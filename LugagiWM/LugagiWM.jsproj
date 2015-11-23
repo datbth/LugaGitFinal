@@ -91,6 +91,7 @@
     <Content Include="pages\index.html" />
     <Content Include="pages\recommendation\ingredientBasedSuggestion.html" />
     <Content Include="pages\recommendation\weekMenuSuggestion.html" />
+    <Content Include="script\index.js" />
     <Content Include="WinJS\css\ui-dark.css" />
     <Content Include="WinJS\css\ui-light.css" />
     <Content Include="WinJS\fonts\Symbols.ttf" />
@@ -98,10 +99,6 @@
     <Content Include="WinJS\js\base.js" />
     <Content Include="WinJS\js\ui.js" />
     <None Include="LugagiWM_TemporaryKey.pfx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="script\" />
-    <Folder Include="script\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
   <!-- To modify your build process, add your task inside one of the targets below then uncomment
