@@ -27,6 +27,7 @@ pages\food\addNewFood.html
 pages\index.html
 pages\recommendation\ingredientBasedSuggestion.html
 pages\recommendation\weekMenuSuggestion.html
+script\index.js
 WinJS\css\ui-dark.css
 WinJS\css\ui-light.css
 WinJS\fonts\Symbols.ttf
