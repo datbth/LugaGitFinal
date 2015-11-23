@@ -71,6 +71,7 @@
     <Content Include="images\88x88.png" />
     <Content Include="images\favicon.png" />
     <Content Include="images\LockScreenLogo.scale-200.png" />
+    <Content Include="images\nguyenlieu-01.svg" />
     <Content Include="images\SplashScreen.scale-200.png" />
     <Content Include="images\splashscreen.scale-400.png" />
     <Content Include="images\Splashscreen1240x600.png" />
@@ -80,6 +81,7 @@
     <Content Include="images\Square44x44Logo.scale-200.png" />
     <Content Include="images\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="images\StoreLogo.png" />
+    <Content Include="images\thucdontuan-01.svg" />
     <Content Include="images\Wide310x150Logo.scale-200.png" />
     <Content Include="js\common.js" />
     <Content Include="js\default.js" />
