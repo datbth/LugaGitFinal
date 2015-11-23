@@ -60,6 +60,9 @@
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\food\addNewFood.html">
       <PackagePath>pages\food\addNewFood.html</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\index_test.html">
+      <PackagePath>pages\index_test.html</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\index.html">
       <PackagePath>pages\index.html</PackagePath>
     </AppxPackagedFile>

@@ -1,20 +1,6 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title>Lugagi - Food suggestion app</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- WinJS references -->
-    <link href="/WinJS/css/ui-light.css" rel="stylesheet" />
-    <script src="/WinJS/js/base.js"></script>
-    <script src="/WinJS/js/ui.js"></script>
-
-    <!-- Lugagi references -->
-    <link href="/css/default.css" rel="stylesheet" />
-    <link href="/css/bootstrap.css" rel="stylesheet" />
-    <script src="/js/default.js"></script>
-    <script src="/js/jquery.min.js"></script>
     <script src="/script/index.js"></script>
 </head>
 
@@ -27,32 +13,35 @@
 	<div class="row">
 
 		<!-- Ingredient-based suggestion -->
-		<div class="col-xs-12 col-sm-6 col-md-3 col-md-offset-3"><p>
+		<div class="col-xs-6 col-sm-6 col-md-3 col-md-offset-3" id="goToIngredient"><p>
 			<img src="/images/nguyenlieu-01.svg" class="img-responsive center-block" ><br>
-			<button id="goToIngredient" class="center-block">Suggest based on ingredients</button>
+			<button class="center-block">Suggest based on ingredients</button>
 		</div>
 
 		<!-- Week menu suggestion -->
-		<div class="col-xs-12 col-sm-6 col-md-3" >
+		<div class="col-xs-6 col-sm-6 col-md-3" id="goToWeek">
 			<img src="/images/thucdontuan-01.svg" class="img-responsive center-block" ><br>
-			<button id="goToWeek">Suggest menu for whole week</button>
+			<button class="center-block">Suggest menu for whole week</button>
 		</div>
         <div id="test"></div>
 	</div>
 </div>
 
-<!-- phan o ben duoi-->
-	<div class="container-fluid" style="backgound-color: #b3d4fc">
-		<!--random mon an-->
-		<h4 style="color: #000000"><center>Nấu gì hôm nay?</center></h4>
-		<p style="color:#f2f2f2"><center>Một món ngẫu nhiên sẽ được chọn sẵn cho bạn.<br>Hãy trượt ngón tay sang trái phải để đổi món hoặc nhấn nút bên dưới!</center></p>
+
+<!-- Main Section -->
+	
+     
+    <div class="container-fluid" style="backgound-color: #b3d4fc">
+		<!--Random suggestion -->
+	 	<h4 style="color: #000000" class="center-block">What to cook today?</h4>
+		<p style="color:#f2f2f2"><center>A random dish will be chosen for you.<br>Swipe left or right or choose the button below to change the dish.</center></p>
 		<hr>
 		<p><center>mon random<br><img src="timthumb.png"></center></p>
 		<p><center>doi mon khac</center></p>
 		<hr>
 
 	<!-- Chon boi lugagi-->
-		<div class="row">
+	 	<div class="row">
 		<p><center><img src="editor-01.svg" height="100" width="100"><br>chon boi Lugagi</center></p>
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><center><img src="S1.jpg" class="img-responsive"><br>xoi</center></div>
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><center><img src="S2.jpg" class="img-responsive"><br>xoi</center></div>
@@ -64,7 +53,7 @@
 		</div>
 
 	<!-- mon moi nhat-->
-		<div class="row">
+	 	<div class="row">
 		<p><center><img src="monmoinhat.svg" height="100" width="100"><br>mon moi nhat</center></p>
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><center><img src="a1.jpg" class="img-responsive"><br>xoi</center></div>
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><center><img src="a2.jpg" class="img-responsive"><br>xoi</center></div>

@@ -88,6 +88,7 @@
     <Content Include="css\default.css" />
     <Content Include="js\jquery.min.js" />
     <Content Include="pages\food\addNewFood.html" />
+    <Content Include="pages\index_test.html" />
     <Content Include="pages\index.html" />
     <Content Include="pages\recommendation\ingredientBasedSuggestion.html" />
     <Content Include="pages\recommendation\weekMenuSuggestion.html" />

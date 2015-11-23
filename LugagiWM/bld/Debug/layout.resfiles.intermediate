@@ -25,6 +25,7 @@ js\default.js
 js\jquery.min.js
 pages\food\addNewFood.html
 pages\index.html
+pages\index_test.html
 pages\recommendation\ingredientBasedSuggestion.html
 pages\recommendation\weekMenuSuggestion.html
 script\index.js
