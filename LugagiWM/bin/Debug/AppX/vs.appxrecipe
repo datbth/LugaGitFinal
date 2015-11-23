@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-23T05:20:27.717</Modified>
+      <Modified>2015-11-23T05:30:33.504</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -80,7 +80,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\index.html">
       <PackagePath>pages\index.html</PackagePath>
-      <Modified>2015-11-23T05:20:05.994</Modified>
+      <Modified>2015-11-23T05:30:32.762</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\recommendation\ingredientBasedSuggestion.html">
       <PackagePath>pages\recommendation\ingredientBasedSuggestion.html</PackagePath>
@@ -162,13 +162,21 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-11-18T03:32:24.287</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\nguyenlieu-01.svg">
+      <PackagePath>images\nguyenlieu-01.svg</PackagePath>
+      <Modified>2015-11-23T05:28:39.171</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\thucdontuan-01.svg">
+      <PackagePath>images\thucdontuan-01.svg</PackagePath>
+      <Modified>2015-11-23T05:28:39.175</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\WinJS\fonts\Symbols.ttf">
       <PackagePath>WinJS\fonts\Symbols.ttf</PackagePath>
       <Modified>2015-11-18T03:32:23.902</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-11-23T05:20:27.593</Modified>
+      <Modified>2015-11-23T05:30:33.424</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
