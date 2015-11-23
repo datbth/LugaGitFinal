@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>LENOVO-B</Machine>
+    <WindowsUser>Caval</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>57884fdc-47c4-43d0-b60c-4b710ebcddf4</PackageIdentityName>
+    <IntermediateOutputPath>C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\bld\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>7BC940FE3F39A188668A8F4B0B8DD20AE5563449F6CBC8B2E757ECC1FE8BE3C0</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>57884fdc-47c4-43d0-b60c-4b710ebcddf4_0.2.1.0_neutral__5n54xp3wtq0c0</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>57884fdc-47c4-43d0-b60c-4b710ebcddf4_5n54xp3wtq0c0!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>57884fdc-47c4-43d0-b60c-4b710ebcddf4</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Luanlocal</RegisteredPackagePublisher>
+    <RegisteredVersion>0.2.1.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-11-18T05:41:18.798</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\components\picaresize\pica.min.js">
+      <PackagePath>components\picaresize\pica.min.js</PackagePath>
+      <Modified>2015-11-18T03:32:24.235</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\js\common.js">
+      <PackagePath>js\common.js</PackagePath>
+      <Modified>2015-11-18T03:32:24.301</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\js\default.js">
+      <PackagePath>js\default.js</PackagePath>
+      <Modified>2015-11-18T09:49:24.050</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\js\jquery.min.js">
+      <PackagePath>js\jquery.min.js</PackagePath>
+      <Modified>2015-11-18T03:32:24.337</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\WinJS\js\en-US\ui.strings.js">
+      <PackagePath>WinJS\js\en-US\ui.strings.js</PackagePath>
+      <Modified>2015-11-18T03:32:24.012</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\WinJS\js\base.js">
+      <PackagePath>WinJS\js\base.js</PackagePath>
+      <Modified>2015-11-18T03:32:23.996</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\WinJS\js\ui.js">
+      <PackagePath>WinJS\js\ui.js</PackagePath>
+      <Modified>2015-11-18T03:32:24.222</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\css\bootstrap.css">
+      <PackagePath>css\bootstrap.css</PackagePath>
+      <Modified>2015-11-18T03:32:24.241</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+      <Modified>2015-11-18T03:32:24.245</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\WinJS\css\ui-dark.css">
+      <PackagePath>WinJS\css\ui-dark.css</PackagePath>
+      <Modified>2015-11-18T03:32:23.880</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\WinJS\css\ui-light.css">
+      <PackagePath>WinJS\css\ui-light.css</PackagePath>
+      <Modified>2015-11-18T03:32:23.893</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\default.html">
+      <PackagePath>default.html</PackagePath>
+      <Modified>2015-11-18T09:44:08.426</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\pages\food\addNewFood.html">
+      <PackagePath>pages\food\addNewFood.html</PackagePath>
+      <Modified>2015-11-18T05:18:55.260</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\pages\index.html">
+      <PackagePath>pages\index.html</PackagePath>
+      <Modified>2015-11-18T05:18:47.563</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\pages\recommendation\ingredientBasedSuggestion.html">
+      <PackagePath>pages\recommendation\ingredientBasedSuggestion.html</PackagePath>
+      <Modified>2015-11-18T05:36:48.816</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\pages\recommendation\weekMenuSuggestion.html">
+      <PackagePath>pages\recommendation\weekMenuSuggestion.html</PackagePath>
+      <Modified>2015-11-18T05:41:18.328</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\images\300x300.png">
+      <PackagePath>images\300x300.png</PackagePath>
+      <Modified>2015-11-18T03:32:24.248</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\images\44x44.png">
+      <PackagePath>images\44x44.png</PackagePath>
+      <Modified>2015-11-18T03:32:24.252</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\images\71x71.png">
+      <PackagePath>images\71x71.png</PackagePath>
+      <Modified>2015-11-18T03:32:24.254</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\images\88x88.png">
+      <PackagePath>images\88x88.png</PackagePath>
+      <Modified>2015-11-18T03:32:24.259</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\images\favicon.png">
+      <PackagePath>images\favicon.png</PackagePath>
+      <Modified>2015-11-18T03:32:24.293</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\images\LockScreenLogo.scale-200.png">
+      <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
+      <Modified>2015-11-18T03:32:24.261</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\images\SplashScreen.scale-200.png">
+      <PackagePath>images\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-11-18T03:32:24.265</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\images\splashscreen.scale-400.png">
+      <PackagePath>images\splashscreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-11-18T03:32:24.294</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\images\Splashscreen1240x600.png">
+      <PackagePath>images\Splashscreen1240x600.png</PackagePath>
+      <Modified>2015-11-18T03:32:24.270</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\images\SplashScreen_Full.png">
+      <PackagePath>images\SplashScreen_Full.png</PackagePath>
+      <Modified>2015-11-18T03:32:24.269</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\images\Square150x150Logo.scale-200.png">
+      <PackagePath>images\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-11-18T03:32:24.272</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\images\Square44x44Logo.scale-100.png">
+      <PackagePath>images\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-11-18T03:32:24.274</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\images\Square44x44Logo.scale-200.png">
+      <PackagePath>images\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-11-18T03:32:24.275</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\images\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-11-18T03:32:24.279</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\images\StoreLogo.png">
+      <PackagePath>images\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-11-18T03:32:24.283</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\images\Wide310x150Logo.scale-200.png">
+      <PackagePath>images\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-11-18T03:32:24.287</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\WinJS\fonts\Symbols.ttf">
+      <PackagePath>WinJS\fonts\Symbols.ttf</PackagePath>
+      <Modified>2015-11-18T03:32:23.902</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\bin\Debug\ReverseMap\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-11-18T05:41:18.764</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,1 @@
+MainPackage=C:\Users\Luan\Documents\Visual Studio 2015\Projects\LugagiWM\LugagiWM\bin\Debug\LugagiWM_0.2.1.0_AnyCPU_Debug.appx
