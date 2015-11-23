@@ -1,0 +1,104 @@
+﻿
+body {
+   overflow:hidden;
+}
+
+#appToolbar {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #da5849;
+    color:white;
+}
+
+#appToolbar .win-splitviewpanetoggle {
+    float: left;
+}
+
+/* SplitView pane content style*/
+#appToolbar.header {
+    white-space: nowrap;
+}
+
+#appToolbar.header .title {
+    font-size: 25px;
+    left: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+    vertical-align: middle;
+    display: inline-block;
+    color:white;
+}
+
+#appToolbar .win-commandglyph {
+    color:white;
+}
+
+.content,
+#app {
+    height: 100%;
+}
+
+#app .nav-commands {
+    margin-top: 20px;
+    /*color:white;*/
+}
+
+.panearea {
+    /*background-color: #da5849;*/
+}
+
+.win-splitviewcommand-button {
+    background-color: transparent;
+    /*color:white;*/
+}
+
+button.win-splitviewpanetoggle {
+    color:white;
+}
+
+#app .win-splitview-pane-closed .win-splitviewcommand-label {
+    /*  Make sure pane content doesn't scroll if 
+    SplitViewCommand label receives focus while pane is closed.
+    */
+    visibility: hidden;
+}
+
+/*SplitView content style*/
+#app .win-splitview-content {
+    height:94%;
+    background-color: #f7f7f7;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-left:3%;
+    padding-right:3%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+#app .contenttext {
+    margin-left: 20px;
+    margin-top: 6px;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.form-control input, .form-control textarea, .win-slider {
+    width: 100%;
+}
+
+.form-control select {
+    width: 100%;
+}
+
+.content-card {
+    padding-top: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.content-card:hover {
+    background-color: #E6E6E6;
+}

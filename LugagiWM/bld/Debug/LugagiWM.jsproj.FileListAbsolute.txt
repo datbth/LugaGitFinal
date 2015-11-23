@@ -1,0 +1,16 @@
+C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\bin\Debug\ReverseMap\resources.pri
+C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\bin\Debug\AppxManifest.xml
+C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\bin\Debug\LugagiWM.build.appxrecipe
+C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\bld\Debug\ResourceHandlingTask.state
+C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\bld\Debug\priconfig.xml
+C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\bld\Debug\priconfig.xml.intermediate
+C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\bld\Debug\layout.resfiles
+C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\bld\Debug\layout.resfiles.intermediate
+C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\bld\Debug\resources.resfiles
+C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\bld\Debug\resources.resfiles.intermediate
+C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\bld\Debug\pri.resfiles
+C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\bld\Debug\pri.resfiles.intermediate
+C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\bld\Debug\qualifiers.txt
+C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\bld\Debug\qualifiers.txt.intermediate
+C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Data\COSC 2634\Lugagi\LugaGit\LugagiWM\bld\Debug\ProjectArchitectures.txt
