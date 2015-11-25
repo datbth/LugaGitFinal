@@ -1,6 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <link href="/css/index/index.css" rel="stylesheet" />
     <script src="/script/index/index.js"></script>
 </head>
 
@@ -30,35 +31,96 @@
 
     <!-- Main Section --> 
     <div class="container-fluid">
+
 		<!--Random suggestion -->
         <div class="row">
             <div class="col-xs-12">
-                <h4 class="text-center">What to cook today?</h4>
+                <h3 class="text-center">What to cook today?</h3>
                 <p  class="text-center">
                     A random dish will be chosen for you.
                     Swipe left or right or choose the button below to change the dish.
                 </p>
                 <img id="randImg" src="" class="img-responsive center-block" />
-                <p id="randName" class="text-center"></p>
+                <h6 id="randName" class="text-center"></h6>
                 <button id="changeRand" class="center-block win-button">Change the dish</button>
             </div>
         </div>
 
-	<!-- Chon boi lugagi-->
-	 	<div class="row">
-		<p><center><img src="editor-01.svg" height="100" width="100"><br>chon boi Lugagi</center></p>
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><center><img src="S1.jpg" class="img-responsive"><br>xoi</center></div>
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><center><img src="S2.jpg" class="img-responsive"><br>xoi</center></div>
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><center><img src="S3.jpg" class="img-responsive"><br>xoi</center></div>
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><center><img src="S4.png" class="img-responsive"><br>xoi</center></div>
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><center><img src="S5.png" class="img-responsive"><br>xoi</center></div>
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><center><img src="S6.png" class="img-responsive"><br>xoi</center></div>
-		<hr>
+        <!-- Chosen by lugagi-->
+        <p>
+            <br /><br />
+        </p>
+        <div class="row" style="text-align:center">
+            <div>
+                <img src="/images/editor-01.svg" width="80" class="img-responsive center-block" />
+            </div>
+            <div class="col-xs-2">
+                <button id="editorPickedPrevious"><img class="img-responsive" src="/images/ic_navigate_previous_48px-128 - Copy.png" width="50" height="40" /></button>
+            </div>
+            <div class="col-xs-4 col-xs-offset-2" style="text-align:center">
+                <h4>Editor picked</h4>
+            </div>
+            <div class="col-xs-2 col-xs-offset-2" >
+                <button id="editorPickedNext"><img class="img-responsive" src="/images/ic_navigate_next_48px-128.png" width="50" height="40" /></button>
+            </div>
+            
+        </div>
+        <div id="editorPickedContainer" class="row" style="text-align:center">
+            <p><br /></p>
+            <div class="editorPickedItem col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                <img class="editorPickedImg img-responsive" src="" />
+                <h6 class="editorPickedName"></h6>
+                <small>
+                    <span class="glyphicon glyphicon-eye-open editorPickedView"></span>
+                    <span class="glyphicon glyphicon-heart editorPickedLike"></span>
+                </small>
+            </div>
+            <div class="editorPickedItem col-xs-6 col-sm-4 col-md-3 col-lg-2">
+                <img class="editorPickedImg img-responsive" src="" />
+                <h6 class="editorPickedName"></h6>
+                <small>
+                    <span class="glyphicon glyphicon-eye-open editorPickedView"></span>
+                    <span class="glyphicon glyphicon-heart editorPickedLike"></span>
+                </small>
+            </div>
+            <div class="editorPickedItem hidden-xs col-sm-4 col-md-3 col-lg-2">
+                <img class="editorPickedImg img-responsive" src="" />
+                <h6 class="editorPickedName"></h6>
+                <small>
+                    <span class="glyphicon glyphicon-eye-open editorPickedView"></span>
+                    <span class="glyphicon glyphicon-heart editorPickedLike"></span>
+                </small>
+            </div>
+            <div class="editorPickedItem hidden-xs hidden-sm col-md-3 col-lg-2">
+                <img class="editorPickedImg img-responsive" src="" />
+                <h6 class="editorPickedName"></h6>
+                <small>
+                    <span class="glyphicon glyphicon-eye-open editorPickedView"></span>
+                    <span class="glyphicon glyphicon-heart editorPickedLike"></span>
+                </small>
+            </div>
+            <div class="editorPickedItem hidden-xs hidden-sm hidden-md col-lg-2">
+                <img class="editorPickedImg img-responsive" src="" />
+                <h6 class="editorPickedName"></h6>
+                <small>
+                    <span class="glyphicon glyphicon-eye-open editorPickedView"></span>
+                    <span class="glyphicon glyphicon-heart editorPickedLike"></span>
+                </small>
+            </div>
+            <div class="editorPickedItem hidden-xs hidden-sm hidden-md col-lg-2">
+                <img class="editorPickedImg img-responsive" src="" />
+                <h6 class="editorPickedName"></h6>
+                <small>
+                    <span class="glyphicon glyphicon-eye-open editorPickedView"></span>
+                    <span class="glyphicon glyphicon-heart editorPickedLike"></span>
+                </small>
+            </div>
+            
 		</div>
 
 	<!-- mon moi nhat-->
 	 	<div class="row">
-		<p><center><img src="monmoinhat.svg" height="100" width="100"><br>mon moi nhat</center></p>
+		<p><center><img src="monmoinhat.svg" height="100" width="100"><br>Latest dishes</center></p>
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><center><img src="a1.jpg" class="img-responsive"><br>xoi</center></div>
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><center><img src="a2.jpg" class="img-responsive"><br>xoi</center></div>
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><center><img src="a3.jpg" class="img-responsive"><br>xoi</center></div>
