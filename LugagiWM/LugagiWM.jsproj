@@ -88,11 +88,11 @@
     <Content Include="css\default.css" />
     <Content Include="js\jquery.min.js" />
     <Content Include="pages\food\addNewFood.html" />
+    <Content Include="pages\index\index.html" />
     <Content Include="pages\index_test.html" />
-    <Content Include="pages\index.html" />
     <Content Include="pages\recommendation\ingredientBasedSuggestion.html" />
     <Content Include="pages\recommendation\weekMenuSuggestion.html" />
-    <Content Include="script\index.js" />
+    <Content Include="script\index\index.js" />
     <Content Include="WinJS\css\ui-dark.css" />
     <Content Include="WinJS\css\ui-light.css" />
     <Content Include="WinJS\fonts\Symbols.ttf" />
