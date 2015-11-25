@@ -1,0 +1,20 @@
+﻿#editorPickedPrevious, #editorPickedNext{
+    opacity: 0.4;
+    border: none;
+}
+
+.editorPickedView, .editorPickedLike{
+    color: #808080;
+}
+
+h4, h6{
+    color: rgb(255,64,129);
+}
+
+h4:hover, h6:hover{
+    color: #337ab7;
+}
+
+h6{
+    font-size: 14px;
+}
