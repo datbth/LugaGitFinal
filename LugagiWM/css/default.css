@@ -69,10 +69,6 @@ button.win-splitviewpanetoggle {
     background-color: #f7f7f7;
     overflow-y: auto;
     overflow-x: hidden;
-    padding-left:3%;
-    padding-right:3%;
-    padding-top: 4%;
-    padding-bottom: 4%;
 }
 
 #app .contenttext {

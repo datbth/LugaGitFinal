@@ -30,3 +30,19 @@ C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\bld\Debug\qualifiers.txt
 C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\bld\Debug\qualifiers.txt.intermediate
 C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\bld\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\bld\Debug\ProjectArchitectures.txt
+C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bin\Debug\ReverseMap\resources.pri
+C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bin\Debug\AppxManifest.xml
+C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bin\Debug\LugagiWM.build.appxrecipe
+C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bld\Debug\ResourceHandlingTask.state
+C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bld\Debug\priconfig.xml
+C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bld\Debug\priconfig.xml.intermediate
+C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bld\Debug\layout.resfiles
+C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bld\Debug\layout.resfiles.intermediate
+C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bld\Debug\resources.resfiles
+C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bld\Debug\resources.resfiles.intermediate
+C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bld\Debug\pri.resfiles
+C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bld\Debug\pri.resfiles.intermediate
+C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bld\Debug\qualifiers.txt
+C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bld\Debug\qualifiers.txt.intermediate
+C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bld\Debug\ProjectArchitectures.txt
