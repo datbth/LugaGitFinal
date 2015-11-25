@@ -72,7 +72,7 @@ function displayFileInputToImg(input, imgElement) {
     }
 }
 
-//Resize with pica
+// Resize with pica
 function resizeWithPica(srcCanvasID, destCanvasID, fileInputID, width, callback) {
 		      
     var canvas = document.getElementById(srcCanvasID);
@@ -134,7 +134,7 @@ function resizeWithPica(srcCanvasID, destCanvasID, fileInputID, width, callback)
     }
 }
 
-//Check for follow function
+// Check for follow function
 function checkForFollow(followingID) {
     $.ajax({
         type: "POST",
@@ -156,7 +156,7 @@ function checkForFollow(followingID) {
 	return false;
 }
 
-//Code for follow button
+// Code for follow button
 function followUser(followingUserID) {
     var followButton = $("#followUserButton_" + followingUserID);
     var followingID = followButton.data("followingid");
@@ -249,7 +249,7 @@ $(document).ready(function(){
     });
 });
 
-//Check for empty javascript object
+// Check for empty javascript object
 function isEmpty(obj) {
     for(var prop in obj) {
         if(obj.hasOwnProperty(prop))
@@ -258,7 +258,7 @@ function isEmpty(obj) {
     return true;
 }
 
-//Promote content to home page
+// Promote content to home page
 $(document).ready(function(){
     $("body").on("click", ".promoteButton", function(){
         var contentID = $(this).data("contentid");
@@ -284,7 +284,7 @@ $(document).ready(function(){
     });
 });
 
-//Check for promotion content
+// Check for promotion content
 function checkForPromotionContent() {
     $.ajax({
         type: "POST",
