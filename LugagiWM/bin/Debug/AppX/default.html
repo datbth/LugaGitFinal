@@ -28,7 +28,8 @@
                         data-win-control="WinJS.UI.SplitViewPaneToggle"
                         data-win-options="{ splitView: select('.splitView') }"></button>
                 <button class="pull-right" id="addNewFoodToolbarCommand" data-win-control="WinJS.UI.Command" data-win-options="{icon: 'add'}"></button>
-                <button class="pull-right" data-win-control="WinJS.UI.Command" data-win-options="{icon: 'find'}"></button>
+                <button class="pull-right" id="navSearchButton" data-win-control="WinJS.UI.Command" data-win-options="{icon: 'find'}"></button>
+                <input class="win-textbox pull-right" id="searchTextbox" style="display:none" placeholder="Input food name..." />
             </div>
         </div>
         <div id="mySplitView" class="splitView" data-win-control="WinJS.UI.SplitView" data-win-options="{

@@ -94,7 +94,33 @@
 			        WinJS.Navigation.addEventListener("navigated", navigate);
 			    });
 			
-		    
+		        //Search button in the navigation bar
+		        //Code to show or hide the textbox
+			    $("body").on("click", "#navSearchButton", function (e) {
+			        var searchTextboxVisibility = $("#searchTextbox").css('display');
+			        if (searchTextboxVisibility == "none") {
+			            $("#searchTextbox").css('display', 'block');
+			            $("#searchTextbox").focus();
+			        }
+			        else {
+			            $("#searchTextbox").css('display', 'none');
+			        }
+			    });
+
+		        //Hide search textbox on focus out
+			    $("body").on("focusout", "#searchTextbox", function (e) {
+			        $("#searchTextbox").css('display', 'none');
+			    });
+
+		        //Saerch textbox keypress (enter key)
+			    $("body").on("keypress", "#searchTextbox", function (e) {
+			        if ((e.keyCode == 10 || e.keyCode == 13)) {
+			            e.preventDefault();
+			            WinJS.Application.sessionState.searchKeyword = $("#searchTextbox").val();
+			            WinJS.Navigation.navigate("/pages/search/searchResult.html");
+			            WinJS.Navigation.addEventListener("navigated", navigate);
+			        }
+			    });
                 
 		    }));
 

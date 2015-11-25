@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-25T05:34:36.534</Modified>
+      <Modified>2015-11-25T13:52:25.962</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -36,7 +36,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\js\default.js">
       <PackagePath>js\default.js</PackagePath>
-      <Modified>2015-11-25T05:29:33.915</Modified>
+      <Modified>2015-11-25T13:52:41.354</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\js\jquery.min.js">
       <PackagePath>js\jquery.min.js</PackagePath>
@@ -45,6 +45,10 @@
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\script\index\index.js">
       <PackagePath>script\index\index.js</PackagePath>
       <Modified>2015-11-25T05:29:33.949</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\script\search\searchFood.js">
+      <PackagePath>script\search\searchFood.js</PackagePath>
+      <Modified>2015-11-25T13:47:32.921</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\WinJS\js\en-US\ui.strings.js">
       <PackagePath>WinJS\js\en-US\ui.strings.js</PackagePath>
@@ -64,7 +68,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\css\default.css">
       <PackagePath>css\default.css</PackagePath>
-      <Modified>2015-11-25T05:37:04.773</Modified>
+      <Modified>2015-11-25T05:37:17.082</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\WinJS\css\ui-dark.css">
       <PackagePath>WinJS\css\ui-dark.css</PackagePath>
@@ -76,7 +80,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2015-11-25T05:29:33.887</Modified>
+      <Modified>2015-11-25T13:53:46.188</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\pages\food\addNewFood.html">
       <PackagePath>pages\food\addNewFood.html</PackagePath>
@@ -97,6 +101,10 @@
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\pages\recommendation\weekMenuSuggestion.html">
       <PackagePath>pages\recommendation\weekMenuSuggestion.html</PackagePath>
       <Modified>2015-11-25T05:29:33.947</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\pages\search\searchResult.html">
+      <PackagePath>pages\search\searchResult.html</PackagePath>
+      <Modified>2015-11-25T13:48:27.359</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\300x300.png">
       <PackagePath>images\300x300.png</PackagePath>
@@ -184,7 +192,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-11-25T05:34:36.447</Modified>
+      <Modified>2015-11-25T13:52:25.924</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

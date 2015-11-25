@@ -33,6 +33,9 @@
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\script\index\index.js">
       <PackagePath>script\index\index.js</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\script\search\searchFood.js">
+      <PackagePath>script\search\searchFood.js</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\WinJS\js\en-US\ui.strings.js">
       <PackagePath>WinJS\js\en-US\ui.strings.js</PackagePath>
     </AppxPackagedFile>
@@ -71,6 +74,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\pages\recommendation\weekMenuSuggestion.html">
       <PackagePath>pages\recommendation\weekMenuSuggestion.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\pages\search\searchResult.html">
+      <PackagePath>pages\search\searchResult.html</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\300x300.png">
       <PackagePath>images\300x300.png</PackagePath>

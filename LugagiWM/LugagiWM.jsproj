@@ -92,7 +92,9 @@
     <Content Include="pages\index_test.html" />
     <Content Include="pages\recommendation\ingredientBasedSuggestion.html" />
     <Content Include="pages\recommendation\weekMenuSuggestion.html" />
+    <Content Include="pages\search\searchResult.html" />
     <Content Include="script\index\index.js" />
+    <Content Include="script\search\searchFood.js" />
     <Content Include="WinJS\css\ui-dark.css" />
     <Content Include="WinJS\css\ui-light.css" />
     <Content Include="WinJS\fonts\Symbols.ttf" />

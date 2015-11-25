@@ -28,7 +28,9 @@ pages\index\index.html
 pages\index_test.html
 pages\recommendation\ingredientBasedSuggestion.html
 pages\recommendation\weekMenuSuggestion.html
+pages\search\searchResult.html
 script\index\index.js
+script\search\searchFood.js
 WinJS\css\ui-dark.css
 WinJS\css\ui-light.css
 WinJS\fonts\Symbols.ttf
