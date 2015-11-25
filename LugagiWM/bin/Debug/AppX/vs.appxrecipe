@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-23T09:52:09.290</Modified>
+      <Modified>2015-11-24T10:00:52.850</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -36,7 +36,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\js\default.js">
       <PackagePath>js\default.js</PackagePath>
-      <Modified>2015-11-23T10:02:19.206</Modified>
+      <Modified>2015-11-23T10:11:56.074</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\js\jquery.min.js">
       <PackagePath>js\jquery.min.js</PackagePath>
@@ -44,7 +44,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\script\index.js">
       <PackagePath>script\index.js</PackagePath>
-      <Modified>2015-11-23T09:51:27.645</Modified>
+      <Modified>2015-11-23T10:11:56.082</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\WinJS\js\en-US\ui.strings.js">
       <PackagePath>WinJS\js\en-US\ui.strings.js</PackagePath>
@@ -76,7 +76,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2015-11-23T09:27:59.214</Modified>
+      <Modified>2015-11-23T10:11:56.070</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\food\addNewFood.html">
       <PackagePath>pages\food\addNewFood.html</PackagePath>
@@ -84,11 +84,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\index_test.html">
       <PackagePath>pages\index_test.html</PackagePath>
-      <Modified>2015-11-23T09:46:20.844</Modified>
+      <Modified>2015-11-23T10:11:56.080</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\index.html">
       <PackagePath>pages\index.html</PackagePath>
-      <Modified>2015-11-23T10:05:09.162</Modified>
+      <Modified>2015-11-24T02:05:27.218</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\recommendation\ingredientBasedSuggestion.html">
       <PackagePath>pages\recommendation\ingredientBasedSuggestion.html</PackagePath>
@@ -184,7 +184,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-11-23T09:52:09.212</Modified>
+      <Modified>2015-11-23T10:14:34.079</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
