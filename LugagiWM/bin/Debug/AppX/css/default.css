@@ -102,3 +102,6 @@ button.win-splitviewpanetoggle {
 .content-card:hover {
     background-color: #E6E6E6;
 }
+.win-button{
+    color: white;
+}

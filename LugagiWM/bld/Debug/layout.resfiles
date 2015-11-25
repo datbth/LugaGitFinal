@@ -24,11 +24,11 @@ js\common.js
 js\default.js
 js\jquery.min.js
 pages\food\addNewFood.html
-pages\index.html
+pages\index\index.html
 pages\index_test.html
 pages\recommendation\ingredientBasedSuggestion.html
 pages\recommendation\weekMenuSuggestion.html
-script\index.js
+script\index\index.js
 WinJS\css\ui-dark.css
 WinJS\css\ui-light.css
 WinJS\fonts\Symbols.ttf
