@@ -69,11 +69,14 @@ button.win-splitviewpanetoggle {
     background-color: #f7f7f7;
     overflow-y: auto;
     overflow-x: hidden;
+<<<<<<< HEAD
+=======
+    padding-bottom: 4%;
+>>>>>>> refs/remotes/origin/master
 }
 
 #app .contenttext {
     margin-left: 20px;
-    margin-top: 6px;
 }
 
 .form-control {
