@@ -19,10 +19,10 @@ function randDish() {
         async: true,
         cache: false,
         success: function (data) {
-            $("#randName").text(data.Foods[0].MonAnName);
-            var fullImgURL = "http://lugagi.com/script/timthumb.php?src=/foodimages/" + data.Foods[0].ImageURL + "&w=250&h=100";
-            console.log(fullImgURL);
+            var fullImgURL = "http://lugagi.com/script/timthumb.php?src=/foodimages/" + data.Foods[0].ImageURL + "&w=500&h=200";
             $("#randImg").attr("src", fullImgURL)
+            $("#randName").text(data.Foods[0].MonAnName);
+            
         }
     });
 }
