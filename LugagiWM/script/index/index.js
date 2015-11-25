@@ -6,20 +6,30 @@ $('body').on("click", "#goToWeek", function () {
     WinJS.Navigation.navigate("/pages/recommendation/weekMenuSuggestion.html"); // navigate to weekMenuSuggestion page
 });
 
+$('body').on("click", "#changeRand", function () {
+    randDish();
+});
+
+// get random dish
+function randDish() {
+    $.ajax({
+        url: "http://lugagi.com/script/food/generateRandomFood.php",
+        data: "Nothing",
+        dataType: "json",
+        async: true,
+        cache: false,
+        success: function (data) {
+            $("#randName").text(data.Foods[0].MonAnName);
+            var fullImgURL = "http://lugagi.com/script/timthumb.php?src=/foodimages/" + data.Foods[0].ImageURL + "&w=250&h=100";
+            console.log(fullImgURL);
+            $("#randImg").attr("src", fullImgURL)
+        }
+    });
+}
+
 // do when the page is ready
 WinJS.UI.Pages.define("/pages/index/index.html", {
     ready: function (element, options) {
-        // get random dish
-        $.ajax({
-            url: "http://lugagi.com/script/food/generateRandomFood.php",
-            dataType: "json",
-            success: function (data) {
-                console.log(data);
-                $("#randName").text(data.Foods[0].MonAnName);
-                var fullImgURL = "http://lugagi.com/script/timthumb.php?src=/foodimages/" + data.Foods[0].ImageURL + "&w=500&h=200";
-                console.log(fullImgURL);
-                $("#randImg").attr("src", fullImgURL)
-            }
-        });
+        randDish();
     }
 });

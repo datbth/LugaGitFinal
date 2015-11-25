@@ -44,7 +44,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\script\index\index.js">
       <PackagePath>script\index\index.js</PackagePath>
-      <Modified>2015-11-25T05:29:21.975</Modified>
+      <Modified>2015-11-25T05:59:01.434</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\WinJS\js\en-US\ui.strings.js">
       <PackagePath>WinJS\js\en-US\ui.strings.js</PackagePath>
@@ -64,7 +64,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\css\default.css">
       <PackagePath>css\default.css</PackagePath>
-      <Modified>2015-11-25T03:20:29.046</Modified>
+      <Modified>2015-11-25T05:35:36.642</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\WinJS\css\ui-dark.css">
       <PackagePath>WinJS\css\ui-dark.css</PackagePath>
@@ -84,7 +84,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\index\index.html">
       <PackagePath>pages\index\index.html</PackagePath>
-      <Modified>2015-11-25T05:27:44.357</Modified>
+      <Modified>2015-11-25T06:01:12.884</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\index_test.html">
       <PackagePath>pages\index_test.html</PackagePath>

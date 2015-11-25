@@ -6,26 +6,26 @@
 
 <body class="win-type-body">
 
-<!-- Head section-->
-<div id="header" class="container-fluid  hidden-xs" style="background-color: #da5849; color: #ffffff">
-	<div class="row"><p class="text-center">Don't know what to cook today? Let Lugagi help you!</p></div>
+    <!-- Head section-->
+    <div id="header" class="container-fluid  hidden-xs" style="background-color: #da5849; color: #ffffff">
+	    <div class="row"><p class="text-center">Don't know what to cook today? Let Lugagi help you!</p></div>
 
-	<div class="row">
+	    <div class="row">
 
-		<!-- Ingredient-based suggestion -->
-		<div class="col-sm-6 col-md-3 col-md-offset-3" id="goToIngredient"><p>
-			<img src="/images/nguyenlieu-01.svg" class="img-responsive center-block" ><br>
-			<button class="center-block win-button">Suggest based on ingredients</button>
-		</div>
+		    <!-- Ingredient-based suggestion -->
+		    <div class="col-sm-6 col-md-3 col-md-offset-3" id="goToIngredient"><p>
+			    <img src="/images/nguyenlieu-01.svg" class="img-responsive center-block" ><br>
+			    <button class="center-block win-button">Suggest based on ingredients</button>
+		    </div>
 
-		<!-- Week menu suggestion -->
-		<div class="col-sm-6 col-md-3" id="goToWeek">
-			<img src="/images/thucdontuan-01.svg" class="img-responsive center-block" ><br>
-			<button class="center-block win-button">Suggest menu for whole week</button>
-		</div>
-        <div id="test"></div>
-	</div>
-</div>
+		    <!-- Week menu suggestion -->
+		    <div class="col-sm-6 col-md-3" id="goToWeek">
+			    <img src="/images/thucdontuan-01.svg" class="img-responsive center-block" ><br>
+			    <button class="center-block win-button">Suggest menu for whole week</button>
+		    </div>
+            <div id="test"></div>
+	    </div>
+    </div>
 
 
     <!-- Main Section --> 
@@ -33,13 +33,14 @@
 		<!--Random suggestion -->
         <div class="row">
             <div class="col-xs-12">
-                    <h4 class="text-center">What to cook today?</h4>
-                    <p style="color:#f2f2f2" class="text-center">
-                        A random dish will be chosen for you.
-                        Swipe left or right or choose the button below to change the dish.
-                    </p>
-                    <img id="randImg" src="" class="img-responsive center-block" />
-                    <p id="randName" class="text-center"></p>
+                <h4 class="text-center">What to cook today?</h4>
+                <p  class="text-center">
+                    A random dish will be chosen for you.
+                    Swipe left or right or choose the button below to change the dish.
+                </p>
+                <img id="randImg" src="" class="img-responsive center-block" />
+                <p id="randName" class="text-center"></p>
+                <button id="changeRand" class="center-block win-button">Change the dish</button>
             </div>
         </div>
 
