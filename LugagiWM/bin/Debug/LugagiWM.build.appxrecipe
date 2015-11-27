@@ -90,8 +90,14 @@
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.svg">
       <PackagePath>fonts\glyphicons-halflings-regular.svg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\bstuathich.svg">
+      <PackagePath>images\bstuathich.svg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\editor-01.svg">
       <PackagePath>images\editor-01.svg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\monan-01.svg">
+      <PackagePath>images\monan-01.svg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\nguyenlieu-01.svg">
       <PackagePath>images\nguyenlieu-01.svg</PackagePath>
