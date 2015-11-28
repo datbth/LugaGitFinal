@@ -1,0 +1,25 @@
+﻿body {
+}
+
+#categoryFilter {
+    margin-top: 5%;
+}
+
+a {
+    text-decoration: none!important;
+}
+
+#weekSuggestion {
+    background-color: rgb(255,64,129);
+    color: white
+}
+
+#weekSuggestion:hover {
+    color: white;
+    background-color: #337ab7;    
+}
+
+#clearBoxes, #clearBoxes:hover {
+    background-color: #f7f7f7;
+    border: none;
+}

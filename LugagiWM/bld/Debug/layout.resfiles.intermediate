@@ -1,7 +1,9 @@
 components\picaresize\pica.min.js
 css\bootstrap.css
 css\default.css
+css\food\foodDetails.css
 css\index\index.css
+css\recommendation\weekMenuSuggestionFilter.css
 default.html
 fonts\glyphicons-halflings-regular.eot
 fonts\glyphicons-halflings-regular.svg
@@ -39,11 +41,16 @@ js\default.js
 js\jquery.min.js
 js\npm.js
 pages\food\addNewFood.html
+pages\food\foodDetails.html
 pages\index\index.html
 pages\index_test.html
 pages\recommendation\ingredientBasedSuggestion.html
-pages\recommendation\weekMenuSuggestion.html
+pages\recommendation\weekMenuSuggestionContent.html
+pages\recommendation\weekMenuSuggestionFilter.html
+script\food\foodDetails.js
 script\index\index.js
+script\recommendation\weekMenuSuggestionContent.js
+script\recommendation\weekMenuSuggestionFilter.js
 WinJS\css\ui-dark.css
 WinJS\css\ui-light.css
 WinJS\fonts\Symbols.ttf

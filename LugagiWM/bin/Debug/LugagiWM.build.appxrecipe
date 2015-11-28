@@ -39,8 +39,17 @@
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\js\npm.js">
       <PackagePath>js\npm.js</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\script\food\foodDetails.js">
+      <PackagePath>script\food\foodDetails.js</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\script\index\index.js">
       <PackagePath>script\index\index.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\script\recommendation\weekMenuSuggestionFilter.js">
+      <PackagePath>script\recommendation\weekMenuSuggestionFilter.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\script\recommendation\weekMenuSuggestionContent.js">
+      <PackagePath>script\recommendation\weekMenuSuggestionContent.js</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\WinJS\js\en-US\ui.strings.js">
       <PackagePath>WinJS\js\en-US\ui.strings.js</PackagePath>
@@ -54,8 +63,14 @@
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\css\bootstrap.css">
       <PackagePath>css\bootstrap.css</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\css\food\foodDetails.css">
+      <PackagePath>css\food\foodDetails.css</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\css\index\index.css">
       <PackagePath>css\index\index.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\css\recommendation\weekMenuSuggestionFilter.css">
+      <PackagePath>css\recommendation\weekMenuSuggestionFilter.css</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\css\default.css">
       <PackagePath>css\default.css</PackagePath>
@@ -72,6 +87,9 @@
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\food\addNewFood.html">
       <PackagePath>pages\food\addNewFood.html</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\food\foodDetails.html">
+      <PackagePath>pages\food\foodDetails.html</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\index\index.html">
       <PackagePath>pages\index\index.html</PackagePath>
     </AppxPackagedFile>
@@ -81,8 +99,11 @@
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\recommendation\ingredientBasedSuggestion.html">
       <PackagePath>pages\recommendation\ingredientBasedSuggestion.html</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\recommendation\weekMenuSuggestion.html">
-      <PackagePath>pages\recommendation\weekMenuSuggestion.html</PackagePath>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\recommendation\weekMenuSuggestionContent.html">
+      <PackagePath>pages\recommendation\weekMenuSuggestionContent.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\recommendation\weekMenuSuggestionFilter.html">
+      <PackagePath>pages\recommendation\weekMenuSuggestionFilter.html</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.eot">
       <PackagePath>fonts\glyphicons-halflings-regular.eot</PackagePath>

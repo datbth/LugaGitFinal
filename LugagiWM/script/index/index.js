@@ -7,85 +7,16 @@ var itemList = [".editorPickedItem", ".latestFoodItem", ".mostLikeCollectionItem
 var containerList = ["#editorPickedContainer", "#latestFoodContainer", "#mostLikeCollectionContainer"];
 var iconList = ["/images/editor-01.svg", "/images/monan-01.svg", "/images/bstuathich.svg"];
 var titleList = ["Editor's Picks", "Latest Dishes", "Most Liked Collections"]
-itemLinkList = [0, 0, 0];
 // startIndex and endIndex of each section
-startIndexList = [0,0,0];
-endIndexList = [0,0,0];
-
-
-// page events
-$(document).ready(function () {
-
-    // header section events
-    $('body').on("click", "#goToIngredient", function () {
-        WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestion.html"); // navigate to ingredientBasedSuggestion page
-    });
-
-    $('body').on("click", "#goToWeek", function () {
-        WinJS.Navigation.navigate("/pages/recommendation/weekMenuSuggestion.html"); // navigate to weekMenuSuggestion page
-    });
-    
-    // random button event
-    $('body').on("click", "#changeRand", function () {
-        randDish();
-    });
-
-    // previous and next events of all sections
-    $('body').on("click", ".previousButton", function () {
-        var numb = $('.previousButton').index(this);
-        sectionPrevious(numb);
-    });
-
-    $('body').on("click", ".nextButton", function () {
-        var numb = $('.nextButton').index(this);
-        sectionNext(numb);
-    });
-
-    //$('body').on("click", ".contentItem", function () {
-    //    var itemID = $('.contentItem').index(this);
-    //    WinJS.Navigation.navigate(itemLinkList[numb][itemID]);
-    //});
-});
-
-function listenForSwipe(item) {
-    var context = new Object();
-    item.addEventListener("MSPointerDown", function (e) {
-        //if (e.pointerType == 2) {
-        if (e.pointerType == "touch") {
-            context._gestureInfos = new Object();
-            context._gestureInfos.started = true;
-            context._gestureInfos.position = new Object();
-            context._gestureInfos.position.x = e.x;
-            context._gestureInfos.position.y = e.y;
-            context._gestureInfos.startTime = Math.round(new Date().getTime() / 1000); //Unix Timestamp
-        }
-    });
-
-    item.addEventListener("MSPointerUp", function (e) {
-        if (e.pointerType == "touch" && context._gestureInfos && context._gestureInfos.started) {
-            var ts = Math.round(new Date().getTime() / 1000);
-
-            if (Math.abs(e.y - context._gestureInfos.position.y) < 50
-                  && ts - context._gestureInfos.startTime <= 1
-                  && Math.abs(e.x - context._gestureInfos.position.x) > window.screen.availWidth * 0.2) {
-                //Gesture done - valid swipe!
-                if (e.x > context._gestureInfos.position.x)
-                    console.log("right");
-                else
-                    console.log("left");
-            }
-            context._gestureInfos.started = false;
-        }
-    });
-
-};
+var startIndexList = [0,0,0];
+var endIndexList = [0, 0, 0];
 
 
 // load random dish
 function randDish() {
     // show progress ring
-    $("#randContainer").find("#randBreak").hide();
-    $("#randContainer").find("#changeRand").hide();
+    $("#randBreak").hide();
+    $("#changeRand").hide();
     $("#randContainer").find("progress").show();
     $.ajax({
         url: "http://lugagi.com/script/food/generateRandomFood.php",
@@ -97,22 +28,24 @@ function randDish() {
             var fullImgURL = "http://lugagi.com/script/timthumb.php?src=/foodimages/" + data.Foods[0].ImageURL + "&w=500&h=200";
             $("#randImg").attr("src", fullImgURL);
             $("#randName").text(data.Foods[0].MonAnName);
+            $("#randContainer").find(".contentID").text(data.Foods[0].MonAnID);
             // hide progress ring
             $("#randContainer").find("progress").hide();
-            $("#randContainer").find("#changeRand").show();
-            $("#randContainer").find("#randBreak").show();
+            $("#changeRand").show();
+            $("#randBreak").show();
         }
     });
 }
 
-
 // load the content received from ajax into elements of item
-function loadContent(j, itemID, source) {
+function loadContent(itemElem, source) {
     var fullImgURL = "http://lugagi.com/script/timthumb.php?src=/" + source.ContentImageURL + "&w=300&h=200";
-    itemID.find(".contentImg").attr("src", fullImgURL);
-    itemID.find(".contentName").text(source.ContentName);
-    itemID.find(".contentView").text(source.ContentViewCount + " ");
-    itemID.find(".contentLike").text(source.ContentLikeCount);
+    itemElem.find(".contentImg").attr("src", fullImgURL);
+    itemElem.find(".contentName").text(source.ContentName);
+    itemElem.find(".contentView").text(source.ContentViewCount + " ");
+    itemElem.find(".contentLike").text(source.ContentLikeCount);
+    itemElem.find(".contentID").text(source.ContentID);
+    itemElem.find(".contentType").text(source.ContentType);
     return "http://lugagi.com" + source.ContentLink;
 };
 
@@ -131,7 +64,7 @@ function sectionPrevious(numb) {
     if (startIndexList[numb] > 0) {
         startIndexList[numb] -= 2;
     }
-    // to go previous when the startIndex is 0
+        // to go previous when the startIndex is 0
     else {
         startIndexList[numb] = endIndexList[numb];
     }
@@ -143,7 +76,7 @@ function sectionNext(numb) {
     if (startIndexList[numb] != endIndexList[numb]) {
         startIndexList[numb] += 2;
     }
-    // reset startIndex if it hits the end of json
+        // reset startIndex if it hits the end of json
     else {
         startIndexList[numb] = 0;
     }
@@ -166,8 +99,7 @@ function loadSection(numb) {
         success: function (data) {
             var sourceList = [data.EditorPickContents, data.LatestFood, data.MostLikeCollection];
             var source = sourceList[numb];
-            itemLinkList[numb] = [];
-
+            
             // calculate the indexes so that the startIndex can be reset at the end of json
             var lastIndex = source.length;
             endIndexList[numb] = calculateEndIndex(source, lastIndex);
@@ -186,8 +118,8 @@ function loadSection(numb) {
                     break;
                 }
                 // load new content to item
-                var itemID = containerID.find(".contentItem:eq(" + j + ")");
-                itemLinkList[numb][j] = loadContent(j, itemID, source[i]);
+                var itemElem = containerID.find(".contentItem:eq(" + j + ")");
+                loadContent(itemElem, source[i]);
                 i++;
 
                 // reset the index if it hits the end of json
@@ -200,6 +132,44 @@ function loadSection(numb) {
         }
     })
 }
+
+// page events
+$(document).ready(function () {
+
+    // header section events
+    $('body').on("click", "#goToIngredient", function () {
+        WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestion.html"); // navigate to ingredientBasedSuggestion page
+    });
+
+    $('body').on("click", "#goToWeek", function () {
+        WinJS.Navigation.navigate("/pages/recommendation/weekMenuSuggestionFilter.html"); // navigate to weekMenuSuggestion page
+    });
+    
+    // random button event
+    $('body').on("click", "#changeRand", function () {
+        randDish();
+    });
+
+    // previous and next events of all sections
+    $('body').on("click", ".previousButton", function () {
+        var numb = $('.previousButton').index(this);
+        sectionPrevious(numb);
+    });
+
+    $('body').on("click", ".nextButton", function () {
+        var numb = $('.nextButton').index(this);
+        sectionNext(numb);
+    });
+
+    $('body').on("click", ".contentItem", function () {
+        var contentType = $(this).find(".contentType").text();
+        if (contentType == "food") {
+            var contentID = $(this).find(".contentID").text();            
+            WinJS.Navigation.navigate("/pages/food/foodDetails.html", contentID);
+        }
+        
+    });
+});
 
 
 // do when the page is ready
