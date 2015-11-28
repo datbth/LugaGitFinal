@@ -64,7 +64,9 @@
     </AppxManifest>
     <Content Include="components\picaresize\pica.min.js" />
     <Content Include="css\bootstrap.css" />
+    <Content Include="css\food\foodDetails.css" />
     <Content Include="css\index\index.css" />
+    <Content Include="css\recommendation\weekMenuSuggestionFilter.css" />
     <Content Include="default.html" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -103,11 +105,16 @@
     <Content Include="js\jquery.min.js" />
     <Content Include="js\npm.js" />
     <Content Include="pages\food\addNewFood.html" />
+    <Content Include="pages\food\foodDetails.html" />
     <Content Include="pages\index\index.html" />
     <Content Include="pages\index_test.html" />
     <Content Include="pages\recommendation\ingredientBasedSuggestion.html" />
-    <Content Include="pages\recommendation\weekMenuSuggestion.html" />
+    <Content Include="pages\recommendation\weekMenuSuggestionContent.html" />
+    <Content Include="pages\recommendation\weekMenuSuggestionFilter.html" />
+    <Content Include="script\food\foodDetails.js" />
     <Content Include="script\index\index.js" />
+    <Content Include="script\recommendation\weekMenuSuggestionFilter.js" />
+    <Content Include="script\recommendation\weekMenuSuggestionContent.js" />
     <Content Include="WinJS\css\ui-dark.css" />
     <Content Include="WinJS\css\ui-light.css" />
     <Content Include="WinJS\fonts\Symbols.ttf" />
