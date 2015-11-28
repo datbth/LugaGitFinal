@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="/css/recommendation/weekMenuSuggestionFilter.css" rel="stylesheet" />
+    <script src="/script/recommendation/weekMenuSuggestionFilter.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Filter Panel -->
+        <div id="categoryFilter" class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" href="#collapseCategoryFilter">
+                        Filter categories
+                    </a>
+                </div>
+                <div id="collapseCategoryFilter" class="panel-collapse collapse">
+                    <div id="filterBody" class="panel-body">
+                        <p>Select your nutrion choice(s)</p>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Diet</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Kid</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Vegetarian</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Snack</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Health Boost</label>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <button id="clearBoxes" class="specialButton">Clear boxes</button>
+                    </div>
+                </div>
+            </div>
+            <button id="weekSuggestion" class="specialButton">Generate Week Menu</button>
+        </div>        
+    </div>
+</body>
+</html>

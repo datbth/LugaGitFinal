@@ -90,7 +90,7 @@
 			        WinJS.Navigation.addEventListener("navigated", navigate);
 			    });
 			    $('#nav-recommendation-week-menu').click(function () {
-			        WinJS.Navigation.navigate("/pages/recommendation/weekMenuSuggestion.html"); // navigate to weekMenuSuggestion page
+			        WinJS.Navigation.navigate("/pages/recommendation/weekMenuSuggestionFilter.html"); // navigate to weekMenuSuggestion page
 			        WinJS.Navigation.addEventListener("navigated", navigate);
 			    });
 			
