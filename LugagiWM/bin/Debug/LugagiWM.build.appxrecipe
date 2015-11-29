@@ -21,17 +21,13 @@
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\components\picaresize\pica.min.js">
       <PackagePath>components\picaresize\pica.min.js</PackagePath>
     </AppxPackagedFile>
-<<<<<<< HEAD
-    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\js\common.js">
-=======
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\js\bootstrap.js">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\js\bootstrap.js">
       <PackagePath>js\bootstrap.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\js\bootstrap.min.js">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\js\bootstrap.min.js">
       <PackagePath>js\bootstrap.min.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\js\common.js">
->>>>>>> refs/remotes/origin/master
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\js\common.js">
       <PackagePath>js\common.js</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\js\default.js">
@@ -40,14 +36,10 @@
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\js\jquery.min.js">
       <PackagePath>js\jquery.min.js</PackagePath>
     </AppxPackagedFile>
-<<<<<<< HEAD
-    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\script\index\index.js">
-=======
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\js\npm.js">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\js\npm.js">
       <PackagePath>js\npm.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\script\index\index.js">
->>>>>>> refs/remotes/origin/master
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\script\index\index.js">
       <PackagePath>script\index\index.js</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\script\search\searchFood.js">
@@ -65,14 +57,10 @@
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\css\bootstrap.css">
       <PackagePath>css\bootstrap.css</PackagePath>
     </AppxPackagedFile>
-<<<<<<< HEAD
-    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\css\default.css">
-=======
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\css\index\index.css">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\css\index\index.css">
       <PackagePath>css\index\index.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\css\default.css">
->>>>>>> refs/remotes/origin/master
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\css\default.css">
       <PackagePath>css\default.css</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\WinJS\css\ui-dark.css">
@@ -99,41 +87,37 @@
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\pages\recommendation\weekMenuSuggestion.html">
       <PackagePath>pages\recommendation\weekMenuSuggestion.html</PackagePath>
     </AppxPackagedFile>
-<<<<<<< HEAD
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\pages\search\searchResult.html">
       <PackagePath>pages\search\searchResult.html</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\300x300.png">
-=======
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.eot">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.eot">
       <PackagePath>fonts\glyphicons-halflings-regular.eot</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.svg">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.svg">
       <PackagePath>fonts\glyphicons-halflings-regular.svg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\editor-01.svg">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\editor-01.svg">
       <PackagePath>images\editor-01.svg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\nguyenlieu-01.svg">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\nguyenlieu-01.svg">
       <PackagePath>images\nguyenlieu-01.svg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\thucdontuan-01.svg">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\thucdontuan-01.svg">
       <PackagePath>images\thucdontuan-01.svg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.ttf">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.ttf">
       <PackagePath>fonts\glyphicons-halflings-regular.ttf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\WinJS\fonts\Symbols.ttf">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\WinJS\fonts\Symbols.ttf">
       <PackagePath>WinJS\fonts\Symbols.ttf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.woff">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.woff">
       <PackagePath>fonts\glyphicons-halflings-regular.woff</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.woff2">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.woff2">
       <PackagePath>fonts\glyphicons-halflings-regular.woff2</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\300x300.png">
->>>>>>> refs/remotes/origin/master
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\300x300.png">
       <PackagePath>images\300x300.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\44x44.png">
@@ -148,17 +132,13 @@
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\favicon.png">
       <PackagePath>images\favicon.png</PackagePath>
     </AppxPackagedFile>
-<<<<<<< HEAD
-    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\LockScreenLogo.scale-200.png">
-=======
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\ic_navigate_next_48px-128.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\ic_navigate_next_48px-128.png">
       <PackagePath>images\ic_navigate_next_48px-128.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\ic_navigate_previous_48px-128 - Copy.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\ic_navigate_previous_48px-128 - Copy.png">
       <PackagePath>images\ic_navigate_previous_48px-128 - Copy.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\LockScreenLogo.scale-200.png">
->>>>>>> refs/remotes/origin/master
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\LockScreenLogo.scale-200.png">
       <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\SplashScreen.scale-200.png">
@@ -199,20 +179,7 @@
       <PackagePath>images\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-<<<<<<< HEAD
-    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\nguyenlieu-01.svg">
-      <PackagePath>images\nguyenlieu-01.svg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\thucdontuan-01.svg">
-      <PackagePath>images\thucdontuan-01.svg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\WinJS\fonts\Symbols.ttf">
-      <PackagePath>WinJS\fonts\Symbols.ttf</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bin\Debug\ReverseMap\resources.pri">
-=======
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\bin\Debug\ReverseMap\resources.pri">
->>>>>>> refs/remotes/origin/master
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
