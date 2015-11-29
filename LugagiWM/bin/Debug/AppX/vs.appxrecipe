@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-28T18:14:51.067</Modified>
+      <Modified>2015-11-29T04:06:03.972</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -32,19 +32,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\js\bootstrap.js">
       <PackagePath>js\bootstrap.js</PackagePath>
-      <Modified>2015-11-27T06:16:28.401</Modified>
+      <Modified>2015-11-28T18:46:02.740</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\js\bootstrap.min.js">
       <PackagePath>js\bootstrap.min.js</PackagePath>
-      <Modified>2015-11-27T06:16:28.420</Modified>
+      <Modified>2015-11-28T18:46:02.756</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\js\common.js">
       <PackagePath>js\common.js</PackagePath>
-      <Modified>2015-11-27T06:16:28.430</Modified>
+      <Modified>2015-11-28T18:46:02.764</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\js\default.js">
       <PackagePath>js\default.js</PackagePath>
-      <Modified>2015-11-28T17:43:16.479</Modified>
+      <Modified>2015-11-28T18:46:02.766</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\js\jquery.min.js">
       <PackagePath>js\jquery.min.js</PackagePath>
@@ -52,23 +52,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\js\npm.js">
       <PackagePath>js\npm.js</PackagePath>
-      <Modified>2015-11-27T06:16:28.432</Modified>
+      <Modified>2015-11-28T18:46:02.767</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\script\food\foodDetails.js">
       <PackagePath>script\food\foodDetails.js</PackagePath>
-      <Modified>2015-11-28T18:09:49.920</Modified>
+      <Modified>2015-11-28T18:46:02.773</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\script\index\index.js">
       <PackagePath>script\index\index.js</PackagePath>
-      <Modified>2015-11-28T17:43:16.486</Modified>
+      <Modified>2015-11-29T08:07:43.679</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\script\recommendation\weekMenuSuggestionFilter.js">
       <PackagePath>script\recommendation\weekMenuSuggestionFilter.js</PackagePath>
-      <Modified>2015-11-28T18:28:56.549</Modified>
+      <Modified>2015-11-29T08:17:34.584</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\script\recommendation\weekMenuSuggestionContent.js">
       <PackagePath>script\recommendation\weekMenuSuggestionContent.js</PackagePath>
-      <Modified>2015-11-28T18:26:44.065</Modified>
+      <Modified>2015-11-29T08:23:21.101</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\WinJS\js\en-US\ui.strings.js">
       <PackagePath>WinJS\js\en-US\ui.strings.js</PackagePath>
@@ -84,23 +84,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\css\bootstrap.css">
       <PackagePath>css\bootstrap.css</PackagePath>
-      <Modified>2015-11-27T06:16:28.193</Modified>
+      <Modified>2015-11-28T18:46:02.657</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\css\food\foodDetails.css">
       <PackagePath>css\food\foodDetails.css</PackagePath>
-      <Modified>2015-11-28T04:27:34.651</Modified>
+      <Modified>2015-11-28T18:46:02.675</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\css\index\index.css">
       <PackagePath>css\index\index.css</PackagePath>
-      <Modified>2015-11-28T04:16:00.528</Modified>
+      <Modified>2015-11-29T08:20:29.132</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\css\recommendation\weekMenuSuggestionFilter.css">
       <PackagePath>css\recommendation\weekMenuSuggestionFilter.css</PackagePath>
-      <Modified>2015-11-28T18:25:39.229</Modified>
+      <Modified>2015-11-29T07:23:47.192</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\css\default.css">
       <PackagePath>css\default.css</PackagePath>
-      <Modified>2015-11-27T15:50:02.149</Modified>
+      <Modified>2015-11-28T18:46:02.674</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\WinJS\css\ui-dark.css">
       <PackagePath>WinJS\css\ui-dark.css</PackagePath>
@@ -112,7 +112,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2015-11-28T15:28:38.885</Modified>
+      <Modified>2015-11-28T18:46:02.680</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\food\addNewFood.html">
       <PackagePath>pages\food\addNewFood.html</PackagePath>
@@ -120,11 +120,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\food\foodDetails.html">
       <PackagePath>pages\food\foodDetails.html</PackagePath>
-      <Modified>2015-11-28T10:52:05.086</Modified>
+      <Modified>2015-11-28T18:46:02.769</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\index\index.html">
       <PackagePath>pages\index\index.html</PackagePath>
-      <Modified>2015-11-28T04:14:28.461</Modified>
+      <Modified>2015-11-29T08:09:07.204</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\index_test.html">
       <PackagePath>pages\index_test.html</PackagePath>
@@ -136,31 +136,31 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\recommendation\weekMenuSuggestionContent.html">
       <PackagePath>pages\recommendation\weekMenuSuggestionContent.html</PackagePath>
-      <Modified>2015-11-28T18:14:50.371</Modified>
+      <Modified>2015-11-29T08:12:49.788</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\recommendation\weekMenuSuggestionFilter.html">
       <PackagePath>pages\recommendation\weekMenuSuggestionFilter.html</PackagePath>
-      <Modified>2015-11-28T18:25:39.218</Modified>
+      <Modified>2015-11-29T08:11:02.058</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.eot">
       <PackagePath>fonts\glyphicons-halflings-regular.eot</PackagePath>
-      <Modified>2015-11-27T06:16:28.308</Modified>
+      <Modified>2015-11-28T18:46:02.691</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.svg">
       <PackagePath>fonts\glyphicons-halflings-regular.svg</PackagePath>
-      <Modified>2015-11-27T06:16:28.328</Modified>
+      <Modified>2015-11-28T18:46:02.698</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\bstuathich.svg">
       <PackagePath>images\bstuathich.svg</PackagePath>
-      <Modified>2015-11-27T06:16:28.370</Modified>
+      <Modified>2015-11-28T18:46:02.723</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\editor-01.svg">
       <PackagePath>images\editor-01.svg</PackagePath>
-      <Modified>2015-11-27T06:16:28.372</Modified>
+      <Modified>2015-11-28T18:46:02.725</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\monan-01.svg">
       <PackagePath>images\monan-01.svg</PackagePath>
-      <Modified>2015-11-27T06:16:28.383</Modified>
+      <Modified>2015-11-28T18:46:02.727</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\nguyenlieu-01.svg">
       <PackagePath>images\nguyenlieu-01.svg</PackagePath>
@@ -172,7 +172,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.ttf">
       <PackagePath>fonts\glyphicons-halflings-regular.ttf</PackagePath>
-      <Modified>2015-11-27T06:16:28.342</Modified>
+      <Modified>2015-11-28T18:46:02.705</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\WinJS\fonts\Symbols.ttf">
       <PackagePath>WinJS\fonts\Symbols.ttf</PackagePath>
@@ -180,11 +180,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.woff">
       <PackagePath>fonts\glyphicons-halflings-regular.woff</PackagePath>
-      <Modified>2015-11-27T06:16:28.353</Modified>
+      <Modified>2015-11-28T18:46:02.709</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.woff2">
       <PackagePath>fonts\glyphicons-halflings-regular.woff2</PackagePath>
-      <Modified>2015-11-27T06:16:28.358</Modified>
+      <Modified>2015-11-28T18:46:02.716</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\300x300.png">
       <PackagePath>images\300x300.png</PackagePath>
@@ -208,11 +208,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\ic_navigate_next_48px-128.png">
       <PackagePath>images\ic_navigate_next_48px-128.png</PackagePath>
-      <Modified>2015-11-27T06:16:28.373</Modified>
+      <Modified>2015-11-28T18:46:02.725</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\ic_navigate_previous_48px-128 - Copy.png">
       <PackagePath>images\ic_navigate_previous_48px-128 - Copy.png</PackagePath>
-      <Modified>2015-11-27T06:16:28.378</Modified>
+      <Modified>2015-11-28T18:46:02.726</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\LockScreenLogo.scale-200.png">
       <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
@@ -221,7 +221,7 @@
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\splashscreen.scale-150.png">
       <PackagePath>images\splashscreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-27T06:16:28.362</Modified>
+      <Modified>2015-11-28T18:46:02.718</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\SplashScreen.scale-200.png">
       <PackagePath>images\SplashScreen.scale-200.png</PackagePath>
@@ -273,7 +273,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-11-28T18:14:50.981</Modified>
+      <Modified>2015-11-28T18:49:43.890</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

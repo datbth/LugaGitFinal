@@ -6,31 +6,34 @@
 </head>
 <body>
     <div class="container-fluid">
-        <!-- Filter Panel -->
+        <h1 class="col-xs-12">Week Menu Suggestion</h1>
         <div id="categoryFilter" class="col-xs-12">
+
+            <!-- Filter Panel -->
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <a data-toggle="collapse" href="#collapseCategoryFilter">
                         Filter categories
                     </a>
                 </div>
+                <!-- Panel Content -->
                 <div id="collapseCategoryFilter" class="panel-collapse collapse">
                     <div id="filterBody" class="panel-body">
-                        <p>Select your nutrion choice(s)</p>
+                        <p>Select your nutrition choice(s)</p>
                         <div class="checkbox">
-                            <label><input type="checkbox" value="">Diet</label>
+                            <label><input type="checkbox" value="1">Diet</label>
                         </div>
                         <div class="checkbox">
-                            <label><input type="checkbox" value="">Kid</label>
+                            <label><input type="checkbox" value="2">Kid</label>
                         </div>
                         <div class="checkbox">
-                            <label><input type="checkbox" value="">Vegetarian</label>
+                            <label><input type="checkbox" value="3">Vegetarian</label>
                         </div>
                         <div class="checkbox">
-                            <label><input type="checkbox" value="">Snack</label>
+                            <label><input type="checkbox" value="4">Snack</label>
                         </div>
                         <div class="checkbox">
-                            <label><input type="checkbox" value="">Health Boost</label>
+                            <label><input type="checkbox" value="5">Health Boost</label>
                         </div>
                     </div>
                     <div class="panel-footer">
@@ -38,6 +41,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Submit button -->
             <button id="weekSuggestion" class="specialButton">Generate Week Menu</button>
         </div>        
     </div>
