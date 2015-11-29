@@ -1,210 +1,210 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>LENOVO-B</Machine>
-    <WindowsUser>Caval</WindowsUser>
+    <Machine>LUANWIN8</Machine>
+    <WindowsUser>Luanlocal</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>57884fdc-47c4-43d0-b60c-4b710ebcddf4</PackageIdentityName>
-    <IntermediateOutputPath>C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\bld\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bld\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\components\picaresize\pica.min.js">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\components\picaresize\pica.min.js">
       <PackagePath>components\picaresize\pica.min.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\js\bootstrap.js">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\js\bootstrap.js">
       <PackagePath>js\bootstrap.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\js\bootstrap.min.js">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\js\bootstrap.min.js">
       <PackagePath>js\bootstrap.min.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\js\common.js">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\js\common.js">
       <PackagePath>js\common.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\js\default.js">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\js\default.js">
       <PackagePath>js\default.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\js\jquery.min.js">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\js\jquery.min.js">
       <PackagePath>js\jquery.min.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\js\npm.js">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\js\npm.js">
       <PackagePath>js\npm.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\script\food\foodDetails.js">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\script\food\foodDetails.js">
       <PackagePath>script\food\foodDetails.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\script\index\index.js">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\script\index\index.js">
       <PackagePath>script\index\index.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\script\recommendation\weekMenuSuggestionFilter.js">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\script\recommendation\weekMenuSuggestionFilter.js">
       <PackagePath>script\recommendation\weekMenuSuggestionFilter.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\script\recommendation\weekMenuSuggestionContent.js">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\script\recommendation\weekMenuSuggestionContent.js">
       <PackagePath>script\recommendation\weekMenuSuggestionContent.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\WinJS\js\en-US\ui.strings.js">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\WinJS\js\en-US\ui.strings.js">
       <PackagePath>WinJS\js\en-US\ui.strings.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\WinJS\js\base.js">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\WinJS\js\base.js">
       <PackagePath>WinJS\js\base.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\WinJS\js\ui.js">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\WinJS\js\ui.js">
       <PackagePath>WinJS\js\ui.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\css\bootstrap.css">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\css\bootstrap.css">
       <PackagePath>css\bootstrap.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\css\food\foodDetails.css">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\css\food\foodDetails.css">
       <PackagePath>css\food\foodDetails.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\css\index\index.css">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\css\index\index.css">
       <PackagePath>css\index\index.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\css\recommendation\weekMenuSuggestionFilter.css">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\css\recommendation\weekMenuSuggestionFilter.css">
       <PackagePath>css\recommendation\weekMenuSuggestionFilter.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\css\default.css">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\css\default.css">
       <PackagePath>css\default.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\WinJS\css\ui-dark.css">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\WinJS\css\ui-dark.css">
       <PackagePath>WinJS\css\ui-dark.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\WinJS\css\ui-light.css">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\WinJS\css\ui-light.css">
       <PackagePath>WinJS\css\ui-light.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\default.html">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\default.html">
       <PackagePath>default.html</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\food\addNewFood.html">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\pages\food\addNewFood.html">
       <PackagePath>pages\food\addNewFood.html</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\food\foodDetails.html">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\pages\food\foodDetails.html">
       <PackagePath>pages\food\foodDetails.html</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\index\index.html">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\pages\index\index.html">
       <PackagePath>pages\index\index.html</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\index_test.html">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\pages\index_test.html">
       <PackagePath>pages\index_test.html</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\recommendation\ingredientBasedSuggestion.html">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\pages\recommendation\ingredientBasedSuggestion.html">
       <PackagePath>pages\recommendation\ingredientBasedSuggestion.html</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\recommendation\weekMenuSuggestionContent.html">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\pages\recommendation\weekMenuSuggestionContent.html">
       <PackagePath>pages\recommendation\weekMenuSuggestionContent.html</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\pages\recommendation\weekMenuSuggestionFilter.html">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\pages\recommendation\weekMenuSuggestionFilter.html">
       <PackagePath>pages\recommendation\weekMenuSuggestionFilter.html</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.eot">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.eot">
       <PackagePath>fonts\glyphicons-halflings-regular.eot</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.svg">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.svg">
       <PackagePath>fonts\glyphicons-halflings-regular.svg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\bstuathich.svg">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\bstuathich.svg">
       <PackagePath>images\bstuathich.svg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\editor-01.svg">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\editor-01.svg">
       <PackagePath>images\editor-01.svg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\monan-01.svg">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\monan-01.svg">
       <PackagePath>images\monan-01.svg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\nguyenlieu-01.svg">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\nguyenlieu-01.svg">
       <PackagePath>images\nguyenlieu-01.svg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\thucdontuan-01.svg">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\thucdontuan-01.svg">
       <PackagePath>images\thucdontuan-01.svg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.ttf">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.ttf">
       <PackagePath>fonts\glyphicons-halflings-regular.ttf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\WinJS\fonts\Symbols.ttf">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\WinJS\fonts\Symbols.ttf">
       <PackagePath>WinJS\fonts\Symbols.ttf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.woff">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.woff">
       <PackagePath>fonts\glyphicons-halflings-regular.woff</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.woff2">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.woff2">
       <PackagePath>fonts\glyphicons-halflings-regular.woff2</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\300x300.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\300x300.png">
       <PackagePath>images\300x300.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\44x44.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\44x44.png">
       <PackagePath>images\44x44.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\71x71.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\71x71.png">
       <PackagePath>images\71x71.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\88x88.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\88x88.png">
       <PackagePath>images\88x88.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\favicon.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\favicon.png">
       <PackagePath>images\favicon.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\ic_navigate_next_48px-128.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\ic_navigate_next_48px-128.png">
       <PackagePath>images\ic_navigate_next_48px-128.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\ic_navigate_previous_48px-128 - Copy.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\ic_navigate_previous_48px-128 - Copy.png">
       <PackagePath>images\ic_navigate_previous_48px-128 - Copy.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\LockScreenLogo.scale-200.png">
       <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\splashscreen.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\splashscreen.scale-150.png">
       <PackagePath>images\splashscreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\SplashScreen.scale-200.png">
       <PackagePath>images\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\splashscreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\splashscreen.scale-400.png">
       <PackagePath>images\splashscreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\Splashscreen1240x600.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\Splashscreen1240x600.png">
       <PackagePath>images\Splashscreen1240x600.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\SplashScreen_Full.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\SplashScreen_Full.png">
       <PackagePath>images\SplashScreen_Full.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\Square150x150Logo.scale-200.png">
       <PackagePath>images\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\Square44x44Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\Square44x44Logo.scale-100.png">
       <PackagePath>images\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\Square44x44Logo.scale-200.png">
       <PackagePath>images\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\StoreLogo.png">
       <PackagePath>images\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\images\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\images\Wide310x150Logo.scale-200.png">
       <PackagePath>images\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Data\COSC 2634\Lugagi\LugaGitFinal\LugagiWM\bin\Debug\ReverseMap\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Luan\Documents\GitHub\LugaGitFinal\LugagiWM\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

@@ -38,7 +38,6 @@ function loadWeekMenuContent(data) {
         var daySource = data[i].Meal;
         var dayID = ".tab-pane:eq(" + i + ")";
         var j = 0;
-        console.log(i);
         // load each meal
         for (j; j < 3; j++) {
             var mealSource = daySource[j];
