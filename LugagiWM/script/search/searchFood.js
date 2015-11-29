@@ -1,8 +1,11 @@
-﻿//Function to load index content
+﻿var searchName;
+
+//Function to load index content
 function loadFoodSearchResult() {
 
-    var searchName = WinJS.Application.sessionState.searchKeyword;
-    $("#displaySearchKeyword").text(WinJS.Application.sessionState.searchKeyword);
+    
+        //= WinJS.Application.sessionState.searchKeyword;
+   // $("#displaySearchKeyword").text(WinJS.Application.sessionState.searchKeyword);
 
     //Load random food
     $.ajax({
@@ -23,18 +26,30 @@ function loadFoodSearchResult() {
                 newResultRow.css("display", "block");
                 newResultRow.find(".foodName").text(foodName);
                 newResultRow.find(".foodImage").attr("src", fullImageURL);
-                newResultRow.find(".content-link").attr("href", "/pages/food/foodDetails.html");
-                newResultRow.find(".content-link").attr("data-passdata", "MonAnID=" + foodID);
-
+                //newResultRow.find(".content-link").attr("href", "/pages/food/foodDetails.html");
+                newResultRow.find(".content-link").attr("data-ID", foodID);
+                console.log(foodID);
+                //"MonAnID=" + 
                 $("#searchResultDisplay").append(newResultRow);
             }
         }
     });
 }
 
+$('body').on("click", ".resultRow", function () {
+    var currentItem = $(this);
+    var contentID = currentItem.find(".content-link").attr("data-ID");
+    console.log(contentID);
+    WinJS.Navigation.navigate("/pages/food/foodDetails.html", contentID);
+
+});
+
+
 //On document load
 WinJS.UI.Pages.define("/pages/search/searchResult.html", {
     ready: function (element, options) {
+        searchName = options;
+        $("#displaySearchKeyword").text(searchName);
         loadFoodSearchResult();
     },
 });

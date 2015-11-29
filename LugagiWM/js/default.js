@@ -116,9 +116,9 @@
 			    $("body").on("keypress", "#searchTextbox", function (e) {
 			        if ((e.keyCode == 10 || e.keyCode == 13)) {
 			            e.preventDefault();
-			            WinJS.Application.sessionState.searchKeyword = $("#searchTextbox").val();
-			            WinJS.Navigation.navigate("/pages/search/searchResult.html");
-			            WinJS.Navigation.addEventListener("navigated", navigate);
+			            var searchKeyWord = $("#searchTextbox").val();
+			            WinJS.Navigation.navigate("/pages/search/searchResult.html", searchKeyWord);
+			            //WinJS.Navigation.addEventListener("navigated", navigate);
 			        }
 			    });
                 
