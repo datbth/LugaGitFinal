@@ -1,4 +1,6 @@
-﻿// page variables
+﻿"use strict"
+
+// page variables
 var urlList =
     ["http://lugagi.com/script/smartPhoneAPI/landing/loadEditorPickedContent.php",
     "http://lugagi.com/script/smartPhoneAPI/landing/loadLatestFood.php",
@@ -8,16 +10,17 @@ var containerList = ["#editorPickedContainer", "#latestFoodContainer", "#mostLik
 var iconList = ["/images/editor-01.svg", "/images/monan-01.svg", "/images/bstuathich.svg"];
 var titleList = ["Editor's Picks", "Latest Dishes", "Most Liked Collections"]
 // startIndex and endIndex of each section
-var startIndexList = [0,0,0];
-var endIndexList = [0, 0, 0];
+var startIndexList;
+var endIndexList;
 
 
 // load random dish
 function randDish() {
+    var randContainer = $("#randContainer");
     // show progress ring
-    $("#randBreak").hide();
-    $("#changeRand").hide();
-    $("#randContainer").find("progress").show();
+    $("#randBreak").hide();    
+    $("#changeRand").hide();    
+    randContainer.find("progress").show();
     $.ajax({
         url: "http://lugagi.com/script/food/generateRandomFood.php",
         data: "Nothing",
@@ -25,12 +28,15 @@ function randDish() {
         async: true,
         cache: false,
         success: function (data) {
-            var fullImgURL = "http://lugagi.com/script/timthumb.php?src=/foodimages/" + data.Foods[0].ImageURL + "&w=500&h=200";
+            var source = data.Foods[0];
+            var fullImgURL = "http://lugagi.com/script/timthumb.php?src=/foodimages/" + source.ImageURL + "&w=500&h=200";
             $("#randImg").attr("src", fullImgURL);
-            $("#randName").text(data.Foods[0].MonAnName);
-            $("#randContainer").find(".contentID").text(data.Foods[0].MonAnID);
+            $("#randName").text(source.MonAnName);
+            var randItem = randContainer.find(".contentItem");
+            randItem.attr("data-ID", source.MonAnID);
+            randItem.attr("data-type", "food");
             // hide progress ring
-            $("#randContainer").find("progress").hide();
+            randContainer.find("progress").hide();
             $("#changeRand").show();
             $("#randBreak").show();
         }
@@ -44,9 +50,8 @@ function loadContent(itemElem, source) {
     itemElem.find(".contentName").text(source.ContentName);
     itemElem.find(".contentView").text(source.ContentViewCount + " ");
     itemElem.find(".contentLike").text(source.ContentLikeCount);
-    itemElem.find(".contentID").text(source.ContentID);
-    itemElem.find(".contentType").text(source.ContentType);
-    return "http://lugagi.com" + source.ContentLink;
+    itemElem.attr("data-ID", source.ContentID);
+    itemElem.attr("data-type", source.ContentType);
 };
 
 // calculate the endIndex
@@ -162,9 +167,10 @@ $(document).ready(function () {
     });
 
     $('body').on("click", ".contentItem", function () {
-        var contentType = $(this).find(".contentType").text();
+        var currentItem = $(this);
+        var contentType = currentItem.attr("data-type")
         if (contentType == "food") {
-            var contentID = $(this).find(".contentID").text();            
+            var contentID = currentItem.attr("data-ID");            
             WinJS.Navigation.navigate("/pages/food/foodDetails.html", contentID);
         }
         
@@ -175,12 +181,18 @@ $(document).ready(function () {
 // do when the page is ready
 WinJS.UI.Pages.define("/pages/index/index.html", {
     ready: function (element, options) {
+        // reset indexes;
+        startIndexList = [0, 0, 0];
+        endIndexList = [0, 0, 0];
+
         // generate random dish
         randDish();
 
         // generate random startIndex
-        var startIndex = Math.round(Math.random() * 19) * 2;
+        var startIndex = Math.round(Math.random() * 9) * 2;
         startIndexList[0] = startIndex;
+        startIndexList[1] = startIndex;
+        startIndexList[2] = startIndex;
 
         // load all the sections
         var noOfSections = urlList.length;
