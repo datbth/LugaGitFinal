@@ -9,15 +9,14 @@
 }
 
 .specialButton{
-    border: 1px solid rgb(255,64,129);
+    /*border: 1px solid rgb(255,64,129);*/
     border-radius: 4px;
-    color: rgb(255,64,129);
-    background-color: white;
+    background-color: rgb(255,64,129);
 }
 
 .specialButton:hover{
-    color: #337ab7;
-    border: 1px solid #337ab7;
+    /*background-color: #337ab7;*/
+    /*border: 1px solid #337ab7;*/
 }
 
 .previousButton, .nextButton{

@@ -68,6 +68,7 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\food\foodDetails.css" />
     <Content Include="css\index\index.css" />
+    <Content Include="css\recommendation\ingredientBasedSuggestion.css" />
     <Content Include="css\recommendation\weekMenuSuggestionFilter.css" />
     <Content Include="default.html" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
@@ -116,6 +117,7 @@
     <Content Include="pages\search\searchResult.html" />
     <Content Include="script\food\foodDetails.js" />
     <Content Include="script\index\index.js" />
+    <Content Include="script\recommendation\ingredientBasedSuggestion.js" />
     <Content Include="script\recommendation\weekMenuSuggestionFilter.js" />
     <Content Include="script\recommendation\weekMenuSuggestionContent.js" />
     <Content Include="script\search\searchFood.js" />

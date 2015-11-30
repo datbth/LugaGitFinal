@@ -11,8 +11,8 @@ div {
 }
 
 #refreshButton, #newFood {
-    border-radius: 4px;
-    background-color: white;
+    /*border-radius: 4px;
+    background-color: white;*/
     margin-bottom: 5px;
     margin-left: 2.5%;
 }
