@@ -8,7 +8,7 @@ var urlList =
 var itemList = [".editorPickedItem", ".latestFoodItem", ".mostLikeCollectionItem"];
 var containerList = ["#editorPickedContainer", "#latestFoodContainer", "#mostLikeCollectionContainer"];
 var iconList = ["/images/editor-01.svg", "/images/monan-01.svg", "/images/bstuathich.svg"];
-var titleList = ["Editor's Picks", "Latest Dishes", "Most Liked Collections"]
+var titleList = ["Editor's Picks", "Latest Dishes", "Featured Collections"]
 // startIndex and endIndex of each section
 var startIndexList;
 var endIndexList;
@@ -189,10 +189,10 @@ WinJS.UI.Pages.define("/pages/index/index.html", {
         randDish();
 
         // generate random startIndex
-        var startIndex = Math.round(Math.random() * 9) * 2;
-        startIndexList[0] = startIndex;
-        startIndexList[1] = startIndex;
-        startIndexList[2] = startIndex;
+        //var startIndex = Math.round(Math.random() * 9) * 2;
+        //startIndexList[0] = startIndex;
+        //startIndexList[1] = startIndex;
+        //startIndexList[2] = startIndex;
 
         // load all the sections
         var noOfSections = urlList.length;
