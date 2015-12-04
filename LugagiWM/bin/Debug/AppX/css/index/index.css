@@ -1,0 +1,62 @@
+﻿
+.win-ring{
+    width: 58.25px;
+    height: 58.25px;
+}
+
+.win-button{
+    border-radius: 4px;
+}
+
+.specialButton{
+    border: 1px solid rgb(255,64,129);
+    border-radius: 4px;
+    color: rgb(255,64,129);
+    background-color: white;
+}
+
+.specialButton:hover{
+    color: #337ab7;
+    border: 1px solid #337ab7;
+}
+
+.previousButton, .nextButton{
+    opacity: 0.3;
+    border: none;
+}
+
+.previousButton:hover, .nextButton:hover {
+    cursor: pointer;
+}
+
+.contentView, .contentLike{
+    color: #808080;
+}
+
+h4 , h3, h6{
+    color: rgb(255,64,129);
+}
+
+h4:hover, h3:hover, h6:hover{
+    color: #337ab7;
+}
+
+h6{
+    font-size: 14px;
+}
+
+h5{
+    font-size: 16px;
+}
+
+
+hr{
+    height: 10px;
+    border-style: solid;
+    border-color: #da5849;
+    border-width: 1px 0 0 0;
+}
+
+.contentItem:hover, .menuContentItem:hover {
+    cursor: pointer;
+}

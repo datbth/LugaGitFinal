@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="/css/index/index.css" rel="stylesheet" />
+    <script src="/script/index/index.js"></script>
+</head>
+
+<body class="win-type-body">
+
+    <!-- Head section-->
+    <div id="header" class="container-fluid  hidden-xs" style="background-color: #da5849; color: #ffffff">
+	    <div class="row"><p class="text-center">Don't know what to cook today? Let Lugagi help you!</p></div>
+
+	    <div class="row">
+
+		    <!-- Ingredient-based suggestion -->
+		    <div class="col-xs-6 col-sm-4 col-md-3 col-sm-offset-2 col-md-offset-3" id="goToIngredient"><p>
+			    <img src="/images/nguyenlieu-01.svg" class="img-responsive center-block">
+			    <button class="center-block win-button">Suggest based on ingredients</button>
+		    </div>
+
+		    <!-- Week menu suggestion -->
+		    <div class="col-xs-6 col-sm-4 col-md-3" id="goToWeek">
+			    <img src="/images/thucdontuan-01.svg" class="img-responsive center-block">
+			    <button class="center-block win-button">Suggest menu for whole week</button>
+		    </div>
+            <div id="test"></div>
+	    </div>
+    </div>
+
+
+    <!-- Main Section --> 
+    <div class="container-fluid">
+
+        <!--Random suggestion -->
+        <div id="randContainer" class="row" style="text-align:center">
+            <div class="col-xs-12">
+                <p><br /></p>
+                <h5>What to cook today?</h5>
+                <small style="color:#777">
+                    A random dish will be chosen for you.<br />
+                </small>
+                <p><br /></p>
+                <div class="contentItem" data-id="" data-type="">
+                    <h4 id="randName" class="text-center"></h4>
+                    <small><br /></small>
+                    <small class="contentID" style="display:none"></small>
+                    <small class="contentType" style="display:none">food</small>
+                    <img id="randImg" src="" class="img-responsive center-block" />
+                </div>
+                <p id="randBreak"><br /></p>
+                <button id="changeRand" class="center-block win-button specialButton">Change dish</button>
+                <progress style="display:none" class="win-ring"></progress>
+            </div>
+        </div>
+
+        <!-- Chosen by lugagi-->
+        <p><br /><hr /></p>
+        <div id="sectionTemplate" class="section">
+            <div class="row" style="text-align:center">
+                <div>
+                    <img src="" width="80" class="sectionIcon img-responsive center-block" />
+                </div>
+                <div class="col-xs-3 col-sm-2">
+                    <img class="previousButton img-responsive center-block" src="/images/ic_navigate_previous_48px-128 - Copy.png" width="50" height="60" />
+                </div>
+                <div class="col-xs-6 col-sm-4 col-sm-offset-2" style="text-align:center">
+                    <p><br /></p>
+                    <h4 class="sectionTitle"></h4>
+                </div>
+                <div class="col-xs-3 col-sm-2 col-sm-offset-2">
+                    <img class="nextButton img-responsive center-block" src="/images/ic_navigate_next_48px-128.png" width="50" height="60" />
+                </div>
+            </div>
+            <div class="sectionContainer row" style="text-align:center">
+                <div class="row pBar">
+                    <p><br /><br /></p>
+                </div>
+                <div class="contentItem col-xs-6 col-sm-4 col-md-3 col-lg-2" data-id="" data-type="">
+                    <img class="contentImg img-responsive" src="" />
+                    <h6 class="contentName"></h6>
+                    <small>
+                        <span class="glyphicon glyphicon-eye-open contentView"></span>
+                        <span class="glyphicon glyphicon-heart contentLike"></span>                        
+                    </small>
+                </div>
+                <div class="contentItem col-xs-6 col-sm-4 col-md-3 col-lg-2" data-id="" data-type="">
+                    <img class="contentImg img-responsive" src="" />
+                    <h6 class="contentName"></h6>
+                    <small>
+                        <span class="glyphicon glyphicon-eye-open contentView"></span>
+                        <span class="glyphicon glyphicon-heart contentLike"></span>
+                    </small>
+                </div>
+                <div class="contentItem hidden-xs col-sm-4 col-md-3 col-lg-2" data-id="" data-type="">
+                    <img class="contentImg img-responsive" src="" />
+                    <h6 class="contentName"></h6>
+                    <small>
+                        <span class="glyphicon glyphicon-eye-open contentView"></span>
+                        <span class="glyphicon glyphicon-heart contentLike"></span>
+                    </small>
+                </div>
+                <div class="contentItem hidden-xs hidden-sm col-md-3 col-lg-2" data-id="" data-type="">
+                    <img class="contentImg img-responsive" src="" />
+                    <h6 class="contentName"></h6>
+                    <small>
+                        <span class="glyphicon glyphicon-eye-open contentView"></span>
+                        <span class="glyphicon glyphicon-heart contentLike"></span>
+                    </small>
+                </div>
+                <div class="contentItem hidden-xs hidden-sm hidden-md col-lg-2" data-id="" data-type="">
+                    <img class="contentImg img-responsive" src="" />
+                    <h6 class="contentName"></h6>
+                    <small>
+                        <span class="glyphicon glyphicon-eye-open contentView"></span>
+                        <span class="glyphicon glyphicon-heart contentLike"></span>
+                    </small>
+                </div>
+                <div class="contentItem hidden-xs hidden-sm hidden-md col-lg-2" data-id="" data-type="">
+                    <img class="contentImg img-responsive" src="" />
+                    <h6 class="contentName"></h6>
+                    <small>
+                        <span class="glyphicon glyphicon-eye-open contentView"></span>
+                        <span class="glyphicon glyphicon-heart contentLike"></span>
+                    </small>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Latest Dishes -->
+        <p><br /><hr /></p>
+        <div class="section"></div>
+        
+        <!-- Most Liked Collections -->
+        <p><br /><hr /></p>
+        <div class="section"></div>
+        
+        <p><br /></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Lugagi - Food suggestion app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- WinJS references -->
+    <link href="/WinJS/css/ui-light.css" rel="stylesheet" />
+    <script src="/WinJS/js/base.js"></script>
+    <script src="/WinJS/js/ui.js"></script>
+
+    <!-- Lugagi references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+    <script src="/js/jquery.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="/js/default.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="components/picaresize/pica.min.js"></script>
+
+
+</head>
+<body class="win-type-body">
+    <div id="app">
+        <!-- Toolbar area -->
+        <div class="row" id="appToolbar">
+            <div class="header">
+                <button class="win-splitviewpanetoggle win-splitviewpanetoggle-outter"
+                        data-win-control="WinJS.UI.SplitViewPaneToggle"
+                        data-win-options="{ splitView: select('.splitView') }"></button>
+                <button class="pull-right" id="addNewFoodToolbarCommand" data-win-control="WinJS.UI.Command" data-win-options="{icon: 'add'}"></button>
+                <button class="pull-right" id="navSearchButton" data-win-control="WinJS.UI.Command" data-win-options="{icon: 'find'}"></button>
+                <input class="win-textbox pull-right" id="searchTextbox" style="display:none" placeholder="Input food name..." />
+            </div>
+        </div>
+        <div id="mySplitView" class="splitView" data-win-control="WinJS.UI.SplitView" data-win-options="{
+            openedDisplayMode: 'overlay',
+            closedDisplayMode: 'inline'
+        }">
+
+            <!-- Pane area -->
+            <div class="panearea" id="panearea">
+                <div class="nav-commands">
+                    <div data-win-control="WinJS.UI.SplitViewCommand" 
+                            data-win-options="{ label: 'Home', icon: 'home', location: '/pages/index.html'}" id="nav-goHome"></div>
+                    <div data-win-control="WinJS.UI.SplitViewCommand" 
+                            data-win-options="{ label: 'Create new', icon: 'add', location: '/pages/food/addNewFood.html'}" id="nav-addNewFood"></div>
+                    <div data-win-control="WinJS.UI.SplitViewCommand" 
+                            data-win-options="{ label: 'Ingredient-based suggestion', icon: 'rotate'}" id="nav-recommendation-ingredient"></div>
+                    <div data-win-control="WinJS.UI.SplitViewCommand" 
+                            data-win-options="{ label: 'Week menu suggestion', icon: 'calendar'}" id="nav-recommendation-week-menu"></div>
+                </div>
+            </div>
+            <!-- Content area -->
+
+            <div class="container-fluid">
+                <div class="row" id="content-host">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
