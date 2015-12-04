@@ -48,11 +48,16 @@ pages\recommendation\ingredientBasedSuggestion.html
 pages\recommendation\weekMenuSuggestionContent.html
 pages\recommendation\weekMenuSuggestionFilter.html
 pages\search\searchResult.html
+pages\userdata\loginform.html
+pages\userdata\profile.html
+script\food\addNewFood.js
 script\food\foodDetails.js
 script\index\index.js
 script\recommendation\weekMenuSuggestionContent.js
 script\recommendation\weekMenuSuggestionFilter.js
 script\search\searchFood.js
+script\userdata\loginLogout\login.js
+script\userdata\loginLogout\logout.js
 WinJS\css\ui-dark.css
 WinJS\css\ui-light.css
 WinJS\fonts\Symbols.ttf
