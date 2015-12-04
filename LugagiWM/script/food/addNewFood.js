@@ -98,12 +98,6 @@ $("body").on("change", "#fileToUpload", function (e) {
 });
 //*************** End of functions to resize images ********************
 
-function resizeImage() {
-
-
-
-}
-
 //Common function to add new food to the database
 function addFood(action) {
 
@@ -111,21 +105,22 @@ function addFood(action) {
     if (tenMonAn) {
         var foodData = $("#foodInfoForm").serialize();
         foodData = foodData + "&CurrentUserID=" + WinJS.Application.sessionState.currentUserID;
-        console.debug(foodData);
+        console.log(foodData);
         $.ajax({
             url: "http://lugagi.com/script/smartPhoneAPI/food/themmonan.php",
             type: "POST",
             data: foodData,
             dataType: "json",
-            async: true,
+            async: false,
             beforeSend: function () {
                 $("#waitingSpinner").css("display", "block");
                 $("#addNewFoodButton").attr("disabled", true);
             },
             success: function (data) {
                 //Get data from the database
-
+                console.log(data);
                 for (var i in data.InsertNewFoodResult) {
+                    
                     var status = data.InsertNewFoodResult[i].Status;
                     var monAnID = data.InsertNewFoodResult[i].MonAnID;
                     var monAnName = data.InsertNewFoodResult[i].MonAnName;

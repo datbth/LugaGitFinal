@@ -30,6 +30,25 @@
 			    var systemNavigation = Windows.UI.Core.SystemNavigationManager.getForCurrentView();
 			    systemNavigation.appViewBackButtonVisibility = Windows.UI.Core.AppViewBackButtonVisibility.visible;
 
+		        //Do auto login
+		        //Get auto login data
+			    var currentUserID = Windows.Storage.ApplicationData.current.roamingSettings.values["currentUserID"]
+
+			    if (currentUserID) {
+			        currentUsername = Windows.Storage.ApplicationData.current.roamingSettings.values["currentUsername"]
+			        profileImageURL = Windows.Storage.ApplicationData.current.roamingSettings.values["profileImageURL"]
+
+			        //Session variables
+			        WinJS.Application.sessionState.currentUserID = currentUserID;
+			        WinJS.Application.sessionState.currentUsername = currentUsername;
+			        WinJS.Application.sessionState.profileImageURL = profileImageURL;
+
+			        //Change UI to reflect to logged in success
+			        $("#nav-login").find(".win-splitviewcommand-label").text(currentUsername);
+			        var imgProfilePicture = "<img src='" + profileImageURL + "' width=30 height=30 class='img-circle' style='margin-top:-5px; margin-left:-7px;'>";
+			        $("#nav-login").find(".win-splitviewcommand-icon").html(imgProfilePicture);
+			    }
+
                 // app functions 
 			    /* Author: Dat - Modified date: 18-11-2015 */
 		        // function to hide pane in small window size
