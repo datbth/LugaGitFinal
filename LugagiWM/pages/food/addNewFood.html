@@ -1,9 +1,208 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <script src="/script/food/addNewFood.js"></script>
+    <script src="/components/picaresize/pica.min.js"></script>
+    <script src="/js/default.js"></script>
+
+    <style>
+        #waitingSpinner {
+            width: 100px;
+            height: 100px;
+        }
+
+        #imageLoadingSpinner {
+            width: 80px;
+            height: 80px;
+        }
+    </style>
 </head>
+
 <body>
-    <div>Add new food</div>
+    <div class="row" style="margin-bottom: 30px;">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+
+            <form id="foodInfoForm" role="form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <div class="panel panel-material-deep-purple-500">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Tên món ăn</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <input class="win-textbox" type="text" name="TenMon" id="TenMon" autocomplete="off"
+                                       placeholder="Nhập tên món ăn vào đây" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="panel panel-material-deep-purple-500">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Cách chế biến</h3>
+                        </div>
+                        <div class="panel-body">
+                            <select name="LoaiMonAn" id="LoaiMonAn" class="win-dropdown"></select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit image for the food -->
+                <div class="form-group">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Chọn ảnh cho món ăn</h3>
+                        </div>
+                        <div class="panel-body">
+                            <input type="file" class="win-button win-button-file" name="fileToUpload" id="fileToUpload" />
+                            <input type="hidden" name="foodImageString" id="foodImageString" />
+                            <br>
+
+                            <progress class="win-progress-ring center-block" id="imageLoadingSpinner" style="display:none"></progress>
+
+                            <!-- Original image canvas -->
+                            <canvas id="sourceimagecanvas" width="900" height="300" class="img-responsive" style="display:none"></canvas>
+                            <!-- Canvas for resized image -->
+                            <canvas id="destimagecanvas" class="img-responsive" style="display:none"></canvas>
+                            <!-- Preview image -->
+                            <img src="" id="food-image-preview" class="img-responsive" style="display:none">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Mô tả</h3>
+                            <p class="text-success">Nếu muốn nhập công thức, vui lòng dùng nút ngay bên dưới</p>
+                        </div>
+                        <div class="panel-body">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <textarea class="win-textarea" type="text" rows="3" name="MoTa" id="MoTa" placeholder="Mô tả công dụng, mùi vị, thường dùng dịp nào..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button class="recipeEdit btn-block win-button win-button-primary"
+                            href="/pages/foodpost/recipe/editrecipe.php?MonAnID=<?php echo $monanid?>"
+                            type="button" id="addNewFoodAndRecipe" name="submit">
+                        THÊM CÔNG THỨC
+                    </button>
+                    <p class="text-success">Nếu chưa có thời gian, bạn có thể bỏ qua và thêm công thức sau cũng được</p>
+                </div>
+
+                <br><br>
+
+                <h3><a data-toggle="collapse" href="#collapse1" id="show-more-info">Thông tin thêm <span class="caret"></span></a></h3>
+                <div class="panel-group" id="food-additional-info" style="display:none">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"></h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <div class="form-group">
+                                    <div class="panel panel-material-deep-purple-500">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Độ khó</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <input class="win-slider" type="range" id="dokhoslider" name="dokhoslider" min="1" max="5" value="2" tabindex="0" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="panel panel-material-deep-purple-500">
+                                        <div class="panel-heading">
+                                            <h5 class="panel-title">Năng lượng (Kilo calo)</h5>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="mdl-textfield mdl-js-textfield">
+                                                <input class="win-textbox" type="text" name="Kcal" id="Kcal" placeholder="Đơn vị: KCal, bạn chỉ cần nhập số..." />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Select stand-alone type of food -->
+                                <div class="panel">
+                                    <div class="panel-heading">
+                                        <h5 class="panel-title">Thông tin thêm</h5>
+                                    </div>
+                                    <div class="panel-body">
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="AnMotMon">
+                                            <input type="checkbox" name="AnMotMon[]" id="AnMotMon" class="win-checkbox" value="1" />
+                                            <span class="mdl-checkbox__label">Có thể ăn riêng một món</span>
+                                        </label>
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="AnSang">
+                                            <input type="checkbox" name="AnSang" id="AnSang" class="win-checkbox" value="Y" />
+                                            <span class="mdl-checkbox__label">Phù hợp để ăn sáng</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Select nutrition type of food -->
+                                <div class="panel">
+                                    <div class="panel-heading">
+                                        <h5 class="panel-title">Loại dinh dưỡng</h5>
+                                    </div>
+                                    <div class="panel-body">
+
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="AnKieng">
+                                            <input type="checkbox" name="CheDoDinhDuong[]" id="AnKieng" class="win-checkbox" value="1" />
+                                            <span class="mdl-checkbox__label">Ăn kiêng</span>
+                                        </label>
+
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="TreEm">
+                                            <input type="checkbox" name="CheDoDinhDuong[]" id="TreEm" class="win-checkbox" value="2" />
+                                            <span class="mdl-checkbox__label">Trẻ em</span>
+                                        </label>
+
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="AnChay">
+                                            <input type="checkbox" name="CheDoDinhDuong[]" id="AnChay" class="win-checkbox" value="3" />
+                                            <span class="mdl-checkbox__label">Ăn chay</span>
+                                        </label>
+
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="AnVat">
+                                            <input type="checkbox" name="CheDoDinhDuong[]" id="AnVat" class="win-checkbox" value="4" />
+                                            <span class="mdl-checkbox__label">Ăn vặt</span>
+                                        </label>
+
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="TamBo">
+                                            <input type="checkbox" name="CheDoDinhDuong[]" id="TamBo" class="win-checkbox" value="5" />
+                                            <span class="mdl-checkbox__label">Tẩm bổ</span>
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- Submit button the whole form -->
+                <div class="form-group">
+                    <button type="button" id="addNewFoodButton" name="submit" class="win-button win-button-primary pull-right">
+                        <span class="glyphicon glyphicon-plus"></span>  Thêm món
+                    </button>
+
+                    <button type="button" name="submit" class="win-button pull-left" onclick="window.history.back()">
+                        <span class="glyphicon glyphicon-remove"></span>  Hủy bỏ
+                    </button>
+                </div>
+
+            </form>
+
+            <progress class="win-progress-ring center-block" id="waitingSpinner" style="display:none"></progress>
+
+        </div>
+    </div>
 </body>
 </html>

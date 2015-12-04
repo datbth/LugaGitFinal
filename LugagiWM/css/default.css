@@ -80,11 +80,11 @@ button.win-splitviewpanetoggle {
     width: 100%;
 }
 
-.form-control input, .form-control textarea, .win-slider {
+.form-full input, .form-control textarea, .win-slider {
     width: 100%;
 }
 
-.form-control select {
+.form-full select {
     width: 100%;
 }
 
