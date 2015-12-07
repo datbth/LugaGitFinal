@@ -1,11 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-<<<<<<< HEAD
-    <ReferenceCachePath>C:\Users\PC01\AppData\Local\Temp\b2dyktl3_LugagiWM_refcache</ReferenceCachePath>
-=======
-    <ReferenceCachePath>C:\Users\Luan\AppData\Local\Temp\l3zgpu4f_LugagiWM_refcache</ReferenceCachePath>
->>>>>>> AddNewFood
+    <ReferenceCachePath>C:\Users\Caval\AppData\Local\Temp\b2dyktl3_LugagiWM_refcache</ReferenceCachePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>AppHostLocalDebugger</DebuggerFlavor>
