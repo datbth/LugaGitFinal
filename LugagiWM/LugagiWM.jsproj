@@ -115,12 +115,17 @@
     <Content Include="pages\recommendation\weekMenuSuggestionContent.html" />
     <Content Include="pages\recommendation\weekMenuSuggestionFilter.html" />
     <Content Include="pages\search\searchResult.html" />
+    <Content Include="pages\userdata\loginform.html" />
+    <Content Include="pages\userdata\profile.html" />
+    <Content Include="script\food\addNewFood.js" />
     <Content Include="script\food\foodDetails.js" />
     <Content Include="script\index\index.js" />
     <Content Include="script\recommendation\ingredientBasedSuggestion.js" />
     <Content Include="script\recommendation\weekMenuSuggestionFilter.js" />
     <Content Include="script\recommendation\weekMenuSuggestionContent.js" />
     <Content Include="script\search\searchFood.js" />
+    <Content Include="script\userdata\loginLogout\login.js" />
+    <Content Include="script\userdata\loginLogout\logout.js" />
     <Content Include="WinJS\css\ui-dark.css" />
     <Content Include="WinJS\css\ui-light.css" />
     <Content Include="WinJS\fonts\Symbols.ttf" />

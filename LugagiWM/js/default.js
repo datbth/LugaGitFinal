@@ -93,6 +93,10 @@
 			        WinJS.Navigation.navigate("/pages/recommendation/weekMenuSuggestionFilter.html"); // navigate to weekMenuSuggestion page
 			        WinJS.Navigation.addEventListener("navigated", navigate);
 			    });
+			    $('#nav-login').click(function () {
+			        WinJS.Navigation.navigate("/pages/userdata/loginform.html"); // navigate to weekMenuSuggestion page
+			        WinJS.Navigation.addEventListener("navigated", navigate);
+			    });
 
 		        //Search button in the navigation bar
 		        //Code to show or hide the textbox
@@ -122,6 +126,11 @@
 			        }
 			    });
                 
+			    $('#addNewFoodToolbarCommand').click(function () {
+			        WinJS.Navigation.navigate("/pages/food/addNewFood.html"); // navigate to weekMenuSuggestion page
+			        WinJS.Navigation.addEventListener("navigated", navigate);
+			    });
+			    
 		    }));
 
 	    }
@@ -141,3 +150,70 @@
 
     //Starting the app, do not remove
     app.start();
+
+    function saveUser(currentUserID, currentUsername, profileImageURL) {
+        //Session variables
+        WinJS.Application.sessionState.currentUserID = currentUserID;
+        WinJS.Application.sessionState.currentUsername = currentUsername;
+        WinJS.Application.sessionState.profileImageURL = profileImageURL;
+
+        //Autologin
+        Windows.Storage.ApplicationData.current.roamingSettings.values["currentUserID"] = currentUserID;
+        Windows.Storage.ApplicationData.current.roamingSettings.values["currentUsername"] = currentUsername;
+        Windows.Storage.ApplicationData.current.roamingSettings.values["profileImageURL"] = profileImageURL
+
+        //Change UI to reflect to logged in success
+        $("#nav-login").find(".win-splitviewcommand-label").text(currentUsername);
+        var imgProfilePicture = "<img src='" + profileImageURL + "' width=30 height=30 class='img-circle' style='margin-top:-5px; margin-left:-7px;'>";
+        $("#nav-login").find(".win-splitviewcommand-icon").html(imgProfilePicture);
+    }
+
+    function removeUser() {
+        //Session variables
+        WinJS.Application.sessionState.currentUserID = "";
+        WinJS.Application.sessionState.currentUsername = "";
+        WinJS.Application.sessionState.profileImageURL = "";
+
+        //Autologin
+        Windows.Storage.ApplicationData.current.roamingSettings.values["currentUserID"] = "";
+        Windows.Storage.ApplicationData.current.roamingSettings.values["currentUsername"] = "";
+        Windows.Storage.ApplicationData.current.roamingSettings.values["profileImageURL"] = ""
+
+        //Change UI to reflect to logged out success
+        WinJS.UI.processAll($("#panearea")[0]);
+    }
+
+
+    function alertBox(message) {
+        var msg = new Windows.UI.Popups.MessageDialog(message);
+
+        // Add commands and set their command handlers
+        msg.commands.append(new Windows.UI.Popups.UICommand("OK"));
+
+        // Set the command that will be invoked by default
+        msg.defaultCommandIndex = 0;
+
+        // Set the command to be invoked when escape is pressed
+        msg.cancelCommandIndex = 0;
+
+        // Show the message dialog
+        msg.showAsync();
+    }
+
+    function truncate(s, n) {
+        var cut = s.indexOf(' ', n);
+        if (cut == -1) return s;
+        return s.substring(0, cut) + "...";
+    }
+
+    //Get parameter from the string separated by "&"
+    function getStringParameter(sString, sParam) {
+        var sPageURL = sString;
+        var sURLVariables = sPageURL.split('&');
+        for (var i = 0; i < sURLVariables.length; i++) {
+            var sParameterName = sURLVariables[i].split('=');
+            if (sParameterName[0] == sParam) {
+                return sParameterName[1];
+            }
+        }
+    }

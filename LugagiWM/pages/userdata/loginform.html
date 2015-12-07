@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="/script/userdata/loginLogout/login.js"></script>
+    <script src="/js/default.js"></script>
+</head>
+
+<body>
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+        <form class="form-horizontal" role="form" action="/script/userdata/loginLogout/login.php" method="post" id="loginFormData">
+            <div class="form-group">
+                <div class="form-full">
+                    <input class="win-textbox" type="text" name="username" id="username" placeholder="Tên truy cập" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-full">
+                    <input class="win-textbox" type="password" name="password" id="password" placeholder="Mật khẩu" />
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="hidden" value="loginform" name="loginform">
+                <button type="button" id="loginButton"
+                        class="win-button win-button-primary btn-block">
+                    Đăng nhập
+                </button>
+            </div>
+            <br>
+            <div class="form-group">
+                <label></label>
+                <button type="button" name="facebookLogin" id="facebookLogin" onclick="fbLogin()"
+                        class="win-button btn-block">
+                    <i class="fa fa-facebook"></i>
+                    Đăng nhập bằng Facebook
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+        <strong><h6 class="creataccounttext"><a href="/pages/user/signup/signupform.php">Chưa là thành viên? Đăng kí tài khoản mới</a> hoặc đăng nhập bằng Facebook</h6></strong>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+        <p class="text-muted"><a href="/pages/user/resetPassword.php">Quên mật khẩu? Nhấn vào đây!</a></p>
+    </div>
+</body>
+</html>
