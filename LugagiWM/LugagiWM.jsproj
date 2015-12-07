@@ -104,8 +104,10 @@
     <Content Include="js\common.js" />
     <Content Include="js\default.js" />
     <Content Include="css\default.css" />
+    <Content Include="js\fb.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\npm.js" />
+    <Content Include="packages.config" />
     <Content Include="pages\food\addNewFood.html" />
     <Content Include="pages\food\foodDetails.html" />
     <Content Include="pages\index\index.html" />
@@ -122,6 +124,7 @@
     <Content Include="script\recommendation\weekMenuSuggestionFilter.js" />
     <Content Include="script\recommendation\weekMenuSuggestionContent.js" />
     <Content Include="script\search\searchFood.js" />
+    <Content Include="script\userdata\loginLogout\fblogin.js" />
     <Content Include="script\userdata\loginLogout\login.js" />
     <Content Include="script\userdata\loginLogout\logout.js" />
     <Content Include="WinJS\css\ui-dark.css" />
