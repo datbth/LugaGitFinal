@@ -130,7 +130,7 @@ function addFood(action) {
                 //Redirect the user to the page
                 if (status == "success") {
                     if (action == "add-only") {
-
+                        WinJS.Navigation.navigate("/pages/food/foodDetails.html", monAnID);
                     }
                     else if (action == "add-then-recipe") {
 
