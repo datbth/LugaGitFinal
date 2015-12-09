@@ -26,7 +26,7 @@ function ingredientTest() {
                 newFood.css("display", "block");
                 $("#suggestionContent").append(newFood);
             }
-            
+           
         }
     });
     $("progress").hide();
