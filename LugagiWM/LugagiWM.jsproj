@@ -59,6 +59,7 @@
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>7F8118AA19397ABCA2CB5D887A8E7694851DD3FE</PackageCertificateThumbprint>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
@@ -66,6 +67,7 @@
     </AppxManifest>
     <Content Include="components\picaresize\pica.min.js" />
     <Content Include="css\bootstrap.css" />
+    <Content Include="css\collection\collection.css" />
     <Content Include="css\food\foodDetails.css" />
     <Content Include="css\index\index.css" />
     <Content Include="css\recommendation\ingredientBasedSuggestion.css" />
@@ -107,6 +109,7 @@
     <Content Include="css\default.css" />
     <Content Include="js\jquery.min.js" />
     <Content Include="js\npm.js" />
+    <Content Include="pages\collection\collection.html" />
     <Content Include="pages\food\addNewFood.html" />
     <Content Include="pages\food\foodDetails.html" />
     <Content Include="pages\index\index.html" />
@@ -117,6 +120,7 @@
     <Content Include="pages\search\searchResult.html" />
     <Content Include="pages\userdata\loginform.html" />
     <Content Include="pages\userdata\profile.html" />
+    <Content Include="script\collection\collection.js" />
     <Content Include="script\food\addNewFood.js" />
     <Content Include="script\food\foodDetails.js" />
     <Content Include="script\index\index.js" />
