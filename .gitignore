@@ -18,7 +18,10 @@ $RECYCLE.BIN/
 *.lnk
 
 # Visual studio project
+*.suo
 *.user
+LugagiWM/bin/
+LugagiWM/bld/
 
 # =========================
 # Operating System Files
