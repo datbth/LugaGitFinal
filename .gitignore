@@ -17,11 +17,25 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# Visual studio project
-*.suo
+#Ignore files build by Visual Studio
 *.user
-LugagiWM/bin/
-LugagiWM/bld/
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.bak
+*.cache
+*.ilk
+*.log
+[Bb]in
+[Dd]ebug*/
+*.sbr
+obj/
+[Rr]elease*/
+_ReSharper*/
 
 # =========================
 # Operating System Files
