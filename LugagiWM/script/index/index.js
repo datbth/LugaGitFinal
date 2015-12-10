@@ -1,5 +1,4 @@
-﻿"use strict"
-
+﻿
 // page variables
 var urlList =
     ["http://lugagi.com/script/smartPhoneAPI/landing/loadEditorPickedContent.php",
@@ -12,7 +11,6 @@ var titleList = ["Editor's Picks", "Latest Dishes", "Featured Collections"]
 // startIndex and endIndex of each section
 var startIndexList;
 var endIndexList;
-
 
 // load random dish
 function randDish() {
@@ -172,6 +170,9 @@ $(document).ready(function () {
         if (contentType == "food") {
             var contentID = currentItem.attr("data-ID");            
             WinJS.Navigation.navigate("/pages/food/foodDetails.html", contentID);
+        } else if (contentType = "collection") {
+            var contentID = currentItem.attr("data-ID");
+            WinJS.Navigation.navigate("/pages/collection/collection.html", contentID);
         }
         
     });

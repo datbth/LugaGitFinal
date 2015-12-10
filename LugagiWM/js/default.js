@@ -39,28 +39,17 @@
 			            splitView.closedDisplayMode = WinJS.UI.SplitView.ClosedDisplayMode.none
 			            windowSize = 'small'
 			        } else {
-			            splitView.openedDisplayMode = WinJS.UI.SplitView.OpenedDisplayMode.inline
+			            splitView.openedDisplayMode = WinJS.UI.SplitView.OpenedDisplayMode.overlay
 			            splitView.closedDisplayMode = WinJS.UI.SplitView.ClosedDisplayMode.inline
 			        }
 			    };
 
 		        //function to navigate between pages
-			    function navigate(eventObject) {
+			    function navigateDefault(eventObject) {
 			        if (windowSize == 'small') {
 			            splitView.closePane()
 			        }
-			        var url = eventObject.detail.location,
-                            host = $("#content-host")[0];
-			        // unload content
-			        host.winControl && host.winControl.unload && host.winControl.unload();
-			        WinJS.Utilities.empty(host);
-			        // load new content
-			        eventObject.detail.setPromise(
-                        WinJS.UI.Pages.render(url, host, eventObject.detail.state).then(function () {
-                            WinJS.Application.sessionState.lastUrl = url;
-                            WinJS.UI.Animation.enterPage(host);
-                            WinJS.UI.processAll()
-                        }))
+			        navigate(eventObject);
 			    };
                 // resize the pane based on window size
 			    WinJS.UI.processAll().then(function () {
@@ -71,9 +60,9 @@
 
                 // load index page when app initiates
 			    $('document').ready(function () {
-			        WinJS.Navigation.navigate("/pages/index/index.html"); // navigate to Home page
+			        WinJS.Navigation.navigate("/pages/index/index.html");
 			        WinJS.Navigation.addEventListener("navigated", navigate);
-			        WinJS.Navigation.navigate("/pages/index/index.html"); 
+			        WinJS.Navigation.navigate("/pages/index/index.html"); // navigate to Home page
 			    })
 
                 // bind events to navigation menu
@@ -84,18 +73,22 @@
 			    $('#nav-addNewFood').click(function () {
 			        WinJS.Navigation.navigate("/pages/food/addNewFood.html"); // navigate to addNewFood page
 			        WinJS.Navigation.addEventListener("navigated", navigate);
+			        //WinJS.Navigation.navigate("/pages/food/addNewFood.html");
 			    });
 			    $('#nav-recommendation-ingredient').click(function () {
 			        WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestion.html"); // navigate to ingredientBasedSuggestion page
 			        WinJS.Navigation.addEventListener("navigated", navigate);
+			        //WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestion.html");
 			    });
 			    $('#nav-recommendation-week-menu').click(function () {
 			        WinJS.Navigation.navigate("/pages/recommendation/weekMenuSuggestionFilter.html"); // navigate to weekMenuSuggestion page
 			        WinJS.Navigation.addEventListener("navigated", navigate);
+			        //WinJS.Navigation.navigate("/pages/recommendation/weekMenuSuggestionFilter.html");
 			    });
 			    $('#nav-login').click(function () {
 			        WinJS.Navigation.navigate("/pages/userdata/loginform.html"); // navigate to weekMenuSuggestion page
 			        WinJS.Navigation.addEventListener("navigated", navigate);
+			        //WinJS.Navigation.navigate("/pages/userdata/loginform.html");
 			    });
 
 		        //Search button in the navigation bar
@@ -122,7 +115,7 @@
 			            e.preventDefault();
 			            var searchKeyWord = $("#searchTextbox").val();
 			            WinJS.Navigation.navigate("/pages/search/searchResult.html", searchKeyWord);
-			            //WinJS.Navigation.addEventListener("navigated", navigate);
+			            WinJS.Navigation.addEventListener("navigated", navigate);
 			        }
 			    });
                 

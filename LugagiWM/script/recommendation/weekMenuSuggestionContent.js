@@ -64,6 +64,7 @@ function loadWeekMenuContent(data) {
 function goToDish() {
     var contentID = $(this).attr("data-food-ID");
     WinJS.Navigation.navigate("/pages/food/foodDetails.html", contentID);
+    WinJS.Navigation.addEventListener("navigated", navigate);
 }
 $('body').on("click", ".menuContentItem", goToDish);
 
