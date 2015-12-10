@@ -3,7 +3,7 @@
 // load the ingredients of the food
 function loadIngredient(ingredientsSource) {
     var ingredientList = $("#foodIngredients").find("ul");
-    ingredientList.html("");
+    //ingredientList.html("");
     if (ingredientsSource) {
         var i = 0;
         for (i; i < ingredientsSource.length; i++) {
@@ -19,7 +19,7 @@ function loadIngredient(ingredientsSource) {
 // load the food cooking steps
 function loadSteps(stepsSource) {
     var foodStepsList = $("#foodSteps");
-    foodStepsList.html("");
+    //foodStepsList.html("");
     if (stepsSource) {
         var i = 0;
         for (i; i < stepsSource.length; i++) {
@@ -68,7 +68,7 @@ function loadFoodInfo(source) {
             nutrionCategory += source.CheDoMonAn[i].CheDoDescription + ", ";
         }
     }
-    $("#foodInfo").html("");
+    //$("#foodInfo").html("");
     $("#foodInfo").append(
         "<li class='list-group-item'>Dish category: " + source.LoaiMonAn[0].LoaiMonAnDescription + "</li>" +
         "<li class='list-group-item'>Nutrion category: " + nutrionCategory + "</li>" +
@@ -114,10 +114,7 @@ function newFood() {
         cache: false,
         success: function (data) {
             var contentID = data.Foods[0].MonAnID;
-            WinJS.Navigation.navigate("/pages/food/foodDetails.html", contentID);
-            WinJS.Navigation.addEventListener("navigated", navigate);
-            WinJS.Navigation.navigate("/pages/food/foodDetails.html", contentID);
-            WinJS.Navigation.addEventListener("navigated", navigate);
+            WinJS.Navigation.navigate("/pages/food/foodDetails.html", contentID);     
         },
     });
     
