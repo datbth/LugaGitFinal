@@ -51,6 +51,7 @@
 			        }
 			        navigate(eventObject);
 			    };
+
                 // resize the pane based on window size
 			    WinJS.UI.processAll().then(function () {
 			        navResize();
@@ -68,26 +69,26 @@
                 // bind events to navigation menu
 			    $('#nav-goHome').click(function () {
 			        WinJS.Navigation.navigate("/pages/index/index.html"); // navigate to Home page
-			        WinJS.Navigation.addEventListener("navigated", navigate);
+			        WinJS.Navigation.addEventListener("navigated", navigateDefault);
 			    })
 			    $('#nav-addNewFood').click(function () {
 			        WinJS.Navigation.navigate("/pages/food/addNewFood.html"); // navigate to addNewFood page
-			        WinJS.Navigation.addEventListener("navigated", navigate);
+			        WinJS.Navigation.addEventListener("navigated", navigateDefault);
 			        //WinJS.Navigation.navigate("/pages/food/addNewFood.html");
 			    });
 			    $('#nav-recommendation-ingredient').click(function () {
 			        WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestion.html"); // navigate to ingredientBasedSuggestion page
-			        WinJS.Navigation.addEventListener("navigated", navigate);
+			        WinJS.Navigation.addEventListener("navigated", navigateDefault);
 			        //WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestion.html");
 			    });
 			    $('#nav-recommendation-week-menu').click(function () {
 			        WinJS.Navigation.navigate("/pages/recommendation/weekMenuSuggestionFilter.html"); // navigate to weekMenuSuggestion page
-			        WinJS.Navigation.addEventListener("navigated", navigate);
+			        WinJS.Navigation.addEventListener("navigated", navigateDefault);
 			        //WinJS.Navigation.navigate("/pages/recommendation/weekMenuSuggestionFilter.html");
 			    });
 			    $('#nav-login').click(function () {
 			        WinJS.Navigation.navigate("/pages/userdata/loginform.html"); // navigate to weekMenuSuggestion page
-			        WinJS.Navigation.addEventListener("navigated", navigate);
+			        WinJS.Navigation.addEventListener("navigated", navigateDefault);
 			        //WinJS.Navigation.navigate("/pages/userdata/loginform.html");
 			    });
 
