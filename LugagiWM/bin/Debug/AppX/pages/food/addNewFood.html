@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="/script/food/addNewFood.js"></script>
+    <script src="/components/picaresize/pica.min.js"></script>
+    <script src="/js/default.js"></script>
+
+    <style>
+        #waitingSpinner {
+            width: 100px;
+            height: 100px;
+        }
+
+        #imageLoadingSpinner {
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row" style="margin-bottom: 30px;">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+
+            <form id="foodInfoForm" role="form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <div class="panel panel-material-deep-purple-500">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Dish Name</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <input class="win-textbox" type="text" name="TenMon" id="TenMon" autocomplete="off"
+                                       placeholder="Please input the name of the dish" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="panel panel-material-deep-purple-500">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Cooking Method</h3>
+                        </div>
+                        <div class="panel-body">
+                            <select name="LoaiMonAn" id="LoaiMonAn" class="win-dropdown"></select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit image for the food -->
+                <div class="form-group">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Choose image for dish</h3>
+                        </div>
+                        <div class="panel-body">
+                            <input type="file" class="win-button win-button-file" name="fileToUpload" id="fileToUpload" />
+                            <input type="hidden" name="foodImageString" id="foodImageString" />
+                            <br>
+
+                            <progress class="win-progress-ring center-block" id="imageLoadingSpinner" style="display:none"></progress>
+
+                            <!-- Original image canvas -->
+                            <canvas id="sourceimagecanvas" width="900" height="300" class="img-responsive" style="display:none"></canvas>
+                            <!-- Canvas for resized image -->
+                            <canvas id="destimagecanvas" class="img-responsive" style="display:none"></canvas>
+                            <!-- Preview image -->
+                            <img src="" id="food-image-preview" class="img-responsive" style="display:none">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Description</h3>
+                            <p class="text-success">This field is optional. If you want to proceed to adding recipe, please choose the button below</p>
+                        </div>
+                        <div class="panel-body">
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <textarea class="win-textarea col-xs-12 col-sm-8" type="text" rows="3" name="MoTa" id="MoTa" placeholder="Describe the tastes, purpose of the dish, when would you cook it..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button class="recipeEdit btn-block win-button win-button-primary"
+                            href="/pages/foodpost/recipe/editrecipe.php?MonAnID=<?php echo $monanid?>"
+                            type="button" id="addNewFoodAndRecipe" name="submit">
+                        ADD RECIPE
+                    </button>
+                    <p class="text-success">If you don't have time, you can skip the recipe for now and add it later</p>
+                </div>
+
+                <br><br>
+
+                <h3><a data-toggle="collapse" href="#collapse1" id="show-more-info">More Info <span class="caret"></span></a></h3>
+                <div class="panel-group" id="food-additional-info" style="display:none">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"></h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse">
+                            <div class="panel-body">
+
+                                <div class="form-group">
+                                    <div class="panel panel-material-deep-purple-500">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Difficulty level</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            <input class="win-slider" type="range" id="dokhoslider" name="dokhoslider" min="1" max="5" value="2" tabindex="0" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="panel panel-material-deep-purple-500">
+                                        <div class="panel-heading">
+                                            <h5 class="panel-title">Energy (Kilo calories)</h5>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="mdl-textfield mdl-js-textfield">
+                                                <input class="win-textbox" type="text" name="Kcal" id="Kcal" placeholder="Unit: KCal, you only need to enter the number..." />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Select stand-alone type of food -->
+                                <div class="panel">
+                                    <div class="panel-heading">
+                                        <h5 class="panel-title">More Info</h5>
+                                    </div>
+                                    <div class="panel-body">
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="AnMotMon">
+                                            <input type="checkbox" name="AnMotMon[]" id="AnMotMon" class="win-checkbox" value="1" />
+                                            <span class="mdl-checkbox__label">Does not require paired dish(es)</span>
+                                        </label>
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="AnSang">
+                                            <input type="checkbox" name="AnSang" id="AnSang" class="win-checkbox" value="Y" />
+                                            <span class="mdl-checkbox__label">Suitable for breakfast</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Select nutrition type of food -->
+                                <div class="panel">
+                                    <div class="panel-heading">
+                                        <h5 class="panel-title">Nutrition</h5>
+                                    </div>
+                                    <div class="panel-body">
+
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="AnKieng">
+                                            <input type="checkbox" name="CheDoDinhDuong[]" id="AnKieng" class="win-checkbox" value="1" />
+                                            <span class="mdl-checkbox__label">Diet</span>
+                                        </label>
+
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="TreEm">
+                                            <input type="checkbox" name="CheDoDinhDuong[]" id="TreEm" class="win-checkbox" value="2" />
+                                            <span class="mdl-checkbox__label">Kids</span>
+                                        </label>
+
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="AnChay">
+                                            <input type="checkbox" name="CheDoDinhDuong[]" id="AnChay" class="win-checkbox" value="3" />
+                                            <span class="mdl-checkbox__label">Vegetarian</span>
+                                        </label>
+
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="AnVat">
+                                            <input type="checkbox" name="CheDoDinhDuong[]" id="AnVat" class="win-checkbox" value="4" />
+                                            <span class="mdl-checkbox__label">Snack</span>
+                                        </label>
+
+                                        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="TamBo">
+                                            <input type="checkbox" name="CheDoDinhDuong[]" id="TamBo" class="win-checkbox" value="5" />
+                                            <span class="mdl-checkbox__label">Health Boost</span>
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <!-- Submit button the whole form -->
+                <div class="form-group">
+                    <button type="button" id="addNewFoodButton" name="submit" class="win-button win-button-primary pull-right">
+                        <span class="glyphicon glyphicon-plus"></span>  Submit Dish
+                    </button>
+
+                    <button type="button" name="submit" class="win-button pull-left" onclick="window.history.back()">
+                        <span class="glyphicon glyphicon-remove"></span>  Cancel
+                    </button>
+                </div>
+
+            </form>
+
+            <progress class="win-progress-ring center-block" id="waitingSpinner" style="display:none"></progress>
+
+        </div>
+    </div>
+</body>
+</html>
