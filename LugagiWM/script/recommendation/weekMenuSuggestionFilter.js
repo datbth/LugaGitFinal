@@ -28,7 +28,6 @@ function loadFilteredMenu(currentChoices) {
         async: true,
         success: function (data) {
             WinJS.Navigation.navigate("/pages/recommendation/weekMenuSuggestionContent.html", [data, nutritionChoices]);
-            WinJS.Navigation.addEventListener("navigated", navigate);
         }
     });
 }

@@ -10,16 +10,16 @@ body {
     color:white;
 }
 
-#appToolbar .win-splitviewpanetoggle {
+/*#appToolbar .win-splitviewpanetoggle {
     float: left;
-}
+}*/
 
 /* SplitView pane content style*/
 #appToolbar.header {
     white-space: nowrap;
 }
 
-#appToolbar.header .title {
+/*#appToolbar.header .title {
     font-size: 25px;
     left: 50px;
     margin-top: 10px;
@@ -27,13 +27,14 @@ body {
     vertical-align: middle;
     display: inline-block;
     color:white;
-}
+}*/
 
 #appToolbar .win-commandglyph {
     color:white;
 }
 
 .content,
+
 #app {
     height: 100%;
 }
@@ -65,11 +66,11 @@ button.win-splitviewpanetoggle {
 
 /*SplitView content style*/
 #app .win-splitview-content {
-    height:94%;
+    height:100%;
     background-color: #f7f7f7;
     overflow-y: auto;
     overflow-x: hidden;
-    padding-bottom: 20%;
+    /*padding-bottom: 20%;*/
 }
 
 #app .contenttext {
