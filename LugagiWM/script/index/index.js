@@ -5,7 +5,7 @@ var urlList =
     "http://lugagi.com/script/smartPhoneAPI/landing/loadLatestFood.php",
     "http://lugagi.com/script/smartPhoneAPI/landing/loadMostLikeCollection.php"]
 var itemList = [".editorPickedItem", ".latestFoodItem", ".mostLikeCollectionItem"];
-var containerList = ["#editorPickedContainer", "#latestFoodContainer", "#mostLikeCollectionContainer"];
+var containerList = ["editorPickedContainer", "latestFoodContainer", "mostLikeCollectionContainer"];
 var iconList = ["/images/editor-01.svg", "/images/monan-01.svg", "/images/bstuathich.svg"];
 var titleList = ["Editor's Picks", "Latest Dishes", "Featured Collections"]
 // startIndex and endIndex of each section
@@ -173,9 +173,19 @@ $(document).ready(function () {
         } else if (contentType = "collection") {
             var contentID = currentItem.attr("data-ID");
             WinJS.Navigation.navigate("/pages/collection/collection.html", contentID);
-        }
-        
+        }    
     });
+    //shit goes here
+    $("body").on("click", "#sectionTemplate", function () {
+        WinJS.Navigation.navigate("/pages/index/categories/editorPick.html")
+    })
+
+    $("body").on("click", "#latestFood", function () {
+        WinJS.Navigation.navigate("/pages/index/categories/latestFood.html")
+    })
+    $("body").on("click", "#mostLikeCollectionContainer", function () {
+        WinJS.Navigation.navigate("/pages/index/categories/featuredCollection.html")
+    })
 });
 
 
@@ -204,6 +214,7 @@ WinJS.UI.Pages.define("/pages/index/index.html", {
             sectionID.html(sectionHTML);
             sectionID.find(".sectionIcon").attr("src", iconList[section]);
             sectionID.find(".sectionTitle").text(titleList[section])
+            //sectionHTML.attr("section-ID", containerList[section])
             loadSection(section);
         }
     }
