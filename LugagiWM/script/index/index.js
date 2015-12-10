@@ -1,5 +1,4 @@
-﻿"use strict"
-
+﻿
 // page variables
 var urlList =
     ["http://lugagi.com/script/smartPhoneAPI/landing/loadEditorPickedContent.php",
@@ -12,7 +11,6 @@ var titleList = ["Editor's Picks", "Latest Dishes", "Featured Collections"]
 // startIndex and endIndex of each section
 var startIndexList;
 var endIndexList;
-
 
 // load random dish
 function randDish() {

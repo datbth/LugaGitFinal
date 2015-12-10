@@ -64,6 +64,7 @@ $('body').on("click", ".removeInput", function () {
 $('body').on("click", ".ingredientContentItem", function(){
     var currentID = $(this).attr("data-food-ID");
     WinJS.Navigation.navigate("/pages/food/foodDetails.html", currentID);
+    WinJS.Navigation.addEventListener("navigated", navigate);
 })
 
 

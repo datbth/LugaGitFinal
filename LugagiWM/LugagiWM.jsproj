@@ -59,7 +59,7 @@
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
-    <PackageCertificateThumbprint>7F8118AA19397ABCA2CB5D887A8E7694851DD3FE</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>BAC674030B2F0615C8CCCBB850195840BB6B49EC</PackageCertificateThumbprint>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">

@@ -50,6 +50,7 @@ $(document).ready(function () {
         var currentItem = $(this);
         var currentID = currentItem.attr("ContentID");
         WinJS.Navigation.navigate("/pages/food/foodDetails.html", currentID);
+        WinJS.Navigation.addEventListener("navigated", navigate);
     });
 })
 

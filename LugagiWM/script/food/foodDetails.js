@@ -1,30 +1,33 @@
-﻿var foodPageHTML;
-var foodDetailsHTML;
-var foodHeaderHTML;
-var currentContentID;
+﻿var currentContentID;
 
 // load the ingredients of the food
 function loadIngredient(ingredientsSource) {
+    var ingredientList = $("#foodIngredients").find("ul");
+    ingredientList.html("");
     if (ingredientsSource) {
         var i = 0;
         for (i; i < ingredientsSource.length; i++) {
             var ingredientName = ingredientsSource[i].IngredientName;
-            var ingredientQuantity = ingredientsSource[i].Amount + " " + ingredientsSource[i].IngredientUnit;
-            $("#foodContent").find("ul").append("<li>" + ingredientName + ": " + ingredientQuantity + "</li>");
+            var ingredientQuantity = ingredientsSource[i].Amount + " " + ingredientsSource[i].IngredientUnit;            
+            ingredientList.append("<li>" + ingredientName + ": " + ingredientQuantity + "</li>");
         }
-    } else { $("#foodIngredients").append("<p>not available<p>") };
+    } else {
+        ingredientList.append("<p>not available<p>")
+    };
 }
 
 // load the food cooking steps
 function loadSteps(stepsSource) {
+    var foodStepsList = $("#foodSteps");
+    foodStepsList.html("");
     if (stepsSource) {
         var i = 0;
         for (i; i < stepsSource.length; i++) {
             var stepText = stepsSource[i].TextContent;
             var stepImgURL = stepsSource[i].ImageURL;
-            $("#foodSteps").append("<li>" + stepText + "</li>");
+            foodStepsList.append("<li>" + stepText + "</li>");
             if (stepImgURL) {
-                $("#foodSteps").append('<img src="http://lugagi.com/script/timthumb.php?src=/postimages/' + stepImgURL + '&w=300&h=200" class="img-responsive center-block" />');
+                foodStepsList.append('<img src="http://lugagi.com/script/timthumb.php?src=/postimages/' + stepImgURL + '&w=300&h=200" class="img-responsive center-block" />');
             }
         }
     } else { $("#foodSteps").append("<p>not available<p>") };
@@ -65,6 +68,7 @@ function loadFoodInfo(source) {
             nutrionCategory += source.CheDoMonAn[i].CheDoDescription + ", ";
         }
     }
+    $("#foodInfo").html("");
     $("#foodInfo").append(
         "<li class='list-group-item'>Dish category: " + source.LoaiMonAn[0].LoaiMonAnDescription + "</li>" +
         "<li class='list-group-item'>Nutrion category: " + nutrionCategory + "</li>" +
@@ -111,16 +115,19 @@ function newFood() {
         success: function (data) {
             var contentID = data.Foods[0].MonAnID;
             WinJS.Navigation.navigate("/pages/food/foodDetails.html", contentID);
+            WinJS.Navigation.addEventListener("navigated", navigate);
+            WinJS.Navigation.navigate("/pages/food/foodDetails.html", contentID);
+            WinJS.Navigation.addEventListener("navigated", navigate);
         },
     });
     
 }
 
-$("body").on("click", "#refreshButton", function () {
-    $("#foodPage").html(foodPageHTML);
-    loadFoodContent();
-    // WinJS.Navigation.navigate("/pages/food/foodDetails.html");
-})
+//$("body").on("click", "#refreshButton", function () {
+//    $("#foodPage").html(foodPageHTML);
+//    loadFoodContent();
+//    // WinJS.Navigation.navigate("/pages/food/foodDetails.html");
+//})
 
 $("body").on("click", "#newFood", function () {
     newFood();
@@ -129,11 +136,6 @@ $("body").on("click", "#newFood", function () {
 
 WinJS.UI.Pages.define("/pages/food/foodDetails.html", {
     ready: function (element, options) {        
-        // save the inital html for later use
-        foodPageHTML = $("#foodPage").html();
-        foodDetailsHTML = $("#foodDetails").html();
-        foodHeaderHTML = $("#foodHeader").html();
-
         // get the ID of the food
         currentContentID = options;
         

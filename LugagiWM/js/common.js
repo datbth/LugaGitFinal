@@ -1,3 +1,19 @@
+// function to reload page when navigating
+function navigate(eventObject) {
+    var url = eventObject.detail.location,
+        host = $("#content-host")[0];
+    // unload content
+    host.winControl && host.winControl.unload && host.winControl.unload();
+    WinJS.Utilities.empty(host);
+    // load new content
+    eventObject.detail.setPromise(
+        WinJS.UI.Pages.render(url, host, eventObject.detail.state).then(function () {
+            WinJS.Application.sessionState.lastUrl = url;
+            WinJS.UI.Animation.enterPage(host);
+            WinJS.UI.processAll()
+        }));
+}
+
 //Get parameter from the string separated by "&"
 function getStringParameter(sString, sParam) {
     var sPageURL = sString;
