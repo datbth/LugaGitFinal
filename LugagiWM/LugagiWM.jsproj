@@ -40,7 +40,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>57884fdc-47c4-43d0-b60c-4b710ebcddf4</ProjectGuid>
-    <TypeScriptToolsVersion>1.6</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.7</TypeScriptToolsVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0'">
@@ -69,6 +69,7 @@
     <Content Include="css\bootstrap.css" />
     <Content Include="css\collection\collection.css" />
     <Content Include="css\food\foodDetails.css" />
+    <Content Include="css\index\categories\categories.css" />
     <Content Include="css\index\index.css" />
     <Content Include="css\recommendation\ingredientBasedSuggestion.css" />
     <Content Include="css\recommendation\weekMenuSuggestionFilter.css" />
@@ -112,6 +113,7 @@
     <Content Include="pages\collection\collection.html" />
     <Content Include="pages\food\addNewFood.html" />
     <Content Include="pages\food\foodDetails.html" />
+    <Content Include="pages\index\categories\editor%27sPicked.html" />
     <Content Include="pages\index\index.html" />
     <Content Include="pages\index_test.html" />
     <Content Include="pages\recommendation\ingredientBasedSuggestion.html" />
@@ -123,6 +125,7 @@
     <Content Include="script\collection\collection.js" />
     <Content Include="script\food\addNewFood.js" />
     <Content Include="script\food\foodDetails.js" />
+    <Content Include="script\index\categories\editor%27sPicked.js" />
     <Content Include="script\index\index.js" />
     <Content Include="script\recommendation\ingredientBasedSuggestion.js" />
     <Content Include="script\recommendation\weekMenuSuggestionFilter.js" />

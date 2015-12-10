@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>HAINGUYEN</Machine>
+    <WindowsUser>Hainguyen</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>57884fdc-47c4-43d0-b60c-4b710ebcddf4</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\bld\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>7C529238B005726896018CFDB9A2C4D9E27831ADFC131DE604D039B9DE52D46A</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>57884fdc-47c4-43d0-b60c-4b710ebcddf4_0.2.7.0_neutral__07a8ccd52rz8e</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>57884fdc-47c4-43d0-b60c-4b710ebcddf4_07a8ccd52rz8e!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>57884fdc-47c4-43d0-b60c-4b710ebcddf4</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Caval</RegisteredPackagePublisher>
+    <RegisteredVersion>0.2.7.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-10T15:49:53.599</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\components\picaresize\pica.min.js">
+      <PackagePath>components\picaresize\pica.min.js</PackagePath>
+      <Modified>2015-12-10T14:06:54.093</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\js\bootstrap.js">
+      <PackagePath>js\bootstrap.js</PackagePath>
+      <Modified>2015-12-10T14:06:54.576</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\js\bootstrap.min.js">
+      <PackagePath>js\bootstrap.min.js</PackagePath>
+      <Modified>2015-12-10T14:06:54.601</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\js\common.js">
+      <PackagePath>js\common.js</PackagePath>
+      <Modified>2015-12-10T14:06:54.618</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\js\default.js">
+      <PackagePath>js\default.js</PackagePath>
+      <Modified>2015-12-10T14:06:54.632</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\js\jquery.min.js">
+      <PackagePath>js\jquery.min.js</PackagePath>
+      <Modified>2015-12-10T14:06:54.729</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\js\npm.js">
+      <PackagePath>js\npm.js</PackagePath>
+      <Modified>2015-12-10T14:06:54.750</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\script\collection\collection.js">
+      <PackagePath>script\collection\collection.js</PackagePath>
+      <Modified>2015-12-10T14:06:54.947</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\script\food\addNewFood.js">
+      <PackagePath>script\food\addNewFood.js</PackagePath>
+      <Modified>2015-12-10T14:06:54.990</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\script\food\foodDetails.js">
+      <PackagePath>script\food\foodDetails.js</PackagePath>
+      <Modified>2015-12-10T14:06:55.005</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\script\index\categories\editor%27sPicked.js">
+      <PackagePath>script\index\categories\editor%27sPicked.js</PackagePath>
+      <Modified>2015-12-10T17:04:35.775</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\script\index\index.js">
+      <PackagePath>script\index\index.js</PackagePath>
+      <Modified>2015-12-10T14:59:31.347</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\script\recommendation\ingredientBasedSuggestion.js">
+      <PackagePath>script\recommendation\ingredientBasedSuggestion.js</PackagePath>
+      <Modified>2015-12-10T14:06:55.032</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\script\recommendation\weekMenuSuggestionFilter.js">
+      <PackagePath>script\recommendation\weekMenuSuggestionFilter.js</PackagePath>
+      <Modified>2015-12-10T14:06:55.060</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\script\recommendation\weekMenuSuggestionContent.js">
+      <PackagePath>script\recommendation\weekMenuSuggestionContent.js</PackagePath>
+      <Modified>2015-12-10T14:06:55.046</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\script\search\searchFood.js">
+      <PackagePath>script\search\searchFood.js</PackagePath>
+      <Modified>2015-12-10T14:06:55.097</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\script\userdata\loginLogout\login.js">
+      <PackagePath>script\userdata\loginLogout\login.js</PackagePath>
+      <Modified>2015-12-10T14:06:55.129</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\script\userdata\loginLogout\logout.js">
+      <PackagePath>script\userdata\loginLogout\logout.js</PackagePath>
+      <Modified>2015-12-10T14:06:55.139</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\WinJS\js\en-US\ui.strings.js">
+      <PackagePath>WinJS\js\en-US\ui.strings.js</PackagePath>
+      <Modified>2015-12-10T14:06:53.582</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\WinJS\js\base.js">
+      <PackagePath>WinJS\js\base.js</PackagePath>
+      <Modified>2015-12-10T14:06:53.546</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\WinJS\js\ui.js">
+      <PackagePath>WinJS\js\ui.js</PackagePath>
+      <Modified>2015-12-10T14:06:54.072</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\css\bootstrap.css">
+      <PackagePath>css\bootstrap.css</PackagePath>
+      <Modified>2015-12-10T14:06:54.134</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\css\collection\collection.css">
+      <PackagePath>css\collection\collection.css</PackagePath>
+      <Modified>2015-12-10T14:06:54.178</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\css\food\foodDetails.css">
+      <PackagePath>css\food\foodDetails.css</PackagePath>
+      <Modified>2015-12-10T14:06:54.196</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\css\index\categories\categories.css">
+      <PackagePath>css\index\categories\categories.css</PackagePath>
+      <Modified>2015-12-10T16:46:44.290</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\css\index\index.css">
+      <PackagePath>css\index\index.css</PackagePath>
+      <Modified>2015-12-10T14:06:54.205</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\css\recommendation\ingredientBasedSuggestion.css">
+      <PackagePath>css\recommendation\ingredientBasedSuggestion.css</PackagePath>
+      <Modified>2015-12-10T14:06:54.214</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\css\recommendation\weekMenuSuggestionFilter.css">
+      <PackagePath>css\recommendation\weekMenuSuggestionFilter.css</PackagePath>
+      <Modified>2015-12-10T14:06:54.222</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+      <Modified>2015-12-10T14:06:54.187</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\WinJS\css\ui-dark.css">
+      <PackagePath>WinJS\css\ui-dark.css</PackagePath>
+      <Modified>2015-12-10T14:06:53.069</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\WinJS\css\ui-light.css">
+      <PackagePath>WinJS\css\ui-light.css</PackagePath>
+      <Modified>2015-12-10T14:06:53.085</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\default.html">
+      <PackagePath>default.html</PackagePath>
+      <Modified>2015-12-10T14:06:54.253</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\pages\collection\collection.html">
+      <PackagePath>pages\collection\collection.html</PackagePath>
+      <Modified>2015-12-10T14:06:54.772</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\pages\food\addNewFood.html">
+      <PackagePath>pages\food\addNewFood.html</PackagePath>
+      <Modified>2015-12-10T14:06:54.785</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\pages\food\foodDetails.html">
+      <PackagePath>pages\food\foodDetails.html</PackagePath>
+      <Modified>2015-12-10T14:06:54.795</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\pages\index\categories\editor%27sPicked.html">
+      <PackagePath>pages\index\categories\editor%27sPicked.html</PackagePath>
+      <Modified>2015-12-10T17:02:26.886</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\pages\index\index.html">
+      <PackagePath>pages\index\index.html</PackagePath>
+      <Modified>2015-12-10T14:59:35.170</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\pages\index_test.html">
+      <PackagePath>pages\index_test.html</PackagePath>
+      <Modified>2015-12-10T14:06:54.817</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\pages\recommendation\ingredientBasedSuggestion.html">
+      <PackagePath>pages\recommendation\ingredientBasedSuggestion.html</PackagePath>
+      <Modified>2015-12-10T14:06:54.830</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\pages\recommendation\weekMenuSuggestionContent.html">
+      <PackagePath>pages\recommendation\weekMenuSuggestionContent.html</PackagePath>
+      <Modified>2015-12-10T14:06:54.860</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\pages\recommendation\weekMenuSuggestionFilter.html">
+      <PackagePath>pages\recommendation\weekMenuSuggestionFilter.html</PackagePath>
+      <Modified>2015-12-10T14:06:54.900</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\pages\search\searchResult.html">
+      <PackagePath>pages\search\searchResult.html</PackagePath>
+      <Modified>2015-12-10T14:06:54.912</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\pages\userdata\loginform.html">
+      <PackagePath>pages\userdata\loginform.html</PackagePath>
+      <Modified>2015-12-10T14:06:54.924</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\pages\userdata\profile.html">
+      <PackagePath>pages\userdata\profile.html</PackagePath>
+      <Modified>2015-12-10T14:06:54.932</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.eot">
+      <PackagePath>fonts\glyphicons-halflings-regular.eot</PackagePath>
+      <Modified>2015-12-10T14:06:54.305</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.svg">
+      <PackagePath>fonts\glyphicons-halflings-regular.svg</PackagePath>
+      <Modified>2015-12-10T14:06:54.381</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\bstuathich.svg">
+      <PackagePath>images\bstuathich.svg</PackagePath>
+      <Modified>2015-12-10T14:06:54.477</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\editor-01.svg">
+      <PackagePath>images\editor-01.svg</PackagePath>
+      <Modified>2015-12-10T14:06:54.482</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\monan-01.svg">
+      <PackagePath>images\monan-01.svg</PackagePath>
+      <Modified>2015-12-10T14:06:54.534</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\nguyenlieu-01.svg">
+      <PackagePath>images\nguyenlieu-01.svg</PackagePath>
+      <Modified>2015-12-10T14:06:54.540</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\thucdontuan-01.svg">
+      <PackagePath>images\thucdontuan-01.svg</PackagePath>
+      <Modified>2015-12-10T14:06:54.549</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.ttf">
+      <PackagePath>fonts\glyphicons-halflings-regular.ttf</PackagePath>
+      <Modified>2015-12-10T14:06:54.393</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\WinJS\fonts\Symbols.ttf">
+      <PackagePath>WinJS\fonts\Symbols.ttf</PackagePath>
+      <Modified>2015-12-10T14:06:53.095</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.woff">
+      <PackagePath>fonts\glyphicons-halflings-regular.woff</PackagePath>
+      <Modified>2015-12-10T14:06:54.402</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\fonts\glyphicons-halflings-regular.woff2">
+      <PackagePath>fonts\glyphicons-halflings-regular.woff2</PackagePath>
+      <Modified>2015-12-10T14:06:54.413</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\300x300.png">
+      <PackagePath>images\300x300.png</PackagePath>
+      <Modified>2015-12-10T14:06:54.416</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\44x44.png">
+      <PackagePath>images\44x44.png</PackagePath>
+      <Modified>2015-12-10T14:06:54.419</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\71x71.png">
+      <PackagePath>images\71x71.png</PackagePath>
+      <Modified>2015-12-10T14:06:54.421</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\88x88.png">
+      <PackagePath>images\88x88.png</PackagePath>
+      <Modified>2015-12-10T14:06:54.424</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\favicon.png">
+      <PackagePath>images\favicon.png</PackagePath>
+      <Modified>2015-12-10T14:06:54.485</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\ic_navigate_next_48px-128.png">
+      <PackagePath>images\ic_navigate_next_48px-128.png</PackagePath>
+      <Modified>2015-12-10T14:06:54.487</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\ic_navigate_previous_48px-128 - Copy.png">
+      <PackagePath>images\ic_navigate_previous_48px-128 - Copy.png</PackagePath>
+      <Modified>2015-12-10T14:06:54.489</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\LockScreenLogo.scale-200.png">
+      <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
+      <Modified>2015-12-10T14:06:54.426</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\splashscreen.scale-150.png">
+      <PackagePath>images\splashscreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-10T14:06:54.430</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\SplashScreen.scale-200.png">
+      <PackagePath>images\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-10T14:06:54.432</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\splashscreen.scale-400.png">
+      <PackagePath>images\splashscreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-10T14:06:54.543</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\Splashscreen1240x600.png">
+      <PackagePath>images\Splashscreen1240x600.png</PackagePath>
+      <Modified>2015-12-10T14:06:54.454</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\SplashScreen_Full.png">
+      <PackagePath>images\SplashScreen_Full.png</PackagePath>
+      <Modified>2015-12-10T14:06:54.451</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\Square150x150Logo.scale-200.png">
+      <PackagePath>images\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-10T14:06:54.457</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\Square44x44Logo.scale-100.png">
+      <PackagePath>images\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-10T14:06:54.459</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\Square44x44Logo.scale-200.png">
+      <PackagePath>images\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-10T14:06:54.461</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-10T14:06:54.464</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\StoreLogo.png">
+      <PackagePath>images\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-10T14:06:54.466</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\images\Wide310x150Logo.scale-200.png">
+      <PackagePath>images\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-12-10T14:06:54.469</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\PC01\Documents\GitHub\LugaGitFinal\LugaGitFinal\LugagiWM\bin\Debug\ReverseMap\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-12-10T15:49:52.455</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
