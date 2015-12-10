@@ -1,42 +1,50 @@
-﻿function loadEditorPickedContent() {
+﻿function loadEditorPicks() {
     $.ajax({
         type: "GET",
         url: "http://lugagi.com/script/smartPhoneAPI/landing/loadEditorPickedContent.php",
-        dataType: "json",
         data: "Nothing",
-        async: true,
+        dataType: 'json',
         cache: false,
-        success: function (data) {
-            var source = data.EditorPickContents;
-            var length = source.length
-            console.log(length)
-            
-            for (var i = 0; i < length; i++) {
-                var currentSource = source[i];
-                var newPick = $("#content").clone();
+        async: true,
+        success: function (receivedData) {
+            var source = receivedData.EditorPickContents
+            for (var i = 0; i < source.length; i++) {
+                var newFood = $("#editorsPickedItem").clone()
+                var currentSource = source[i]
+                var fullImgUrl = "http://lugagi.com/script/timthumb.php?src=" + currentSource.ContentImageURL + "&w=500&h=200";
+                newFood.find(".editorsPickedItemImg").attr("src", fullImgUrl);
+                newFood.find(".editorsPickedItemName").text(currentSource.ContentName);
+                newFood.find(".contentView").text(currentSource.ContentViewCount);
+                newFood.find(".contentLike").text(currentSource.ContentLikeCount);
+                newFood.attr("ContentID", currentSource.ContentID);
+                newFood.attr("ContentType", currentSource.ContentType)
+                newFood.show();
+                $("#editorsPickedContent").append(newFood)
 
-                var fullImgURL = "http://lugagi.com/script/timthumb.php?src=/" + currentSource.ContentImageURL + "&w=300&h=200";
-                newPick.find(".pickName").text(currentSource.ContentName);
-                newPick.find(".pickImg").attr("src", fullImgURL)
-                newPick.find("#viewCount").text(currentSource.ContentViewCount)
-                newPick.find("#likeCount").text(currentSource.ContentLikeCount)
-                newPick.attr("ContentID", currentSource.ContentID)
-                newPick.show();
-                $("#pickContent").append(newPick);
             }
         }
     })
 }
 
+// page events
 $(document).ready(function () {
-    $("body").on("click", ".foodItem", function () {
-        var currentID = $(this).attr("ContentID");
-        WinJS.Navigation.navigate("/pages/food/foodDetails.html", currentID);
-    })
-})
+    $('body').on("click", ".editorsPickedItem", function () {
+        var currentItem = $(this);
+        var contentType = currentItem.attr("ContentType")
+        if (contentType == "food") {
+            var contentID = currentItem.attr("ContentID");
+            WinJS.Navigation.navigate("/pages/food/foodDetails.html", contentID);
+        } else if (contentType = "collection") {
+            var contentID = currentItem.attr("ContentID");
+            WinJS.Navigation.navigate("/pages/collection/collection.html", contentID);
+        }
+
+    });
+
+});
 
 WinJS.UI.Pages.define("/pages/index/categories/editorPick.html", {
     ready: function () {
-        loadEditorPickedContent();
+        loadEditorPicks();
     }
 });
