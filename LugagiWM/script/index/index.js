@@ -172,6 +172,9 @@ $(document).ready(function () {
         if (contentType == "food") {
             var contentID = currentItem.attr("data-ID");            
             WinJS.Navigation.navigate("/pages/food/foodDetails.html", contentID);
+        } else if (contentType = "collection") {
+            var contentID = currentItem.attr("data-ID");
+            WinJS.Navigation.navigate("/pages/collection/collection.html", contentID);
         }
     
     });
