@@ -7,7 +7,8 @@ var urlList =
 var itemList = [".editorPickedItem", ".latestFoodItem", ".mostLikeCollectionItem"];
 var containerList = ["editorPickedContainer", "latestFoodContainer", "mostLikeCollectionContainer"];
 var iconList = ["/images/editor-01.svg", "/images/monan-01.svg", "/images/bstuathich.svg"];
-var titleList = ["Editor's Picks", "Latest Dishes", "Featured Collections"]
+var titleList = ["Editor's Picks", "Latest Dishes", "Featured Collections"];
+var pageList = ["/pages/index/categories/editorPick.html", "/pages/index/categories/latestFood.html", "/pages/index/categories/featuredCollection.html"];
 // startIndex and endIndex of each section
 var startIndexList;
 var endIndexList;
@@ -102,7 +103,7 @@ function loadSection(numb) {
         success: function (data) {
             var sourceList = [data.EditorPickContents, data.LatestFood, data.MostLikeCollection];
             var source = sourceList[numb];
-            
+
             // calculate the indexes so that the startIndex can be reset at the end of json
             var lastIndex = source.length;
             endIndexList[numb] = calculateEndIndex(source, lastIndex);
@@ -134,7 +135,12 @@ function loadSection(numb) {
             containerID.find(".pBar").html('<p><br /><br /></p>');
         }
     })
-}
+};
+
+// function to navigate to category pages
+function navigateCategory(numb) {
+    WinJS.Navigation.navigate(pageList[numb]);
+};
 
 // page events
 $(document).ready(function () {
@@ -175,17 +181,23 @@ $(document).ready(function () {
             WinJS.Navigation.navigate("/pages/collection/collection.html", contentID);
         }    
     });
-    //shit goes here
-    $("body").on("click", "#sectionTemplate", function () {
-        WinJS.Navigation.navigate("/pages/index/categories/editorPick.html")
-    })
 
-    $("body").on("click", "#latestFood", function () {
-        WinJS.Navigation.navigate("/pages/index/categories/latestFood.html")
-    })
-    $("body").on("click", "#mostLikeCollectionContainer", function () {
-        WinJS.Navigation.navigate("/pages/index/categories/featuredCollection.html")
-    })
+    // go to category pages
+    $("body").on("click", ".sectionTitle", function () {
+        navigateCategory($(".sectionTitle").index(this));
+    });
+
+    $("body").on("click", ".sectionIcon", function () {
+        navigateCategory($(".sectionIcon").index(this));
+    });
+
+    //$("body").on("click", "#latestFood", function () {
+    //    WinJS.Navigation.navigate("/pages/index/categories/latestFood.html")
+    //});
+
+    //$("body").on("click", "#mostLikeCollectionContainer", function () {
+    //    WinJS.Navigation.navigate("/pages/index/categories/featuredCollection.html")
+    //});
 });
 
 
@@ -213,7 +225,7 @@ WinJS.UI.Pages.define("/pages/index/index.html", {
             var sectionID = $(".section:eq(" + section + ")");
             sectionID.html(sectionHTML);
             sectionID.find(".sectionIcon").attr("src", iconList[section]);
-            sectionID.find(".sectionTitle").text(titleList[section])
+            sectionID.find(".sectionTitle").text(titleList[section]);
             //sectionHTML.attr("section-ID", containerList[section])
             loadSection(section);
         }
