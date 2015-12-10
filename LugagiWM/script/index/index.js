@@ -173,7 +173,15 @@ $(document).ready(function () {
             var contentID = currentItem.attr("data-ID");            
             WinJS.Navigation.navigate("/pages/food/foodDetails.html", contentID);
         }
-        
+    
+    });
+
+    /* three pages link */
+
+
+
+    $('body').on("click", "#latestfood", function () {
+        WinJS.Navigation.navigate("/pages/categories/latestFood.html");
     });
 });
 
@@ -203,6 +211,7 @@ WinJS.UI.Pages.define("/pages/index/index.html", {
             sectionID.html(sectionHTML);
             sectionID.find(".sectionIcon").attr("src", iconList[section]);
             sectionID.find(".sectionTitle").text(titleList[section])
+            sectionID.find(".sectionLink").attr("id", containerList[section])
             loadSection(section);
         }
     }

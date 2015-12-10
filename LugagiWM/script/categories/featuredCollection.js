@@ -1,0 +1,1 @@
+﻿http://lugagi.com/script/smartPhoneAPI/landing/loadMostLikeCollection.php
