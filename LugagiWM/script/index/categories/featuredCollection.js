@@ -1,6 +1,6 @@
 ﻿function loadFeaturedCollections() {
     $.ajax({
-        type:"GET",
+        type: "GET",
         url: "http://lugagi.com/script/smartPhoneAPI/landing/loadMostLikeCollection.php",
         dataType: "json",
         data: "Nothing",
@@ -14,16 +14,16 @@
                 var newCollection = $("#content").clone();
                 var fullImgURL = "http://lugagi.com/script/timthumb.php?src=/" + currentSource.ContentImageURL + "&w=300&h=200";
                 newCollection.find(".collectionName").text(currentSource.ContentName);
-                newCollection.find(".collectionImg").attr("src", fullImgURL)
-                newCollection.find("#viewCount").text(currentSource.ContentViewCount)
-                newCollection.find("#likeCount").text(currentSource.ContentLikeCount)
-                newCollection.attr("ContentID", currentSource.ContentID)
+                newCollection.find(".collectionImg").attr("src", fullImgURL);
+                newCollection.find("#viewCount").text(currentSource.ContentViewCount);
+                newCollection.find("#likeCount").text(currentSource.ContentLikeCount);
+                newCollection.attr("ContentID", currentSource.ContentID);
                 newCollection.show();
                 $("#collectionContent").append(newCollection);
-
+                $("progress").hide();
             }
         }
-    })
+    });
 }
 
 $(document).ready(function () {

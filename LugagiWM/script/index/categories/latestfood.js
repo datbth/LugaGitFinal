@@ -1,6 +1,6 @@
-﻿function loadFood() {
+﻿function loadLatestFood() {
     $.ajax({
-        type:"GET",
+        type: "GET",
         url: "http://lugagi.com/script/smartPhoneAPI/landing/loadLatestFood.php",
         dataType: "json",
         data: "Nothing",
@@ -16,15 +16,16 @@
 
                 var fullImgURL = "http://lugagi.com/script/timthumb.php?src=/" + currentSource.ContentImageURL + "&w=300&h=200";
                 newFood.find(".foodName").text(currentSource.ContentName);
-                newFood.find(".foodImg").attr("src", fullImgURL)
-                newFood.find("#viewCount").text(currentSource.ContentViewCount)
-                newFood.find("#likeCount").text(currentSource.ContentLikeCount)
-                newFood.attr("ContentID", currentSource.ContentID)
+                newFood.find(".foodImg").attr("src", fullImgURL);
+                newFood.find("#viewCount").text(currentSource.ContentViewCount);
+                newFood.find("#likeCount").text(currentSource.ContentLikeCount);
+                newFood.attr("ContentID", currentSource.ContentID);
                 newFood.show();
                 $("#foodContent").append(newFood);
+                $("progress").hide();
             }
         }
-    })
+    });
 }
 
 $(document).ready(function () {
@@ -36,6 +37,6 @@ $(document).ready(function () {
 
 WinJS.UI.Pages.define("/pages/index/categories/latestFood.html", {
     ready: function () {
-        loadFood();
+        loadLatestFood();
     }
 });

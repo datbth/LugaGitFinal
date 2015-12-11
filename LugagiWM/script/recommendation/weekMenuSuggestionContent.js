@@ -58,6 +58,7 @@ function loadWeekMenuContent(data) {
             }
         }
     }
+    $("progress").hide();
 }
 
 // navigate to foodDetails page of the dish
@@ -69,6 +70,7 @@ $('body').on("click", ".menuContentItem", goToDish);
 
 // new menu suggestion event
 $('body').on("click", "#newMenu", function () {
+    $("progress").show();
     loadWeekMenu(nutritionChoices);
 })
 

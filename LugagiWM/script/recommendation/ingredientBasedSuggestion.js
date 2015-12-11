@@ -21,11 +21,10 @@ function loadIngredientSuggestion() {
                 newFood.attr("data-food-ID", currentSource.MonAnID);
                 newFood.css("display", "block");
                 $("#suggestionContent").append(newFood);
-            }
-           
+                $("progress").hide();
+            }        
         }
     });
-    $("progress").hide();
 }
 
 $('body').on("click", "#submitUserInput", function () {

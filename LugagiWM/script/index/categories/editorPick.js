@@ -17,14 +17,14 @@
                 newFood.find(".contentView").text(currentSource.ContentViewCount);
                 newFood.find(".contentLike").text(currentSource.ContentLikeCount);
                 newFood.attr("ContentID", currentSource.ContentID);
-                newFood.attr("ContentType", currentSource.ContentType)
+                newFood.attr("ContentType", currentSource.ContentType);
                 newFood.show();
-                $("#editorsPickedContent").append(newFood)
-
+                $("#editorsPickedContent").append(newFood);
+                $("progress").hide();
             }
-        }
-    })
-}
+        }    
+    });
+};
 
 // page events
 $(document).ready(function () {

@@ -99,9 +99,9 @@ function loadFoodContent() {
             $("#authorInfo").text(source.AddedByUsername + "  " + source.CreatedDate);
             loadFoodInfo(source);
             loadFoodRecipe();
+            $("body").find("progress").hide();
         }
     });
-    $("body").find("progress").hide();
 }
 
 // generate a new random food
@@ -127,6 +127,7 @@ function newFood() {
 //})
 
 $("body").on("click", "#newFood", function () {
+    $("body").find("progress").show();
     newFood();
 })
 

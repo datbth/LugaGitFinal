@@ -53,6 +53,7 @@ $('body').on("change", ".checkbox", function () {
 
 // add the chosen choices by counting the checked boxes
 $('body').on("click", "#weekSuggestion", function () {
+    $("progress").show();
     var noOfCheckBox = checkBoxesElem.length;
     nutritionChoices = [true];
     var i = 0;
