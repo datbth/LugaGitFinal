@@ -91,7 +91,11 @@
 			        //WinJS.Navigation.navigate("/pages/recommendation/weekMenuSuggestionFilter.html");
 			    });
 			    $('#nav-login').click(function () {
-			        WinJS.Navigation.navigate("/pages/userdata/loginform.html"); // navigate to weekMenuSuggestion page
+			        if (WinJS.Application.sessionState.currentUserID) {
+			            WinJS.Navigation.navigate("/pages/userdata/profile.html");
+			        } else {
+                        WinJS.Navigation.navigate("/pages/userdata/loginform.html");
+			        }			        
 			        navigateDefault();
 			        //WinJS.Navigation.addEventListener("navigated", navigateDefault);
 			        //WinJS.Navigation.navigate("/pages/userdata/loginform.html");
@@ -120,14 +124,12 @@
 			        if ((e.keyCode == 10 || e.keyCode == 13)) {
 			            e.preventDefault();
 			            var searchKeyWord = $("#searchTextbox").val();
-			            WinJS.Navigation.navigate("/pages/search/searchResult.html", searchKeyWord);
-			            WinJS.Navigation.addEventListener("navigated", navigate);
+			            WinJS.Navigation.navigate("/pages/search/searchResult.html", searchKeyWord);			            
 			        }
 			    });
                 
 			    $('#addNewFoodToolbarCommand').click(function () {
-			        WinJS.Navigation.navigate("/pages/food/addNewFood.html"); // navigate to weekMenuSuggestion page
-			        WinJS.Navigation.addEventListener("navigated", navigate);
+			        WinJS.Navigation.navigate("/pages/food/addNewFood.html");
 			    });
 			    
 		    }));
@@ -180,6 +182,9 @@
 
         //Change UI to reflect to logged out success
         WinJS.UI.processAll($("#panearea")[0]);
+        var navLoginButton = document.getElementById("nav-login").winControl;
+        navLoginButton.label = "Sign in";
+        navLoginButton.icon = 'contact';
     }
 
 

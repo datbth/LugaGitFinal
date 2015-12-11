@@ -23,8 +23,7 @@
                 else if (status == "success") {
                     saveUser(currentUserID, currentUsername, profileImageURL);
                     alertBox("Đã đăng nhập thành công!");
-                    //WinJS.Navigation.navigate("/pages/index/index.html"); // navigate to Home page
-                    //WinJS.Navigation.addEventListener("navigated", navigate);
+                    WinJS.Navigation.navigate("/pages/index/index.html");
                 }
             },
             error: function (xhr, status, error) {

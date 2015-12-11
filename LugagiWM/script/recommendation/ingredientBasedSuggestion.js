@@ -66,6 +66,7 @@ $('body').on("click", "#submitUserInput", function () {
 
 $('body').on("keyup", ".ingredientInput input", function (e) {
     if (e.keyCode == 13) {
+        $(this).blur();
         generateSuggestion();
     } else {
         if (e.keyCode == 27) {
