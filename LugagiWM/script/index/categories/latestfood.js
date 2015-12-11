@@ -9,7 +9,6 @@
         success: function (data) {
             var source = data.LatestFood;
             var length = source.length
-            console.log(length)
             $("#shit").text("shit")
             for (var i = 0; i < length; i++) {
                 var currentSource = source[i];

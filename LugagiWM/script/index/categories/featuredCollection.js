@@ -1,4 +1,4 @@
-﻿function loadMostLikeCollection() {
+﻿function loadFeaturedCollections() {
     $.ajax({
         type:"GET",
         url: "http://lugagi.com/script/smartPhoneAPI/landing/loadMostLikeCollection.php",
@@ -9,8 +9,6 @@
         success: function (data) {
             var source = data.MostLikeCollection;
             var length = source.length
-            console.log(length)
-            //$("#shit").text("shit")
             for (var i = 0; i < length; i++) {
                 var currentSource = source[i];
                 var newCollection = $("#content").clone();
@@ -37,6 +35,6 @@ $(document).ready(function () {
 
 WinJS.UI.Pages.define("/pages/index/categories/featuredCollection.html", {
     ready: function () {
-        loadMostLikeCollection();
+        loadFeaturedCollections();
     }
 });

@@ -89,7 +89,11 @@ button.win-splitviewpanetoggle {
     width: 100%;
 }
 
-.content-card {
+#content-host {
+    margin-bottom: 5%;
+}
+
+/*.content-card {
     padding-top: 10px;
     padding-left: 0px;
     padding-right: 0px;
@@ -98,8 +102,9 @@ button.win-splitviewpanetoggle {
 }
 .content-card:hover {
     background-color: #E6E6E6;
-}
-.win-button{
+}*/
+
+/*.win-button{
     color: white;
-}
+}*/
 

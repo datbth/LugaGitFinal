@@ -1,8 +1,7 @@
 ﻿var currentName = "";
 var initialIngredientHTML;
 
-function ingredientTest() {
-    console.log("123");
+function loadIngredientSuggestion() {
     $.ajax({
         type: "GET",
         url: "http://lugagi.com/script/ingredientRecommendation/generateFoodSuggestion.php",
@@ -11,9 +10,6 @@ function ingredientTest() {
         cache: false,
         async: true,
         success: function (receivedData) {
-            console.log("yes");
-            console.log(receivedData);
-
             var source = receivedData.Foods
             var noOfFood = source.length;
             for (var i = 0; i < noOfFood; i++) {
@@ -37,14 +33,11 @@ $('body').on("click", "#submitUserInput", function () {
     $("#suggestionContent").html(initialIngredientHTML);
     $("progress").show();
     var numberOfInput = $(".ingredientInput").length;
-    console.log(numberOfInput);
     for (var i = 0; i < numberOfInput; i++) {
         var inputName = $(".ingredientInput:eq(" + i + ")").find("input").val();
-        console.log(inputName);
         currentName += inputName + " ";
     };
-    console.log(currentName);
-    ingredientTest();
+    loadIngredientSuggestion();
     
 })
 
