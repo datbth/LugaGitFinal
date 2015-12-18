@@ -40,7 +40,8 @@ function loadWeekMenuContent(data) {
         var j = 0;
         // load each meal
         for (j; j < 3; j++) {
-            var mealSource = daySource[j];
+            mealList = [daySource.Breakfast, daySource.Lunch, daySource.Dinner]
+            var mealSource = mealList[j];
             var mealSectionElem = $(dayID).find(mealSectionList[j]);
             var k = 0;
             // load each dish
