@@ -147,6 +147,7 @@
     <Content Include="script\search\searchFood.js" />
     <Content Include="script\userdata\loginLogout\login.js" />
     <Content Include="script\userdata\loginLogout\logout.js" />
+    <Content Include="script\userdata\profile\profile.js" />
     <Content Include="WinJS\css\ui-dark.css" />
     <Content Include="WinJS\css\ui-light.css" />
     <Content Include="WinJS\fonts\Symbols.ttf" />

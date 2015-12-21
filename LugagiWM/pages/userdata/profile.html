@@ -3,12 +3,21 @@
 <head>
     <title></title>
     <script src="/script/userdata/loginLogout/logout.js"></script>
+    <script src="/script/userdata/profile/profile.js"></script>
     <style>
 
     </style>
 </head>
 <body>
     <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+            <img class="img-circle img-responsive" id="userProfilePic" src="" />
+            <h4 id="username"></h4>
+            <p id="fullname" class="text-muted"></p>
+            <p>Gender: <span id="gender"></span></p>
+            <p>Member since: <span id="membersince"></span></p>
+            <p id="userIntroduction"></p>
+        </div>
         <div class="col-xs-12">
             <button type="button" id="logoutButton" class="win-button btn-block">
                 Log out
