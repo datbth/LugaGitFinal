@@ -190,15 +190,19 @@
     }
 
     function getCurrentUser() {
-        //Session variables
-        WinJS.Application.sessionState.currentUserID = Windows.Storage.ApplicationData.current.roamingSettings.values["currentUserID"];
-        WinJS.Application.sessionState.currentUsername = Windows.Storage.ApplicationData.current.roamingSettings.values["currentUsername"];
-        WinJS.Application.sessionState.profileImageURL = Windows.Storage.ApplicationData.current.roamingSettings.values["profileImageURL"];
+        var currentUserID = WinJS.Application.sessionState.currentUserID;
 
-        //Change UI to reflect to logged in success
-        $("#nav-login").find(".win-splitviewcommand-label").text(WinJS.Application.sessionState.currentUserID);
-        var imgProfilePicture = "<img src='" + WinJS.Application.sessionState.profileImageURL + "' width=30 height=30 class='img-circle' style='margin-top:-5px; margin-left:-7px;'>";
-        $("#nav-login").find(".win-splitviewcommand-icon").html(imgProfilePicture);
+        if (currentUserID) {
+            //Session variables
+            WinJS.Application.sessionState.currentUserID = Windows.Storage.ApplicationData.current.roamingSettings.values["currentUserID"];
+            WinJS.Application.sessionState.currentUsername = Windows.Storage.ApplicationData.current.roamingSettings.values["currentUsername"];
+            WinJS.Application.sessionState.profileImageURL = Windows.Storage.ApplicationData.current.roamingSettings.values["profileImageURL"];
+
+            //Change UI to reflect to logged in success
+            $("#nav-login").find(".win-splitviewcommand-label").text(WinJS.Application.sessionState.currentUsername);
+            var imgProfilePicture = "<img src='" + WinJS.Application.sessionState.profileImageURL + "' width=30 height=30 class='img-circle' style='margin-top:-5px; margin-left:-7px;'>";
+            $("#nav-login").find(".win-splitviewcommand-icon").html(imgProfilePicture);
+        }
     }
 
     function alertBox(message) {
