@@ -7,7 +7,9 @@
     app.onactivated = function (args) {
 	    if (args.detail.kind === activation.ActivationKind.launch) {
 		    if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
-			    // TODO: This application has been newly launched. Initialize your application here.
+		        // TODO: This application has been newly launched. Initialize your application here.
+		        getCurrentUser();
+
 		    } else {
 			    // TODO: This application was suspended and then terminated.
 			    // To create a smooth user experience, restore application state here so that it looks like the app never stopped running.
@@ -187,6 +189,17 @@
         navLoginButton.icon = 'contact';
     }
 
+    function getCurrentUser() {
+        //Session variables
+        WinJS.Application.sessionState.currentUserID = Windows.Storage.ApplicationData.current.roamingSettings.values["currentUserID"];
+        WinJS.Application.sessionState.currentUsername = Windows.Storage.ApplicationData.current.roamingSettings.values["currentUsername"];
+        WinJS.Application.sessionState.profileImageURL = Windows.Storage.ApplicationData.current.roamingSettings.values["profileImageURL"];
+
+        //Change UI to reflect to logged in success
+        $("#nav-login").find(".win-splitviewcommand-label").text(WinJS.Application.sessionState.currentUserID);
+        var imgProfilePicture = "<img src='" + WinJS.Application.sessionState.profileImageURL + "' width=30 height=30 class='img-circle' style='margin-top:-5px; margin-left:-7px;'>";
+        $("#nav-login").find(".win-splitviewcommand-icon").html(imgProfilePicture);
+    }
 
     function alertBox(message) {
         var msg = new Windows.UI.Popups.MessageDialog(message);

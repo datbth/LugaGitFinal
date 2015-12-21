@@ -229,5 +229,8 @@ WinJS.UI.Pages.define("/pages/index/index.html", {
             //sectionHTML.attr("section-ID", containerList[section])
             loadSection(section);
         }
+
+        //Get auto login user
+        getCurrentUser();
     }
 });
