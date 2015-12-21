@@ -22,7 +22,7 @@
                 }
                 else if (status == "success") {
                     saveUser(currentUserID, currentUsername, profileImageURL);
-                    alertBox("Đã đăng nhập thành công!");
+                    alertBox("Logged in succesfully!");
                     WinJS.Navigation.navigate("/pages/index/index.html");
                 }
             },
