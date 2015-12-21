@@ -97,6 +97,7 @@ function loadFoodContent() {
             $("#foodName").text(source.MonAnName);
             $(".foodDescription").text(source.MonAnDescription);
             $("#authorInfo").text(source.AddedByUsername + "  " + source.CreatedDate);
+            $("#authorInfo").attr("authorID", source.AddedByUserID);
             loadFoodInfo(source);
             loadFoodRecipe();
             $("body").find("progress").hide();
@@ -120,15 +121,14 @@ function newFood() {
     
 }
 
-//$("body").on("click", "#refreshButton", function () {
-//    $("#foodPage").html(foodPageHTML);
-//    loadFoodContent();
-//    // WinJS.Navigation.navigate("/pages/food/foodDetails.html");
-//})
-
 $("body").on("click", "#newFood", function () {
     $("body").find("progress").show();
     newFood();
+});
+
+$("body").on("click", "#authorInfo", function () {
+    console.log($(this).attr("authorID"));
+    WinJS.Navigation.navigate("/pages/userdata/profile.html", $(this).attr("authorID"));
 })
 
 
