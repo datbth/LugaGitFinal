@@ -58,7 +58,7 @@ $('body').on("click", "#weekSuggestion", function () {
     nutritionChoices = [true];
     var i = 0;
     for (i; i < noOfCheckBox; i++) {
-        var currentCheckBox = checkBoxesElem.eq(i).find("input");
+        var currentCheckBox = checkBoxesElem.eq(i);
         if (currentCheckBox.prop("checked")) {
             nutritionChoices[0] = false;
             nutritionChoices.push(i + 1);            
@@ -69,13 +69,13 @@ $('body').on("click", "#weekSuggestion", function () {
 
 // uncheck all boxes
 $('body').on("click", "#clearBoxes", function(){
-    checkBoxesElem.find("input").prop("checked", false);
+    checkBoxesElem.prop("checked", false);
     nutritionChoices[0] = true;
 })
 
 
 WinJS.UI.Pages.define("/pages/recommendation/weekMenuSuggestionFilter.html", {
     ready: function (element, options) {
-        checkBoxesElem = $(".checkbox");
+        checkBoxesElem = $('body').find("input");
     }
 });

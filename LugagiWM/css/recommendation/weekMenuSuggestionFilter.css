@@ -11,5 +11,5 @@ a {
 
 #clearBoxes, #clearBoxes:hover {
     background-color: #f7f7f7;
-    border: none;
+    border: 1px solid grey;
 }

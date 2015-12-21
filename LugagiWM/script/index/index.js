@@ -92,7 +92,7 @@ function sectionNext(numb) {
 function loadSection(numb) {
     // show the progress bar
     var containerID = $(".sectionContainer:eq(" + numb + ")");
-    containerID.find(".pBar").html('<p><br /></p><progress></progress>');
+    containerID.find(".pBar").html('<progress></progress>');
     $.ajax({
         url: urlList[numb],
         dataType: "json",
@@ -132,7 +132,7 @@ function loadSection(numb) {
                 };
             };
             // hide the progress bar
-            containerID.find(".pBar").html('<p><br /><br /></p>');
+            containerID.find(".pBar").html('<p><br/></p>');
         }
     })
 };
