@@ -71,7 +71,8 @@ function loadUserCreatedFood(pageNumber) {
                 };
             }
             else {
-                $("#userFoodContainer").append("<p>There is no dishes to display<p>")
+                $("#loadMoreUserFood").hide();
+                $("#userFoodContainer").append("<p>There is no dishes to display<p>");
             };
             userFoodProgress.hide();
         }
