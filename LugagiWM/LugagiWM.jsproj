@@ -127,7 +127,6 @@
     <Content Include="pages\index\categories\featuredCollection.html" />
     <Content Include="pages\index\categories\latestFood.html" />
     <Content Include="pages\index\index.html" />
-    <Content Include="pages\index_test.html" />
     <Content Include="pages\recommendation\ingredientBasedSuggestion.html" />
     <Content Include="pages\recommendation\weekMenuSuggestionContent.html" />
     <Content Include="pages\recommendation\weekMenuSuggestionFilter.html" />

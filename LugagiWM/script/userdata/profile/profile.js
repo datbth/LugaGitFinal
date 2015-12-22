@@ -83,6 +83,10 @@ $("body").on("click", "#loadMoreUserFood", function () {
     loadUserCreatedFood(userFoodPageNum);
 });
 
+$("body").on("click", ".userFoodItem", function () {
+    WinJS.Navigation.navigate("/pages/food/foodDetails.html", $(this).attr("foodID"));
+});
+
 // do when the page is ready
 WinJS.UI.Pages.define("/pages/userdata/profile.html", {
     ready: function (element, options) {

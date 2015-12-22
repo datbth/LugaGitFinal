@@ -80,34 +80,28 @@
 			            WinJS.Navigation.navigate("/pages/food/addNewFood.html"); // navigate to addNewFood page
 			        }
 			        else {
-			            WinJS.Navigation.navigate("/pages/userdata/loginform.html");
+			            alertBox("Please login before adding a new dish");
 			            WinJS.Application.sessionState.goingToAddFood = true;
+			            WinJS.Navigation.navigate("/pages/userdata/loginform.html");
 			        }
 			        navigateDefault();
-			        //WinJS.Navigation.addEventListener("navigated", navigateDefault);
-			        //WinJS.Navigation.navigate("/pages/food/addNewFood.html");
 			    });
 			    $('#nav-recommendation-ingredient').click(function () {
 			        WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestion.html"); // navigate to ingredientBasedSuggestion page
 			        navigateDefault();
-			        //WinJS.Navigation.addEventListener("navigated", navigateDefault);
-			        //WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestion.html");
 			    });
 			    $('#nav-recommendation-week-menu').click(function () {
 			        WinJS.Navigation.navigate("/pages/recommendation/weekMenuSuggestionFilter.html"); // navigate to weekMenuSuggestion page
 			        navigateDefault();
-			        //WinJS.Navigation.addEventListener("navigated", navigateDefault);
-			        //WinJS.Navigation.navigate("/pages/recommendation/weekMenuSuggestionFilter.html");
 			    });
 			    $('#nav-login').click(function () {
 			        if (WinJS.Application.sessionState.currentUserID) {
 			            WinJS.Navigation.navigate("/pages/userdata/profile.html");
 			        } else {
+			            WinJS.Application.sessionState.goingToAddFood = false;
                         WinJS.Navigation.navigate("/pages/userdata/loginform.html");
 			        }			        
 			        navigateDefault();
-			        //WinJS.Navigation.addEventListener("navigated", navigateDefault);
-			        //WinJS.Navigation.navigate("/pages/userdata/loginform.html");
 			    });
 
 		        //Search button in the navigation bar

@@ -111,7 +111,7 @@ function addFood(action) {
     if (tenMonAn) {
         var foodData = $("#foodInfoForm").serialize();
         foodData = foodData + "&CurrentUserID=" + WinJS.Application.sessionState.currentUserID;
-        console.debug(foodData);
+        console.log(foodData);
         $.ajax({
             url: "http://lugagi.com/script/smartPhoneAPI/food/themmonan.php",
             type: "POST",
