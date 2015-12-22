@@ -135,7 +135,7 @@ function addFood(action) {
                 //Redirect the user to the page
                 if (status == "success") {
                     if (action == "add-only") {
-
+                        WinJS.Navigation.navigate("/pages/food/foodDetails.html", monAnID);
                     }
                     else if (action == "add-then-recipe") {
 
@@ -164,6 +164,10 @@ function addFood(action) {
 //Function to submit the form
 $("body").on("click", "#addNewFoodButton", function (e) {
     addFood("add-only");
+});
+
+$("body").on("click", "#cancelButton", function (evt) {
+    WinJS.Navigation.back(1).done;
 });
 
 //Function to submit the form and then move to the edit recipe screen

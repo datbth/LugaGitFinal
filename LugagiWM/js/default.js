@@ -75,7 +75,13 @@
 			        //WinJS.Navigation.addEventListener("navigated", navigateDefault);
 			    })
 			    $('#nav-addNewFood').click(function () {
-			        WinJS.Navigation.navigate("/pages/food/addNewFood.html"); // navigate to addNewFood page
+			        if (WinJS.Application.sessionState.currentUserID) {
+			            WinJS.Navigation.navigate("/pages/food/addNewFood.html"); // navigate to addNewFood page
+			        }
+			        else {
+			            WinJS.Navigation.navigate("/pages/userdata/loginform.html");
+			            WinJS.Application.sessionState.goingToAddFood = true;
+			        }
 			        navigateDefault();
 			        //WinJS.Navigation.addEventListener("navigated", navigateDefault);
 			        //WinJS.Navigation.navigate("/pages/food/addNewFood.html");

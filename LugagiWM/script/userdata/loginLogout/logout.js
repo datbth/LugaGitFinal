@@ -3,7 +3,7 @@
 
     // Add commands and set their command handlers
     msg.commands.append(new Windows.UI.Popups.UICommand("Log out", logOutHandler));
-    msg.commands.append(new Windows.UI.Popups.UICommand("Cancel", logOutHandler));
+    msg.commands.append(new Windows.UI.Popups.UICommand("Cancel"));
 
     // Set the command that will be invoked by default
     msg.defaultCommandIndex = 0;
@@ -21,7 +21,7 @@ function logOutHandler(command) {
         removeUser();
 
         alertBox("Logged out successfully!");
-
+        WinJS.Application.sessionState.goingToAddFood = false;
         WinJS.Navigation.navigate("/pages/index/index.html");        
     }
 }
