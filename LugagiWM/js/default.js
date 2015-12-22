@@ -48,6 +48,7 @@
 
 		        //function to navigate between pages
 			    function navigateDefault() {
+			        $(".win-splitview-content").scrollTop(0);
 			        if (windowSize == 'small') {
 			            splitView.closePane();
 			        }

@@ -167,7 +167,7 @@ $("body").on("click", "#addNewFoodButton", function (e) {
 });
 
 $("body").on("click", "#cancelButton", function (evt) {
-    WinJS.Navigation.back(1).done;
+    WinJS.Navigation.navigate("pages/index/index.html");
 });
 
 //Function to submit the form and then move to the edit recipe screen
