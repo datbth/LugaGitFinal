@@ -1,7 +1,7 @@
 ﻿var userFoodPageNum = 1;
 var currentUserID;
 var userID;
-var userFoodContainer;
+var userFoodProgress;
 
 function loadProfile() {
     $.ajax({
@@ -51,11 +51,12 @@ function loadUserCreatedFood(pageNumber) {
         cache: false,
         async: true,
         beforeSend: function(){
-            userFoodContainer.show();
+            userFoodProgress.show();
         },
         success: function(data){
             source = data.MostViewFoods;
-            if (source != []){
+            numOfFood = source.length;
+            if (numOfFood > 0) {
                 for (var i = 0; i < source.length; i++) {
                     var currentSource = source[i];
                     var currentFoodItem = $("#sampleUserFood").clone();
@@ -68,8 +69,11 @@ function loadUserCreatedFood(pageNumber) {
                     currentFoodItem.show();
                     $("#userFoodContainer").append(currentFoodItem);
                 };
-                userFoodContainer.hide();
             }
+            else {
+                $("#userFoodContainer").append("<p>There is no dishes to display<p>")
+            };
+            userFoodProgress.hide();
         }
     });
 };
@@ -88,7 +92,7 @@ WinJS.UI.Pages.define("/pages/userdata/profile.html", {
         else {
             $("#logoutButton").hide();
         };
-        userFoodContainer = $("#userFoodContainer").find("progress");
+        userFoodProgress = $("#userFoodContainer").find("progress");
         loadProfile();
         loadUserCreatedFood(userFoodPageNum);
     }

@@ -18,7 +18,7 @@
                 }
 
                 if (status == "failed") {
-                    alertBox(errorMessage);
+                    alertBox("Wrong ID or Password. Please try again");
                 }
                 else if (status == "success") {
                     saveUser(currentUserID, currentUsername, profileImageURL);
