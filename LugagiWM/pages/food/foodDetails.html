@@ -6,23 +6,21 @@
 </head>
 <body>
     <div id="foodPage" class="container-fluid">
-        <!-- Header -->
-        <div id="foodHeader" class="col-xs-12">
-            <div id="foodHeaderInfo" class="col-xs-12">
-                <h2 id="foodName"></h2>
-                <p class="foodDescription hidden-xs"></p>
-            </div>
-        </div>
-        <!-- Ultility buttons -->
-        <div class="row">
-            <button id="newFood" class="win-button col-xs-3">Change Dish</button>
-            <progress class="col-xs-8"></progress>
-        </div>
+        
+        
         <!-- Main content -->
-        <p class="foodDescription visible-xs" style="opacity: 0.5"></p>
         <div id="foodDetails" class="row contentContainer">
             <!-- Food info summary -->
             <div class="col-xs-12 col-sm-5 pull-right contentContainer">
+                <!-- Header -->
+                <img id="foodHeader" src="" class="img-responsive"/>
+                <h2 id="foodName"></h2>
+                <p class="foodDescription" style="opacity: 0.5"></p>
+                <!-- Ultility buttons -->
+                <div class="row">
+                    <button id="newFood" class="win-button col-xs-3">Change Dish</button>
+                    <progress class="col-xs-8"></progress>
+                </div>
                 <h4>Dish information</h4>
                 <ul id="foodInfo" class="list-group"></ul>
             </div>
@@ -39,7 +37,7 @@
                 <!-- Food cooking steps -->
                 <div>
                     <h4>Cooking steps</h4>
-                    <ol id="foodSteps"></ol>
+                    <ol id="foodSteps" style="word-wrap: break-word"></ol>
                 </div>
             </div>
         </div>      

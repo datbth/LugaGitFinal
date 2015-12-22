@@ -92,8 +92,8 @@ function loadFoodContent() {
         async: true,
         success: function (receivedData) {
             var source = receivedData.FoodInfo[0];
-            var fullImgUrl = "http://lugagi.com/script/timthumb.php?src=/" + source.ImageURL + "&w=1311&h=400";
-            $("#foodHeader").css("background-image", "url(" + fullImgUrl + ")");
+            var fullImgUrl = "http://lugagi.com/script/timthumb.php?src=/" + source.ImageURL + "&w=600&h=400";
+            $("#foodHeader").attr("src", fullImgUrl);
             $("#foodName").text(source.MonAnName);
             $(".foodDescription").text(source.MonAnDescription);
             $("#authorInfo").text(source.AddedByUsername + "  " + source.CreatedDate);
