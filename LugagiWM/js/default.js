@@ -76,14 +76,8 @@
 			        //WinJS.Navigation.addEventListener("navigated", navigateDefault);
 			    })
 			    $('#nav-addNewFood').click(function () {
-			        if (WinJS.Application.sessionState.currentUserID) {
-			            WinJS.Navigation.navigate("/pages/food/addNewFood.html"); // navigate to addNewFood page
-			        }
-			        else {
-			            alertBox("Please login before adding a new dish");
-			            WinJS.Application.sessionState.goingToAddFood = true;
-			            WinJS.Navigation.navigate("/pages/userdata/loginform.html");
-			        }
+                    alertBox("Because you have not login yet. New dishes will be added using our default account")
+			        WinJS.Navigation.navigate("/pages/food/addNewFood.html"); // navigate to addNewFood page
 			        navigateDefault();
 			    });
 			    $('#nav-recommendation-ingredient').click(function () {
@@ -98,8 +92,7 @@
 			        if (WinJS.Application.sessionState.currentUserID) {
 			            WinJS.Navigation.navigate("/pages/userdata/profile.html");
 			        } else {
-			            WinJS.Application.sessionState.goingToAddFood = false;
-                        WinJS.Navigation.navigate("/pages/userdata/loginform.html");
+			            WinJS.Navigation.navigate("/pages/userdata/loginform.html");
 			        }			        
 			        navigateDefault();
 			    });

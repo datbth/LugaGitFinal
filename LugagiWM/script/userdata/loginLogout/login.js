@@ -22,12 +22,8 @@
                 }
                 else if (status == "success") {
                     saveUser(currentUserID, currentUsername, profileImageURL);
-                    if (WinJS.Application.sessionState.goingToAddFood) {
-                        WinJS.Navigation.navigate("/pages/food/addNewFood.html");
-                    } else {
-                        alertBox("Logged in succesfully!");
-                        WinJS.Navigation.navigate("/pages/index/index.html");
-                    }
+                    alertBox("Logged in succesfully!");
+                    WinJS.Navigation.navigate("/pages/index/index.html");
                 }
             },
             error: function (xhr, status, error) {
