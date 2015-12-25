@@ -186,7 +186,7 @@
     }
 
     function getCurrentUser() {
-        var currentUserID = WinJS.Application.sessionState.currentUserID;
+        var currentUserID = Windows.Storage.ApplicationData.current.roamingSettings.values["currentUserID"];
 
         if (currentUserID) {
             //Session variables
