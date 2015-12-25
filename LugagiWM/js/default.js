@@ -76,7 +76,9 @@
 			        //WinJS.Navigation.addEventListener("navigated", navigateDefault);
 			    })
 			    $('#nav-addNewFood').click(function () {
-                    alertBox("Because you have not login yet. New dishes will be added using our default account")
+			        if (!WinJS.Application.sessionState.currentUserID) {
+			            alertBox("Because you have not login yet, new dishes will be added using our default account")
+			        }
 			        WinJS.Navigation.navigate("/pages/food/addNewFood.html"); // navigate to addNewFood page
 			        navigateDefault();
 			    });

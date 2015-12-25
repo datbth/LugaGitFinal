@@ -9,27 +9,26 @@
             dataType: "json",
             async: true,
             success: function (data) {
-                for (var i in data.LoginStatus) {
-                    var status = data.LoginStatus[i].Status;
-                    var errorMessage = data.LoginStatus[i].ErrorMessage;
-                    var currentUserID = data.LoginStatus[i].CurrentUserID;
-                    var currentUsername = data.LoginStatus[i].CurrentUsername;
-                    var profileImageURL = data.LoginStatus[i].ProfileImageURL;
-                }
+                loginStatus = data.LoginStatus
+                var status = loginStatus.Status;
+                var errorMessage = loginStatus.ErrorMessage;
+                var currentUserID = loginStatus.CurrentUserID;
+                var currentUsername = loginStatus.CurrentUsername;
+                var profileImageURL = loginStatus.ProfileImageURL;
 
                 if (status == "failed") {
                     alertBox("Wrong ID or Password. Please try again");
                 }
                 else if (status == "success") {
                     saveUser(currentUserID, currentUsername, profileImageURL);
-                    alertBox("Logged in succesfully!");
-                    WinJS.Navigation.navigate("/pages/index/index.html");
+                    alertBox("Welcome back to Lugagi, " + currentUsername + "!");
+                    WinJS.Navigation.navigate("/pages/userdata/profile.html");
                 }
             },
             error: function (xhr, status, error) {
-                console.debug("AJAX request fail " + status + " " + error);
-                var err = xhr.responseText;
-                alertBox(err + error);
+                //console.debug("AJAX request fail " + status + " " + error);
+                //var err = xhr.responseText;
+                alertBox("Some errors have occurred");
             }
         });
     });
