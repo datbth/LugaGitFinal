@@ -21,7 +21,6 @@ function logOutHandler(command) {
         removeUser();
 
         alertBox("Logged out successfully!");
-        WinJS.Application.sessionState.goingToAddFood = false;
         WinJS.Navigation.navigate("/pages/index/index.html");        
     }
 }
