@@ -7,7 +7,6 @@
 <body>
     <div id="foodPage" class="container-fluid">
         
-        
         <!-- Main content -->
         <div id="foodDetails" class="row contentContainer">
             <!-- Food info summary -->
@@ -17,9 +16,16 @@
                 <h2 id="foodName"></h2>
                 <p class="foodDescription" style="opacity: 0.5"></p>
                 <!-- Ultility buttons -->
-                <div class="row">
+                <div class="row" id="changeDishButton">
                     <button id="newFood" class="win-button col-xs-3">Change Dish</button>
                     <progress class="col-xs-8"></progress>
+                </div>
+                <!-- food navigation in collection-->
+                <div class="row" id="previousAndNextButton" style="display:none">
+                    <h4 id="currentCollection"></h4>
+                    <button class="win-button col-xs-3" id="foodNavigationPrevious" style="display:none">Previous</button>
+                    <button class="win-button col-xs-3" id="foodNavigationNext" style="display:none">Next</button>
+                    <progress class="col-xs-10"></progress>
                 </div>
                 <h4>Dish information</h4>
                 <ul id="foodInfo" class="list-group"></ul>

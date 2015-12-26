@@ -1,4 +1,8 @@
 ﻿var currentContentID;
+var currentIndex;
+var foodIdList;
+var initialFoodDetailHTML;
+var foodIdListLength;
 
 // load the ingredients of the food
 function loadIngredient(ingredientsSource) {
@@ -91,6 +95,7 @@ function loadFoodContent() {
         cache: false,
         async: true,
         success: function (receivedData) {
+            console.log("receivedData", receivedData)
             var source = receivedData.FoodInfo[0];
             var fullImgUrl = "http://lugagi.com/script/timthumb.php?src=/" + source.ImageURL + "&w=600&h=400";
             $("#foodHeader").attr("src", fullImgUrl);
@@ -101,6 +106,14 @@ function loadFoodContent() {
             loadFoodInfo(source);
             loadFoodRecipe();
             $("body").find("progress").hide();
+            console.log("food info", source)
+            // show or hide navigation button
+            showOrHideButton();
+            if (currentIndex === 0) { $("#foodNavigationPrevious").hide(); }
+            if (currentIndex === foodIdListLength - 1) { $("#foodNavigationNext").hide(); }
+            console.log("currentIndex", currentIndex);
+
+            
         }
     });
 }
@@ -121,6 +134,21 @@ function newFood() {
     
 }
 
+// show or hid the button
+function showOrHideButton() {
+    if (currentIndex === foodIdListLength - 1) {
+        $("#foodNavigationNext").hide();
+    } else {
+        $("#foodNavigationNext").show();
+    }
+    if (currentIndex === 0) {
+        $("#foodNavigationPrevious").hide();
+    } else {
+        $("#foodNavigationPrevious").show();
+    }
+}
+
+
 $("body").on("click", "#newFood", function () {
     $("body").find("progress").show();
     newFood();
@@ -131,12 +159,55 @@ $("body").on("click", "#authorInfo", function () {
     WinJS.Navigation.navigate("/pages/userdata/profile.html", $(this).attr("authorID"));
 })
 
+$("body").on("click", "#foodNavigationPrevious", function () {
+    $("body").find("progress").show();
+    currentIndex -= 1;
+    currentContentID = foodIdList[currentIndex];
+    $("#foodDetails").html(initialFoodDetailHTML);
+
+    console.log("foodIdListLength", foodIdListLength);
+    console.log("currentIndex", currentIndex, typeof currentIndex);
+    console.log("currentContentID", currentContentID);
+    
+    loadFoodContent();
+})
+
+$("body").on("click", "#foodNavigationNext", function () {
+    $("body").find("progress").show();
+    currentIndex += 1;
+    currentContentID = foodIdList[currentIndex];
+    $("#foodDetails").html(initialFoodDetailHTML);
+
+    console.log("foodIdListLength", foodIdListLength);
+    console.log("currentIndex", currentIndex, typeof currentIndex);
+    console.log("currentContentID", currentContentID);
+
+    loadFoodContent();
+})
+
 
 WinJS.UI.Pages.define("/pages/food/foodDetails.html", {
     ready: function (element, options) {        
         // get the ID of the food
-        currentContentID = options;
-        
+        if (typeof options === "object") {
+            $("#currentCollection").text("Current Collection: " + options[2]);
+            foodIdList = options[1];
+            currentIndex = options[0];
+            currentContentID = foodIdList[currentIndex];
+            foodIdListLength = foodIdList.length;
+
+            console.log("foodIdList", foodIdList)
+            $("#previousAndNextButton").show();
+            $("#changeDishButton").hide();
+            
+        } else {
+            currentContentID = options;
+            $("#previousAndNextButton").hide();
+            $("#changeDishButton").show();
+        }
+
+        // initial page
+        initialFoodDetailHTML = $("#foodDetails").html();
         // load new food
         loadFoodContent();
     }

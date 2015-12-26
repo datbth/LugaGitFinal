@@ -14,7 +14,7 @@ div {
     /*border-radius: 4px;
     background-color: white;*/
     margin-bottom: 5px;
-    margin-left: 2.5%;
+    margin-left: 15px;
 }
 
 
@@ -73,3 +73,10 @@ hr{
         height: 400px;
     }
 }*/
+
+#previousAndNextButton {
+    margin-left: 0px;
+}
+#foodNavigationPrevious {
+    margin-right: 5px;
+}

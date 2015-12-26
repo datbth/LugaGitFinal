@@ -1,4 +1,6 @@
 ﻿var collectionID;
+var foodIdList = [];
+var collectionName;
 function loadCollection() {
     $.ajax({
         type: "GET",
@@ -9,7 +11,8 @@ function loadCollection() {
         async: true,
         success: function (receivedData) {
             var source = receivedData.Collection
-            $("#collectionName").text(source.CollectionName);
+            collectionName = source.CollectionName;
+            $("#collectionName").text(collectionName);
             $("#ViewCount").text(source.ViewCount);
             $("#LikeCount").text(source.LikeCount);
             $("#CollectionDescription").text(source.CollectionDescription);
@@ -30,10 +33,16 @@ function loadCollection() {
                 newFood.find(".collectionItemImg").attr("src", fullImgURL);
                 newFood.attr("ContentID", currentSource.ContentID);
                 newFood.show();
-                $("#collectionContent").append(newFood);                
+                $("#collectionContent").append(newFood);
+                // append food ID to a list.
+                foodIdList.push(currentSource.ContentID);
+                // create index atrribute
+                foodCurrentIndex = newFood.attr("currentIndex", i);
+
             }
         }
     });
+    console.log(foodIdList);
 };
 
 // event
@@ -41,7 +50,13 @@ $(document).ready(function () {
     $("body").on("click", ".collectionItem", function () {
         var currentItem = $(this);
         var currentID = currentItem.attr("ContentID");
-        WinJS.Navigation.navigate("/pages/food/foodDetails.html", currentID);        
+        // WinJS.Navigation.navigate("/pages/food/foodDetails.html", foodIdList[currentItem.attr("currentIndex")]);
+        var listAndIndex = {
+            0: parseInt(currentItem.attr("currentIndex")),
+            1: foodIdList,
+            2: collectionName,
+        };
+        WinJS.Navigation.navigate("/pages/food/foodDetails.html", listAndIndex);
     });
 })
 
