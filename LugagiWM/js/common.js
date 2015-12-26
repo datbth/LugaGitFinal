@@ -1,22 +1,24 @@
 function adjustItemHeight() {
     var classToResize = WinJS.Application.sessionState.classToResize;
     if (classToResize) {
-        console.log(window.innerWidth);
-        if (window.innerWidth <= 525) {
-            classToResize.css("height", '200px');
+        var viewWidth = window.innerWidth;
+        var newSize;
+        if (viewWidth <= 525) {
+            newSize = '200px'
         }
-        else if (window.innerWidth <= 575) {
-            classToResize.css("height", '225px');
+        else if (viewWidth <= 575) {
+            newSize = '225px';
         }
-        else if (window.innerWidth <= 780) {
-            classToResize.css("height", '250px');
+        else if (viewWidth <= 780) {
+            newSize = '250px';
         }
-        else if (window.innerWidth <= 1200) {
-            classToResize.css("height", '225px');
+        else if (viewWidth <= 1200) {
+            newSize = '225px';
         }
         else {
-            classToResize.css("height", '205px');
-        }
+            newSize = '205px';
+        };
+        classToResize.css("height", newSize);
     }
 };
 
@@ -205,7 +207,6 @@ function followUser(followingUserID) {
         data: "FollowingID=" + followingID,
         async: false,
         success: function(data) {
-          console.log("Follow status: " + data);
           if (data == "follow") {
             followButton.text("Bỏ theo dõi");
           }
