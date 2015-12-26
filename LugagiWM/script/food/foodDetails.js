@@ -1,4 +1,8 @@
 ﻿var currentContentID;
+var currentIndex;
+var foodIdList;
+var initialFoodDetailHTML;
+var foodIdListLength;
 
 // load the ingredients of the food
 function loadIngredient(ingredientsSource) {
@@ -101,6 +105,9 @@ function loadFoodContent() {
             loadFoodInfo(source);
             loadFoodRecipe();
             $("body").find("progress").hide();
+
+            // show or hide navigation buttons
+            toggleCollectionNav();
         }
     });
 }
@@ -121,22 +128,73 @@ function newFood() {
     
 }
 
+// show or hide the collection navigation buttons
+function toggleCollectionNav() {
+    if (currentIndex === foodIdListLength - 1) {
+        $("#foodNavigationNext").hide();
+    }
+    else if (currentIndex === 0) {
+        $("#foodNavigationPrevious").hide();
+        $('#foodNavigationNext').addClass("col-xs-offset-3");
+    }
+    else if (currentIndex == 1 || currentIndex == foodIdListLength - 2){
+        $('#foodNavigationNext').removeClass("col-xs-offset-3");
+        $("#foodNavigationNext").show();
+        $("#foodNavigationPrevious").show();
+    };
+};
+
+// function to navigate to other food within collection
+function navigateInCollection() {
+    $("body").find("progress").show();
+    currentContentID = foodIdList[currentIndex];
+    $("#foodDetails").html(initialFoodDetailHTML);
+    loadFoodContent();
+};
+
+
 $("body").on("click", "#newFood", function () {
     $("body").find("progress").show();
     newFood();
 });
 
 $("body").on("click", "#authorInfo", function () {
-    console.log($(this).attr("authorID"));
     WinJS.Navigation.navigate("/pages/userdata/profile.html", $(this).attr("authorID"));
 })
 
+$("body").on("click", "#foodNavigationPrevious", function () {
+    currentIndex--;
+    navigateInCollection();
+});
+
+$("body").on("click", "#foodNavigationNext", function () {
+    currentIndex++;
+    navigateInCollection();
+});
+
+$('body').on("click", "#currentCollection", function () {
+    WinJS.Navigation.back(1).done;
+});
 
 WinJS.UI.Pages.define("/pages/food/foodDetails.html", {
     ready: function (element, options) {        
         // get the ID of the food
-        currentContentID = options;
-        
+        if (typeof options === "object") {
+            var collectionData = options;
+            $("#currentCollection").text("Current Collection: " + collectionData.collectionName);
+            foodIdList = options.foodIDList;
+            currentIndex = options.foodIndex;
+            currentContentID = foodIdList[currentIndex];
+            foodIdListLength = foodIdList.length;
+            $("#newFood").hide();
+            $("#collectionNavDiv").show();
+        }
+        else {
+            currentContentID = options;
+        };
+
+        // initial page
+        initialFoodDetailHTML = $("#foodDetails").html();
         // load new food
         loadFoodContent();
     }
