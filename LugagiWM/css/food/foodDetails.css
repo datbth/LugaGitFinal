@@ -10,36 +10,15 @@ div {
     display: block;
 }
 
-#refreshButton, #newFood {
-    /*border-radius: 4px;
-    background-color: white;*/
+#newFood {
     margin-bottom: 5px;
     margin-left: 15px;
 }
 
-
-/*#foodHeader {
-    height: 250px;
-    margin-top: -40px;
-    margin-bottom: 20px;
-    color: white;
-    background-position-x: 50%;
-    background-position-y: 50%;
-    background-size: cover;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: initial;
+#collectionNavDiv {
+    margin-bottom: 5px;
+    margin-left: 1px;
 }
-
-#foodHeaderInfo {
-    width: 100%;
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) );
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}*/
 
 #foodContent {
     padding: 20px;

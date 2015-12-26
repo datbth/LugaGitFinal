@@ -17,7 +17,6 @@
 		    args.setPromise(WinJS.UI.processAll().done(function () {
 		        // app variables
 		        /* added by Dat - 18-11-2015 */
-		        var viewWidth = window.innerWidth
 		        var splitView = document.getElementById('mySplitView').winControl;
 		        var windowSize;
 
@@ -59,6 +58,7 @@
 			    WinJS.UI.processAll().then(function () {
 			        navResize();
 			        $(window).resize(navResize);
+			        $(window).resize(adjustItemHeight);
 			    });
                 
 

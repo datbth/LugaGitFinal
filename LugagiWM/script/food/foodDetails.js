@@ -95,7 +95,6 @@ function loadFoodContent() {
         cache: false,
         async: true,
         success: function (receivedData) {
-            console.log("receivedData", receivedData)
             var source = receivedData.FoodInfo[0];
             var fullImgUrl = "http://lugagi.com/script/timthumb.php?src=/" + source.ImageURL + "&w=600&h=400";
             $("#foodHeader").attr("src", fullImgUrl);
@@ -106,14 +105,9 @@ function loadFoodContent() {
             loadFoodInfo(source);
             loadFoodRecipe();
             $("body").find("progress").hide();
-            console.log("food info", source)
-            // show or hide navigation button
-            showOrHideButton();
-            if (currentIndex === 0) { $("#foodNavigationPrevious").hide(); }
-            if (currentIndex === foodIdListLength - 1) { $("#foodNavigationNext").hide(); }
-            console.log("currentIndex", currentIndex);
 
-            
+            // show or hide navigation buttons
+            toggleCollectionNav();
         }
     });
 }
@@ -134,19 +128,29 @@ function newFood() {
     
 }
 
-// show or hid the button
-function showOrHideButton() {
+// show or hide the collection navigation buttons
+function toggleCollectionNav() {
     if (currentIndex === foodIdListLength - 1) {
         $("#foodNavigationNext").hide();
-    } else {
-        $("#foodNavigationNext").show();
     }
-    if (currentIndex === 0) {
+    else if (currentIndex === 0) {
         $("#foodNavigationPrevious").hide();
-    } else {
-        $("#foodNavigationPrevious").show();
+        $('#foodNavigationNext').addClass("col-xs-offset-3");
     }
-}
+    else if (currentIndex == 1 || currentIndex == foodIdListLength - 2){
+        $('#foodNavigationNext').removeClass("col-xs-offset-3");
+        $("#foodNavigationNext").show();
+        $("#foodNavigationPrevious").show();
+    };
+};
+
+// function to navigate to other food within collection
+function navigateInCollection() {
+    $("body").find("progress").show();
+    currentContentID = foodIdList[currentIndex];
+    $("#foodDetails").html(initialFoodDetailHTML);
+    loadFoodContent();
+};
 
 
 $("body").on("click", "#newFood", function () {
@@ -155,56 +159,39 @@ $("body").on("click", "#newFood", function () {
 });
 
 $("body").on("click", "#authorInfo", function () {
-    console.log($(this).attr("authorID"));
     WinJS.Navigation.navigate("/pages/userdata/profile.html", $(this).attr("authorID"));
 })
 
 $("body").on("click", "#foodNavigationPrevious", function () {
-    $("body").find("progress").show();
-    currentIndex -= 1;
-    currentContentID = foodIdList[currentIndex];
-    $("#foodDetails").html(initialFoodDetailHTML);
-
-    console.log("foodIdListLength", foodIdListLength);
-    console.log("currentIndex", currentIndex, typeof currentIndex);
-    console.log("currentContentID", currentContentID);
-    
-    loadFoodContent();
-})
+    currentIndex--;
+    navigateInCollection();
+});
 
 $("body").on("click", "#foodNavigationNext", function () {
-    $("body").find("progress").show();
-    currentIndex += 1;
-    currentContentID = foodIdList[currentIndex];
-    $("#foodDetails").html(initialFoodDetailHTML);
+    currentIndex++;
+    navigateInCollection();
+});
 
-    console.log("foodIdListLength", foodIdListLength);
-    console.log("currentIndex", currentIndex, typeof currentIndex);
-    console.log("currentContentID", currentContentID);
-
-    loadFoodContent();
-})
-
+$('body').on("click", "#currentCollection", function () {
+    WinJS.Navigation.back(1).done;
+});
 
 WinJS.UI.Pages.define("/pages/food/foodDetails.html", {
     ready: function (element, options) {        
         // get the ID of the food
         if (typeof options === "object") {
-            $("#currentCollection").text("Current Collection: " + options[2]);
-            foodIdList = options[1];
-            currentIndex = options[0];
+            var collectionData = options;
+            $("#currentCollection").text("Current Collection: " + collectionData.collectionName);
+            foodIdList = options.foodIDList;
+            currentIndex = options.foodIndex;
             currentContentID = foodIdList[currentIndex];
             foodIdListLength = foodIdList.length;
-
-            console.log("foodIdList", foodIdList)
-            $("#previousAndNextButton").show();
-            $("#changeDishButton").hide();
-            
-        } else {
-            currentContentID = options;
-            $("#previousAndNextButton").hide();
-            $("#changeDishButton").show();
+            $("#newFood").hide();
+            $("#collectionNavDiv").show();
         }
+        else {
+            currentContentID = options;
+        };
 
         // initial page
         initialFoodDetailHTML = $("#foodDetails").html();

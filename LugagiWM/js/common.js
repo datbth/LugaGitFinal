@@ -1,6 +1,28 @@
+function adjustItemHeight() {
+    var classToResize = WinJS.Application.sessionState.classToResize;
+    if (classToResize) {
+        console.log(window.innerWidth);
+        if (window.innerWidth <= 525) {
+            classToResize.css("height", '200px');
+        }
+        else if (window.innerWidth <= 575) {
+            classToResize.css("height", '225px');
+        }
+        else if (window.innerWidth <= 780) {
+            classToResize.css("height", '250px');
+        }
+        else if (window.innerWidth <= 1200) {
+            classToResize.css("height", '225px');
+        }
+        else {
+            classToResize.css("height", '205px');
+        }
+    }
+};
 
 // function to reload page when navigating
 function navigate(evObject) {
+    WinJS.Application.sessionState.classToResize = undefined;
     var url = evObject.detail.location,
         host = $("#content-host")[0];
     // unload content
