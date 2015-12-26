@@ -188,6 +188,7 @@ WinJS.UI.Pages.define("/pages/food/foodDetails.html", {
             foodIdListLength = foodIdList.length;
             $("#newFood").hide();
             $("#collectionNavDiv").show();
+            $("#changeDishButton").find("progress").remove();
         }
         else {
             currentContentID = options;
