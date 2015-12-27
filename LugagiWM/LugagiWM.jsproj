@@ -74,6 +74,7 @@
     <Content Include="css\index\categories\latestFood.css" />
     <Content Include="css\index\index.css" />
     <Content Include="css\recommendation\ingredientBasedSuggestion.css" />
+    <Content Include="css\recommendation\weekMenuSuggestionContent.css" />
     <Content Include="css\recommendation\weekMenuSuggestionFilter.css" />
     <Content Include="default.html" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
