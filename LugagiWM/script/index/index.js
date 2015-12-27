@@ -143,19 +143,19 @@ function navigateCategory(numb) {
 };
 
 // page events
-$(document).ready(function () {
+function addPageEvents() {
 
     // header section events
-    $('body').on("click", "#goToIngredient", function () {
+    $("#goToIngredient").click(function (ev) {
         WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestion.html"); // navigate to ingredientBasedSuggestion page
     });
 
-    $('body').on("click", "#goToWeek", function () {
+    $("#goToWeek").click(function () {
         WinJS.Navigation.navigate("/pages/recommendation/weekMenuSuggestionFilter.html"); // navigate to weekMenuSuggestion page
     });
     
     // random button event
-    $('body').on("click", "#changeRand", function () {
+    $("#changeRand").click(function () {
         randDish();
     });
 
@@ -198,12 +198,14 @@ $(document).ready(function () {
     //$("body").on("click", "#mostLikeCollectionContainer", function () {
     //    WinJS.Navigation.navigate("/pages/index/categories/featuredCollection.html")
     //});
-});
+};
 
 
 // do when the page is ready
 WinJS.UI.Pages.define("/pages/index/index.html", {
     ready: function (element, options) {
+        addPageEvents();
+
         // reset indexes;
         startIndexList = [0, 0, 0];
         endIndexList = [0, 0, 0];

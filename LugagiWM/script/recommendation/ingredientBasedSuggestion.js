@@ -10,6 +10,7 @@ function loadIngredientSuggestion() {
         cache: false,
         async: true,
         success: function (receivedData) {
+            console.log(receivedData);
             var source = receivedData.Foods;
             var noOfFood = source.length;
             if (noOfFood < 1) {
@@ -23,6 +24,8 @@ function loadIngredientSuggestion() {
                     var fullImageURL = "http://lugagi.com/script/timthumb.php?src=/foodimages/" + currentSource.ImageURL + "&w=300&h=200";
                     newFood.find(".ingredientContentImg").attr("src", fullImageURL);
                     newFood.attr("data-food-ID", currentSource.MonAnID);
+                    //newFood.find(".contentView").text(currentSource.ContentViewCount + " ");
+                    //newFood.find(".contentLike").text(currentSource.ContentLikeCount);
                     newFood.css("display", "block");
                     $("#suggestionContent").append(newFood);
                     $("progress").hide();

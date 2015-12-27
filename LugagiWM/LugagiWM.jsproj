@@ -65,9 +65,9 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <Content Include="components\picaresize\pica.min.js" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\collection\collection.css" />
+    <Content Include="css\components\picaresize\pica.min.js" />
     <Content Include="css\food\foodDetails.css" />
     <Content Include="css\index\categories\editorPick.css" />
     <Content Include="css\index\categories\featuredCollection.css" />
