@@ -1,3 +1,78 @@
+"use strict";
+
+function saveUser(currentUserID, currentUsername, profileImageURL) {
+    //Session variables
+    WinJS.Application.sessionState.currentUserID = currentUserID;
+    WinJS.Application.sessionState.currentUsername = currentUsername;
+    WinJS.Application.sessionState.profileImageURL = profileImageURL;
+
+    //Autologin
+    Windows.Storage.ApplicationData.current.roamingSettings.values["currentUserID"] = currentUserID;
+    Windows.Storage.ApplicationData.current.roamingSettings.values["currentUsername"] = currentUsername;
+    Windows.Storage.ApplicationData.current.roamingSettings.values["profileImageURL"] = profileImageURL
+
+    //Change UI to reflect to logged in success
+    $("#nav-login").find(".win-splitviewcommand-label").text(currentUsername);
+    var imgProfilePicture = "<img src='" + profileImageURL + "' width=30 height=30 class='img-circle' style='margin-top:-5px; margin-left:-7px;'>";
+    $("#nav-login").find(".win-splitviewcommand-icon").html(imgProfilePicture);
+}
+
+function removeUser() {
+    //Session variables
+    WinJS.Application.sessionState.currentUserID = "";
+    WinJS.Application.sessionState.currentUsername = "";
+    WinJS.Application.sessionState.profileImageURL = "";
+
+    //Autologin
+    Windows.Storage.ApplicationData.current.roamingSettings.values["currentUserID"] = "";
+    Windows.Storage.ApplicationData.current.roamingSettings.values["currentUsername"] = "";
+    Windows.Storage.ApplicationData.current.roamingSettings.values["profileImageURL"] = ""
+
+    //Change UI to reflect to logged out success
+    WinJS.UI.processAll($("#panearea")[0]);
+    var navLoginButton = document.getElementById("nav-login").winControl;
+    navLoginButton.label = "Sign in";
+    navLoginButton.icon = 'contact';
+}
+
+function getCurrentUser() {
+    var currentUserID = Windows.Storage.ApplicationData.current.roamingSettings.values["currentUserID"];
+
+    if (currentUserID) {
+        //Session variables
+        WinJS.Application.sessionState.currentUserID = Windows.Storage.ApplicationData.current.roamingSettings.values["currentUserID"];
+        WinJS.Application.sessionState.currentUsername = Windows.Storage.ApplicationData.current.roamingSettings.values["currentUsername"];
+        WinJS.Application.sessionState.profileImageURL = Windows.Storage.ApplicationData.current.roamingSettings.values["profileImageURL"];
+
+        //Change UI to reflect to logged in success
+        $("#nav-login").find(".win-splitviewcommand-label").text(WinJS.Application.sessionState.currentUsername);
+        var imgProfilePicture = "<img src='" + WinJS.Application.sessionState.profileImageURL + "' width=30 height=30 class='img-circle' style='margin-top:-5px; margin-left:-7px;'>";
+        $("#nav-login").find(".win-splitviewcommand-icon").html(imgProfilePicture);
+    }
+}
+
+function alertBox(message) {
+    var msg = new Windows.UI.Popups.MessageDialog(message);
+
+    // Add commands and set their command handlers
+    msg.commands.append(new Windows.UI.Popups.UICommand("OK"));
+
+    // Set the command that will be invoked by default
+    msg.defaultCommandIndex = 0;
+
+    // Set the command to be invoked when escape is pressed
+    msg.cancelCommandIndex = 0;
+
+    // Show the message dialog
+    msg.showAsync();
+};
+
+function truncate(s, n) {
+    var cut = s.indexOf(' ', n);
+    if (cut == -1) return s;
+    return s.substring(0, cut) + "...";
+};
+
 function adjustItemHeight() {
     var classToResize = WinJS.Application.sessionState.classToResize;
     if (classToResize) {
