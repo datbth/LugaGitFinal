@@ -143,7 +143,7 @@ function navigateCategory(numb) {
 };
 
 // page events
-function addPageEvents() {
+$(document).ready(function() {
 
     // header section events
     $('body').on("click", "#goToIngredient", function () {
@@ -198,13 +198,12 @@ function addPageEvents() {
     //$("body").on("click", "#mostLikeCollectionContainer", function () {
     //    WinJS.Navigation.navigate("/pages/index/categories/featuredCollection.html")
     //});
-};
+});
 
 
 // do when the page is ready
 WinJS.UI.Pages.define("/pages/index/index.html", {
     ready: function (element, options) {
-        addPageEvents();
 
         // reset indexes;
         startIndexList = [0, 0, 0];
