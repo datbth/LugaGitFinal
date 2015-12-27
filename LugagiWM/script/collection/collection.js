@@ -21,6 +21,9 @@ function loadCollection() {
             var contentSource = source.Content
             for (var i = 0; i < contentSource.length; i++) {
                 var currentSource = contentSource[i];
+                if (currentSource.ContentType != 'food') {
+                    continue;
+                };
                 var newFood = $("#collectionItemSample").clone();
                 newFood.attr("id", "");
                 var contentImg = currentSource.ContentImageURL;
@@ -32,7 +35,8 @@ function loadCollection() {
                 }
                 newFood.find(".collectionItemName").text(currentSource.ContentName);
                 newFood.find(".collectionItemImg").attr("src", fullImgURL);
-                newFood.attr("ContentID", currentSource.ContentID);
+                
+                // newFood.attr("ContentID", currentSource.ContentID);
                 newFood.show();
                 // create index atrribute
                 newFood.attr("currentIndex", i);
@@ -52,7 +56,7 @@ function loadCollection() {
 $(document).ready(function () {
     $("body").on("click", ".collectionItem", function () {
         var currentItem = $(this);
-        var currentID = currentItem.attr("ContentID");
+        // var currentID = currentItem.attr("ContentID");
         // WinJS.Navigation.navigate("/pages/food/foodDetails.html", foodIdList[currentItem.attr("currentIndex")]);
         var collectionData = {
             'foodIndex': parseInt(currentItem.attr("currentIndex")),

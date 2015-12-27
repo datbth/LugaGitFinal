@@ -177,7 +177,7 @@ $('body').on("click", "#currentCollection", function () {
 });
 
 WinJS.UI.Pages.define("/pages/food/foodDetails.html", {
-    ready: function (element, options) {        
+    ready: function (element, options) {
         // get the ID of the food
         if (typeof options === "object") {
             var collectionData = options;
