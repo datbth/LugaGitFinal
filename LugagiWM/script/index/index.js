@@ -146,16 +146,16 @@ function navigateCategory(numb) {
 function addPageEvents() {
 
     // header section events
-    $("#goToIngredient").click(function (ev) {
+    $('body').on("click", "#goToIngredient", function () {
         WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestion.html"); // navigate to ingredientBasedSuggestion page
     });
 
-    $("#goToWeek").click(function () {
+    $('body').on("click", "#goToWeek", function () {
         WinJS.Navigation.navigate("/pages/recommendation/weekMenuSuggestionFilter.html"); // navigate to weekMenuSuggestion page
     });
     
     // random button event
-    $("#changeRand").click(function () {
+    $('body').on("click", "#changeRand", function () {
         randDish();
     });
 
