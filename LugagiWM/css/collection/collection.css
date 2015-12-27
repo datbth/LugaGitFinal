@@ -1,4 +1,4 @@
-﻿body {
+﻿/*body {
 }
 .contentView, .contentLike{
     color: #808080;
@@ -20,16 +20,16 @@ h6{
 
 h5{
     font-size: 16px;
-}
+}*/
 
 
-hr{
+/*hr{
     height: 10px;
     border-style: solid;
     border-color: #da5849;
     border-width: 1px 0 0 0;
-}
+}*/
 
-.collectionItem:hover {
+/*.collectionItem:hover {
     cursor: pointer;
-}
+}*/
