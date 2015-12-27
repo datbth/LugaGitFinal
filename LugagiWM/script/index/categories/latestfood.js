@@ -17,8 +17,8 @@
                 var fullImgURL = "http://lugagi.com/script/timthumb.php?src=/" + currentSource.ContentImageURL + "&w=300&h=200";
                 newFood.find(".foodName").text(currentSource.ContentName);
                 newFood.find(".foodImg").attr("src", fullImgURL);
-                newFood.find("#viewCount").text(currentSource.ContentViewCount);
-                newFood.find("#likeCount").text(currentSource.ContentLikeCount);
+                newFood.find(".contentView").text(currentSource.ContentViewCount);
+                newFood.find(".contentLike").text(currentSource.ContentLikeCount);
                 newFood.attr("ContentID", currentSource.ContentID);
                 newFood.show();
                 $("#foodContent").append(newFood);

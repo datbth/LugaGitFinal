@@ -15,8 +15,8 @@
                 var fullImgURL = "http://lugagi.com/script/timthumb.php?src=/" + currentSource.ContentImageURL + "&w=300&h=200";
                 newCollection.find(".collectionName").text(currentSource.ContentName);
                 newCollection.find(".collectionImg").attr("src", fullImgURL);
-                newCollection.find("#viewCount").text(currentSource.ContentViewCount);
-                newCollection.find("#likeCount").text(currentSource.ContentLikeCount);
+                newCollection.find(".contentView").text(currentSource.ContentViewCount);
+                newCollection.find(".contentLike").text(currentSource.ContentLikeCount);
                 newCollection.attr("ContentID", currentSource.ContentID);
                 newCollection.show();
                 $("#collectionContent").append(newCollection);

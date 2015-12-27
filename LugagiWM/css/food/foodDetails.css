@@ -34,12 +34,12 @@ div {
     line-height: 20px;
 }
 
-hr{
+/*hr{
     height: 5px;
     border-style: solid;
     border-color: #da5849;
     border-width: 1px 0 0 0;
-}
+}*/
 
 /*@media screen and (min-width: 500px) {
     #foodHeader {

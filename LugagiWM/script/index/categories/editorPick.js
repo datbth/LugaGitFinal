@@ -11,7 +11,7 @@
             for (var i = 0; i < source.length; i++) {
                 var newFood = $("#editorsPickedItem").clone()
                 var currentSource = source[i]
-                var fullImgUrl = "http://lugagi.com/script/timthumb.php?src=" + currentSource.ContentImageURL + "&w=500&h=200";
+                var fullImgUrl = "http://lugagi.com/script/timthumb.php?src=" + currentSource.ContentImageURL + "&w=300&h=200";
                 newFood.find(".editorsPickedItemImg").attr("src", fullImgUrl);
                 newFood.find(".editorsPickedItemName").text(currentSource.ContentName);
                 newFood.find(".contentView").text(currentSource.ContentViewCount);

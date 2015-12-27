@@ -143,14 +143,9 @@ button.win-splitviewpanetoggle {
 }*/
 
 
-
-.div-clickable:hover, .txt-clickable:hover {
-    cursor: pointer;
-}
-
-.txt-clickable:hover {
+/*.txt-clickable:hover {
     color: #337ab7;
-}
+}*/
 
 .contentView, .contentLike{
     color: #808080;
@@ -169,13 +164,30 @@ h6{
 }
 
 h5{
-    font-size: 16px;
+    font-size: 18px;
 }
 
 
 hr{
-    height: 10px;
+    height: 5px;
     border-style: solid;
     border-color: #da5849;
     border-width: 1px 0 0 0;
+}
+
+
+.div-clickable:hover, .txt-clickable:hover {
+    cursor: pointer;
+}
+
+.div-clickable:hover .win-button {
+    border-color: rgba(0, 0, 0, 0.4);
+}
+
+.txt-clickable:hover, .div-clickable:hover .txt-clickable {
+    color: #337ab7;
+}
+
+.txt-white {
+    color: #eee9e9;
 }
