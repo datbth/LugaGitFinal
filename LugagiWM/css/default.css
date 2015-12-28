@@ -222,3 +222,8 @@ hr{
 .txt-white {
     color: #eee9e9;
 }
+
+.wrap-two-lines {
+    text-overflow:ellipsis;
+    height:35px;
+}
