@@ -11,29 +11,29 @@
     $('body').on("click", "#weekSuggestion", function () {
         $("progress").show();
         var noOfCheckBox = checkBoxesElem.length;
-        nutritionChoices = [true];
+        weekMenuScript.nutritionChoices = [true];
         var i = 0;
         for (i; i < noOfCheckBox; i++) {
             var currentCheckBox = checkBoxesElem.eq(i);
             if (currentCheckBox.prop("checked")) {
-                nutritionChoices[0] = false;
-                nutritionChoices.push(i + 1);
+                weekMenuScript.nutritionChoices[0] = false;
+                weekMenuScript.nutritionChoices.push(i + 1);
             }
         }
-        loadWeekMenu(nutritionChoices);
+        weekMenuScript.loadWeekMenu(weekMenuScript.nutritionChoices);
     })
 
     // uncheck all boxes
     $('body').on("click", "#clearBoxes", function () {
         checkBoxesElem.prop("checked", false);
-        nutritionChoices[0] = true;
+        weekMenuScript.nutritionChoices[0] = true;
     })
 
 
     WinJS.UI.Pages.define("/pages/recommendation/weekMenuSuggestionFilter.html", {
         ready: function (element, options) {
-            $.getScript("/script/recommendation/weekMenuCommonScript.js");
-            nutritionChoices = [true];
+            // $.getScript("/script/recommendation/weekMenuCommonScript.js");
+            weekMenuScript.nutritionChoices = [true];
             checkBoxesElem = $('body').find(".filter-checkbox");
         }
     });

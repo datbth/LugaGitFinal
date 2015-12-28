@@ -73,7 +73,7 @@
     // new menu suggestion event
     $('body').on("click", "#newMenu", function () {
         $("progress").show();
-        loadWeekMenu(nutritionChoices);
+        weekMenuScript.loadWeekMenu(weekMenuScript.nutritionChoices);
     })
 
 
@@ -90,10 +90,11 @@
 
     WinJS.UI.Pages.define("/pages/recommendation/weekMenuSuggestionContent.html", {
         ready: function (element, options) {
-            $.getScript("/script/recommendation/weekMenuCommonScript.js");
+            // $.getScript("/script/recommendation/weekMenuCommonScript.js");
             dayMenuHTML = $("#monday").html();
             reloadContent();
-            nutritionChoices = options[1];
+            console.log(options[1]);
+            weekMenuScript.nutritionChoices = options[1];
             loadWeekMenuContent(options[0]);
         }
     });
