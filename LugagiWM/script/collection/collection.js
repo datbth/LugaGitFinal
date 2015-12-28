@@ -19,8 +19,9 @@
                 $("#CollectionDescription").text(source.CollectionDescription);
                 $("#CollectionCreatedDate").text(source.CollectionCreatedDate);
 
-                var contentSource = source.Content
-                for (var i = 0; i < contentSource.length; i++) {
+                var contentSource = source.Content;
+                var numOfContent = contentSource.length;
+                for (var i = 0; i < numOfContent; i++) {
                     var currentSource = contentSource[i];
                     if (currentSource.ContentType != 'food') {
                         continue;
@@ -34,8 +35,9 @@
                     else {
                         var fullImgURL = '';
                     }
+                    var newFoodImg = newFood.find(".collectionItemImg");
                     newFood.find(".collectionItemName").text(currentSource.ContentName);
-                    newFood.find(".collectionItemImg").attr("src", fullImgURL);
+                    newFoodImg.attr("src", fullImgURL);
 
                     // newFood.attr("ContentID", currentSource.ContentID);
                     newFood.show();
@@ -45,6 +47,11 @@
                     foodIdList.push(currentSource.ContentID);
 
                     $("#collectionContent").append(newFood);
+                    if (i == numOfContent - 1) {
+                        newFoodImg.on("load", function () {
+                            $("progress").hide();
+                        })
+                    }
                 }
                 wrapTwoLines();
             }

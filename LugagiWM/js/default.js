@@ -60,9 +60,6 @@
                     navResize();
                     $(window).resize(navResize);
                     $(window).resize(adjustItemHeight);
-                    $(window).resize(function () {
-                        $('body').find("img").css("height", "auto");
-                    });
                 });
 
 

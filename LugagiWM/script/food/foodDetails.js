@@ -105,7 +105,9 @@
                 $("#authorInfo").attr("authorID", source.AddedByUserID);
                 loadFoodInfo(source);
                 loadFoodRecipe();
-                $("body").find("progress").hide();
+                $("#foodHeader").on("load", function () {
+                    $("body").find("progress").hide();
+                });
 
                 // show or hide navigation buttons
                 toggleCollectionNav();

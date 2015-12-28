@@ -9,21 +9,25 @@
             cache: false,
             success: function (data) {
                 var source = data.LatestFood;
-                var length = source.length
-                $("#shit").text("shit")
-                for (var i = 0; i < length; i++) {
+                var numOfFood = source.length;
+                for (var i = 0; i < numOfFood; i++) {
                     var currentSource = source[i];
                     var newFood = $("#content").clone();
 
                     var fullImgURL = "http://lugagi.com/script/timthumb.php?src=/" + currentSource.ContentImageURL + "&w=300&h=200";
+                    var newFoodImg = newFood.find(".foodImg");
                     newFood.find(".foodName").text(currentSource.ContentName);
-                    newFood.find(".foodImg").attr("src", fullImgURL);
+                    newFoodImg.attr("src", fullImgURL);
                     newFood.find(".contentView").text(currentSource.ContentViewCount);
                     newFood.find(".contentLike").text(currentSource.ContentLikeCount);
                     newFood.attr("ContentID", currentSource.ContentID);
                     newFood.show();
                     $("#foodContent").append(newFood);
-                    $("progress").hide();
+                    if (i == numOfFood - 1) {
+                        newFoodImg.on("load", function () {
+                            $("progress").hide();
+                        });
+                    }
                 };
                 wrapTwoLines();
             }

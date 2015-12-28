@@ -17,19 +17,23 @@
     function randDish() {
         var randContainer = $("#randContainer");
         // show progress ring
-        $("#randBreak").hide();
-        $("#changeRand").hide();
-        randContainer.find("progress").show();
+        var randBreak = $("#randBreak");
+        var changeRand = $("#changeRand");
+        var randProgress = randContainer.find("progress");
+        var randImg = $("#randImg");
+        randBreak.hide();
+        changeRand.hide();
+        randProgress.show();
         $.ajax({
             url: "http://lugagi.com/script/food/generateRandomFood.php",
             data: "Nothing",
             dataType: "json",
-            async: false,
+            async: true,
             cache: false,
             success: function (data) {
                 var source = data.Foods[0];
                 var fullImgURL = "http://lugagi.com/script/timthumb.php?src=/foodimages/" + source.ImageURL + "&w=500&h=220";
-                $("#randImg").attr("src", fullImgURL);
+                randImg.attr("src", fullImgURL);
                 $("#randName").text(source.MonAnName);
                 var randItem = randContainer.find(".contentItem");
                 randItem.attr("data-ID", source.MonAnID);
@@ -38,27 +42,15 @@
                 //randContainer.show();
             },
             complete: function () {
-                // hide progress ring
-                randContainer.find("progress").hide();
-                $("#changeRand").show();
-                $("#randBreak").show();
+                randImg.on("load", function () {
+                    // hide progress ring
+                    randProgress.hide();
+                    randBreak.show();
+                    changeRand.show();
+                });
             }
         });
     }
-
-    // load the content received from ajax into elements of item
-    function loadContent(itemElem, source) {
-        var fullImgURL = "http://lugagi.com/script/timthumb.php?src=/" + source.ContentImageURL + "&w=300&h=200";
-        itemElem.find(".contentImg").attr("src", fullImgURL);
-        // itemElem.find(".contentImg").css("height", "auto");
-        itemElem.find(".contentName").text(source.ContentName);
-        itemElem.find(".contentView").text(source.ContentViewCount + " ");
-        reveal(itemElem.find(".contentView"));
-        itemElem.find(".contentLike").text(source.ContentLikeCount);
-        reveal(itemElem.find(".contentLike"));
-        itemElem.attr("data-ID", source.ContentID);
-        itemElem.attr("data-type", source.ContentType);
-    };
 
     // calculate the endIndex
     function calculateEndIndex(source, lastIndex) {
@@ -99,7 +91,8 @@
     function loadSection(numb) {
         // show the progress bar
         var currentContainer = $(".sectionContainer:eq(" + numb + ")");
-        reveal(currentContainer.find(".pBar"));
+        var progressBar = currentContainer.find(".pBar");
+        reveal(progressBar);
         $.ajax({
             url: urlList[numb],
             dataType: "json",
@@ -121,18 +114,38 @@
                 for (j; j < 6; j++) {
 
                     // prevent the index from getting out of json range when the nextButton is clicked too fast
-                    try {
-                        var test = source[i].ContentName;
-                    }
-                    catch (err) {
-                        startIndexList[numb] = 0;
-                        break;
-                    }
+                    //try {
+                    //    var test = source[i].ContentName;
+                    //}
+                    //catch (err) {
+                    //    startIndexList[numb] = 0;
+                    //    break;
+                    //}
+
                     // load new content to item
                     var itemElem = currentContainer.find(".contentItem:eq(" + j + ")");
-                    transparentize(itemElem.find(".contentView"));
-                    transparentize(itemElem.find(".contentLike"));
-                    loadContent(itemElem, source[i]);
+                    var newItem = $("#sampleItem").clone();
+                    newItem.attr("id", "");
+                    var currentImg = newItem.find(".contentImg");
+                    var currentSource = source[i];
+
+                    // load the content received from ajax into elements of item
+                    var fullImgURL = "http://lugagi.com/script/timthumb.php?src=/" + currentSource.ContentImageURL + "&w=300&h=200";
+                    currentImg.attr("src", fullImgURL);
+                    // itemElem.find(".contentImg").css("height", "auto");
+                    newItem.find(".contentName").text(currentSource.ContentName);
+                    newItem.find(".contentView").text(currentSource.ContentViewCount + " ");
+                    newItem.find(".contentLike").text(currentSource.ContentLikeCount);
+                    itemElem.attr("data-ID", currentSource.ContentID);
+                    itemElem.attr("data-type", currentSource.ContentType);
+                    newItem.show();
+                    itemElem.html(newItem);
+
+                    currentImg.on("load", function () {
+                        if (j == 6) {
+                            transparentize(progressBar);
+                        }
+                    });
                     i++;
 
                     // reset the index if it hits the end of json
@@ -140,8 +153,12 @@
                         i = 0;
                     };
                 };
-                // hide the progress bar
-                transparentize(currentContainer.find(".pBar"));
+                //currentContainer.find(".contentItem:eq(6)").find(".contentImg").on("load", function () {
+                //    reveal(itemElem.find(".contentView"));
+                //    reveal(itemElem.find(".contentLike"));
+                //    // hide the progress bar
+                //    transparentize(currentContainer.find(".pBar"));
+                //});
                 wrapTwoLines();
             }
         })
@@ -201,6 +218,8 @@
             navigateCategory($(".sectionIcon").index(this));
         });
 
+        
+
         //$("body").on("click", "#latestFood", function () {
         //    WinJS.Navigation.navigate("/pages/index/categories/latestFood.html")
         //});
@@ -222,12 +241,6 @@
 
             // generate random dish
             randDish();
-
-            // generate random startIndex
-            //var startIndex = Math.round(Math.random() * 9) * 2;
-            //startIndexList[0] = startIndex;
-            //startIndexList[1] = startIndex;
-            //startIndexList[2] = startIndex;
 
             // load all the sections
             var noOfSections = urlList.length;

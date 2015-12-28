@@ -58,7 +58,7 @@
                 source = data.MostViewFoods;
                 numOfFood = source.length;
                 if (numOfFood > 0) {
-                    for (var i = 0; i < source.length; i++) {
+                    for (var i = 0; i < numOfFood; i++) {
                         var currentSource = source[i];
                         var currentFoodItem = $("#sampleUserFood").clone();
 
@@ -69,13 +69,17 @@
                         currentFoodItem.attr("foodID", currentSource.MonAnID);
                         currentFoodItem.show();
                         $("#userFoodContainer").append(currentFoodItem);
+                        if (i == numOfFood - 1) {
+                            currentFoodItem.find(".userFoodImg").on("load", function () {
+                                userFoodProgress.hide();
+                            })
+                        }
                     };
                 }
                 else {
                     $("#loadMoreUserFood").hide();
                     $("#userFoodContainer").append("<p>There is no dishes to display<p>");
                 };
-                userFoodProgress.hide();
                 wrapTwoLines();
             }
         });

@@ -13,7 +13,8 @@
                     var newFood = $("#editorsPickedItem").clone()
                     var currentSource = source[i]
                     var fullImgUrl = "http://lugagi.com/script/timthumb.php?src=" + currentSource.ContentImageURL + "&w=300&h=200";
-                    newFood.find(".editorsPickedItemImg").attr("src", fullImgUrl);
+                    var newFoodImg = newFood.find(".editorsPickedItemImg");
+                    newFoodImg.attr("src", fullImgUrl);
                     newFood.find(".editorsPickedItemName").text(currentSource.ContentName);
                     newFood.find(".contentView").text(currentSource.ContentViewCount);
                     newFood.find(".contentLike").text(currentSource.ContentLikeCount);
@@ -21,7 +22,11 @@
                     newFood.attr("ContentType", currentSource.ContentType);
                     newFood.show();
                     $("#editorsPickedContent").append(newFood);
-                    $("progress").hide();
+                    if (i == source.length - 1) {
+                        newFoodImg.on("load", function () {
+                            $("progress").hide();
+                        });
+                    }
                 };
                 wrapTwoLines();
             }
