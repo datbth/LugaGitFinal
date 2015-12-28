@@ -74,26 +74,13 @@
     $('body').on("click", "#newMenu", function () {
         $("progress").show();
         weekMenuScript.loadWeekMenu(weekMenuScript.nutritionChoices);
-    })
-
-
-    // for change menu dish feature (have not finished)
-
-    //$('body').off("click", ".changeMenuItem", goToDish);
-
-    //$('body').on("click", ".changeMenuItem", function () {
-    //    var itemDay = $(this).attr("data-day");
-    //    var itemMeal = $(this).attr("data-meal");
-    //    var itemDish = $(this).attr("data-dish");
-    //})
-
+    });
 
     WinJS.UI.Pages.define("/pages/recommendation/weekMenuSuggestionContent.html", {
         ready: function (element, options) {
             // $.getScript("/script/recommendation/weekMenuCommonScript.js");
             dayMenuHTML = $("#monday").html();
             reloadContent();
-            console.log(options[1]);
             weekMenuScript.nutritionChoices = options[1];
             loadWeekMenuContent(options[0]);
         }

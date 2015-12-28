@@ -70,7 +70,7 @@
                     $("#addNewFoodButton").attr("disabled", false);
                 },
                 error: function (xhr, status, error) {
-                    console.debug("AJAX request fail " + status + " " + error);
+                    // console.debug("AJAX request fail " + status + " " + error);
                     var err = xhr.responseText;
                     alertBox(err + error);
                     $("#waitingSpinner").css("display", "none");
@@ -116,7 +116,7 @@
         var dst = $("#destimagecanvas")[0];
 
         if (this.files && this.files[0]) {
-            console.debug("Starting resizing image");
+            // console.debug("Starting resizing image");
             for (var i = 0, f; f = this.files[i]; i++) {
                 var FR = new FileReader();
                 FR.onload = function (e) {
@@ -140,15 +140,15 @@
                         ctx.drawImage(oc, 0, 0, oc.width * 0.5, oc.height * 0.5,
                                          0, 0, canvas.width, canvas.height);
 
-                        console.debug("Image resize complete");
+                        // console.debug("Image resize complete");
                         //Convert the image in the dest canvas to a img html tag
                         var imgSourceString = canvas.toDataURL();
                         selectImageButton.parent().parent().find("#food-image-preview").attr("src", imgSourceString);
                         selectImageButton.parent().parent().find("#food-image-preview").css("display", "block");
-                        console.debug("Display result image to IMG tag");
+                        // console.debug("Display result image to IMG tag");
                         //Set the image string into a hidden input
                         $("#foodImageString").val(imgSourceString);
-                        console.debug("Insert image string to the hidden input");
+                        // console.debug("Insert image string to the hidden input");
                         //Hide image spinner
                         $("#imageLoadingSpinner").hide();
                         selectImageButton.prop("disabled", false);
