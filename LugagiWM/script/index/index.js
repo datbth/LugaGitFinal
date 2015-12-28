@@ -24,16 +24,20 @@
             url: "http://lugagi.com/script/food/generateRandomFood.php",
             data: "Nothing",
             dataType: "json",
-            async: true,
+            async: false,
             cache: false,
             success: function (data) {
                 var source = data.Foods[0];
-                var fullImgURL = "http://lugagi.com/script/timthumb.php?src=/foodimages/" + source.ImageURL + "&w=500&h=200";
+                var fullImgURL = "http://lugagi.com/script/timthumb.php?src=/foodimages/" + source.ImageURL + "&w=500&h=220";
                 $("#randImg").attr("src", fullImgURL);
                 $("#randName").text(source.MonAnName);
                 var randItem = randContainer.find(".contentItem");
                 randItem.attr("data-ID", source.MonAnID);
                 randItem.attr("data-type", "food");
+                //reveal(randContainer);
+                //randContainer.show();
+            },
+            complete: function () {
                 // hide progress ring
                 randContainer.find("progress").hide();
                 $("#changeRand").show();
@@ -46,9 +50,12 @@
     function loadContent(itemElem, source) {
         var fullImgURL = "http://lugagi.com/script/timthumb.php?src=/" + source.ContentImageURL + "&w=300&h=200";
         itemElem.find(".contentImg").attr("src", fullImgURL);
+        // itemElem.find(".contentImg").css("height", "auto");
         itemElem.find(".contentName").text(source.ContentName);
         itemElem.find(".contentView").text(source.ContentViewCount + " ");
+        reveal(itemElem.find(".contentView"));
         itemElem.find(".contentLike").text(source.ContentLikeCount);
+        reveal(itemElem.find(".contentLike"));
         itemElem.attr("data-ID", source.ContentID);
         itemElem.attr("data-type", source.ContentType);
     };
@@ -91,8 +98,8 @@
     // run the ajax and get content from server, then load it to the page
     function loadSection(numb) {
         // show the progress bar
-        var containerID = $(".sectionContainer:eq(" + numb + ")");
-        containerID.find(".pBar").html('<progress></progress>');
+        var currentContainer = $(".sectionContainer:eq(" + numb + ")");
+        reveal(currentContainer.find(".pBar"));
         $.ajax({
             url: urlList[numb],
             dataType: "json",
@@ -122,7 +129,9 @@
                         break;
                     }
                     // load new content to item
-                    var itemElem = containerID.find(".contentItem:eq(" + j + ")");
+                    var itemElem = currentContainer.find(".contentItem:eq(" + j + ")");
+                    transparentize(itemElem.find(".contentView"));
+                    transparentize(itemElem.find(".contentLike"));
                     loadContent(itemElem, source[i]);
                     i++;
 
@@ -132,7 +141,7 @@
                     };
                 };
                 // hide the progress bar
-                containerID.find(".pBar").html('<p><br/></p>');
+                transparentize(currentContainer.find(".pBar"));
                 wrapTwoLines();
             }
         })
@@ -199,6 +208,7 @@
         //$("body").on("click", "#mostLikeCollectionContainer", function () {
         //    WinJS.Navigation.navigate("/pages/index/categories/featuredCollection.html")
         //});
+        
     });
 
 

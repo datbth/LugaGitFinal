@@ -3,7 +3,7 @@
     var mealSectionList = [".breakfastSection", ".lunchSection", ".dinnerSection"];
     var contentItemHTML = '<div class="menuContentCol col-xs-6 col-sm-4 col-md-3 col-lg-2">' +
                                '<div class="menuContentItem div-clickable" data-food-ID="">' +
-                                   '<img class="menuContentImg img-responsive" src="" />' +
+                                   '<img class="menuContentImg img-responsive" />' +
                                    '<h6 class="menuContentName txt-clickable wrap-two-lines"></h6>' +
                                    //'<small>' +
                                        //'<span class="glyphicon glyphicon-eye-open contentView"></span>' +

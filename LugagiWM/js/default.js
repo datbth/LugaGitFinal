@@ -60,18 +60,9 @@
                     navResize();
                     $(window).resize(navResize);
                     $(window).resize(adjustItemHeight);
-                    //$('#content-host').ready(function () {
-                    //    console.log(111);
-                    //    var wrappingTexts = $(document).find(".wrap-two-lines");
-                    //    console.log(wrappingTexts);
-                    //    for (var i = 0; i < wrappingTexts.length; i++) {
-                    //        var currentText = wrappingTexts.eq(i).text();
-                    //        wrappingTextx.eq(i).text(truncate(currentText, 50));
-                    //        console.log(truncate(currentText, 50));
-                    //    }
-                        
-                    //});
-                    
+                    $(window).resize(function () {
+                        $('body').find("img").css("height", "auto");
+                    });
                 });
 
 

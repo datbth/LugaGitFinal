@@ -1,4 +1,17 @@
 "use strict";
+
+//$("body").find("img").error(function () {
+//    // $(this).hide();
+//    $(this).css({ visibility: "hidden" });
+//});
+function transparentize(elem) {
+    elem.css({ visibility: "hidden" });
+}
+
+function reveal(elem) {
+    elem.css({ visibility: "visible" });
+}
+
 function wrapTwoLines() {
     var wrappingTexts = $('body').find(".wrap-two-lines");
     for (var i = 0; i < wrappingTexts.length; i++) {
