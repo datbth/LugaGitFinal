@@ -4,3 +4,18 @@
 .nav-pills > li > a {
     border-radius: 0px;
 }
+
+.meal-header{
+    margin-left:4px;
+}
+
+.meal-header > h5{
+    color: rgb(0, 150, 136);
+}
+
+.meal-header > hr {
+    margin-top:0px;
+    height:1px;
+    text-align:left;
+    border-color: rgb(0, 150, 136);
+}
