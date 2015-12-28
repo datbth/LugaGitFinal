@@ -24,7 +24,8 @@
                     newFood.show();
                     $("#foodContent").append(newFood);
                     $("progress").hide();
-                }
+                };
+                wrapTwoLines();
             }
         });
     }

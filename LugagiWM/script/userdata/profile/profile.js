@@ -76,6 +76,7 @@
                     $("#userFoodContainer").append("<p>There is no dishes to display<p>");
                 };
                 userFoodProgress.hide();
+                wrapTwoLines();
             }
         });
     };
@@ -101,6 +102,7 @@
             userFoodProgress = $("#userFoodContainer").find("progress");
             loadProfile();
             loadUserCreatedFood(userFoodPageNum);
+            
         }
     });
 })();

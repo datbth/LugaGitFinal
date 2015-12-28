@@ -133,6 +133,7 @@
                 };
                 // hide the progress bar
                 containerID.find(".pBar").html('<p><br/></p>');
+                wrapTwoLines();
             }
         })
     };

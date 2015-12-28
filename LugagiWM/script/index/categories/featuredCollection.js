@@ -22,7 +22,8 @@
                     newCollection.show();
                     $("#collectionContent").append(newCollection);
                     $("progress").hide();
-                }
+                };
+                wrapTwoLines();
             }
         });
     }

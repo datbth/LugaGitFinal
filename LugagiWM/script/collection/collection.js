@@ -46,8 +46,7 @@
 
                     $("#collectionContent").append(newFood);
                 }
-                // WinJS.Application.sessionState.classToResize = $(".collectionItem");
-                adjustItemHeight();
+                wrapTwoLines();
             }
         });
     };

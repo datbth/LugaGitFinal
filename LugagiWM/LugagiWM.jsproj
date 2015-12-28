@@ -142,7 +142,6 @@
     <Content Include="script\index\categories\latestFood.js" />
     <Content Include="script\index\index.js" />
     <Content Include="script\recommendation\ingredientBasedSuggestion.js" />
-    <Content Include="script\recommendation\weekMenuCommonScript.js" />
     <Content Include="script\recommendation\weekMenuSuggestionFilter.js" />
     <Content Include="script\recommendation\weekMenuSuggestionContent.js" />
     <Content Include="script\search\searchFood.js" />

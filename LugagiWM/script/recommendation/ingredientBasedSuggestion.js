@@ -30,6 +30,7 @@
                         $("#suggestionContent").append(newFood);
                         $("progress").hide();
                     }
+                    wrapTwoLines();
                 }
             }
         });
@@ -103,6 +104,7 @@
     WinJS.UI.Pages.define("/pages/recommendation/ingredientBasedSuggestion.html", {
         ready: function (element, options) {
             initialIngredientHTML = $("#suggestionContent").html();
+            $('.ingredientInput:eq(0)').find("input").focus();
         }
     });
 })();

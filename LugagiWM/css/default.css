@@ -224,6 +224,8 @@ hr{
 }
 
 .wrap-two-lines {
-    text-overflow:ellipsis;
+    /*overflow: hidden;
+    text-overflow:ellipsis;*/
     height:35px;
+    /*white-space: nowrap;*/
 }

@@ -22,7 +22,8 @@
                     newFood.show();
                     $("#editorsPickedContent").append(newFood);
                     $("progress").hide();
-                }
+                };
+                wrapTwoLines();
             }
         });
     };

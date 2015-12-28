@@ -61,6 +61,7 @@
             }
         }
         $("progress").hide();
+        wrapTwoLines();
     }
 
     // navigate to foodDetails page of the dish
