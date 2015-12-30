@@ -1,7 +1,7 @@
-﻿.contentContainer {
+﻿/*.contentContainer {
     padding-left:2.5%;
     padding-right:2.5%;
-}
+}*/
 
 body {
 }
@@ -21,17 +21,19 @@ div {
 }
 
 #foodContent {
-    padding: 20px;
+    padding: 15px;
     padding-top: 5px;
-    background-color:white;
-    border: 1px solid #ddd;
-    border-radius: 2px;
+    background-color:white; border: 1px solid #ddd;
 }
 
 .list-group-item {
     background-color: #f7f7f7;
     font-size: 12px;
-    line-height: 20px;
+    line-height: 16px;
+}
+
+.list-group, .list-group-item {
+    border-radius:0px;
 }
 
 /*hr{
