@@ -35,7 +35,7 @@
                     foodStepsList.append('<img src="http://lugagi.com/script/timthumb.php?src=/postimages/' + stepImgURL + '&w=300&h=200" class="img-responsive center-block" style="margin-left:30px"/>');
                 }
             }
-        } else { $("#foodSteps").append("<p>not available<p>") };
+        } else { $("#foodSteps").append("<p><br/>not available<p>") };
     }
 
     function loadFoodRecipe() {

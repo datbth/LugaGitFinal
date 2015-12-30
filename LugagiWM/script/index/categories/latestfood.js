@@ -22,7 +22,7 @@
                     newFood.find(".contentLike").text(currentSource.ContentLikeCount);
                     newFood.attr("ContentID", currentSource.ContentID);
                     newFood.show();
-                    $("#foodContent").append(newFood);
+                    $("#latestFoodContent").append(newFood);
                     if (i == numOfFood - 1) {
                         newFoodImg.on("load", function () {
                             $("progress").hide();

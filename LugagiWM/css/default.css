@@ -1,6 +1,7 @@
 ﻿
 body {
    overflow:hidden;
+   background-color: #f7f7f7;
 }
 
 #appToolbar {
@@ -67,7 +68,6 @@ button.win-splitviewpanetoggle {
 /*SplitView content style*/
 #app .win-splitview-content {
     height:100%;
-    background-color: #f7f7f7;
     overflow-y: auto;
     overflow-x: hidden;
     /*padding-bottom: 20%;*/

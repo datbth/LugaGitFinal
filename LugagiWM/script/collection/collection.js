@@ -11,7 +11,7 @@
             cache: false,
             async: true,
             success: function (receivedData) {
-                var source = receivedData.Collection
+                var source = receivedData.Collection;
                 collectionName = source.CollectionName;
                 $("#collectionName").text(collectionName);
                 $("#ViewCount").text(source.ViewCount);
@@ -23,6 +23,11 @@
                 var numOfContent = contentSource.length;
                 for (var i = 0; i < numOfContent; i++) {
                     var currentSource = contentSource[i];
+                    if (i == numOfContent - 1) {
+                        newFoodImg.on("load", function () {
+                            $("progress").hide();
+                        })
+                    };
                     if (currentSource.ContentType != 'food') {
                         continue;
                     };
@@ -47,11 +52,6 @@
                     foodIdList.push(currentSource.ContentID);
 
                     $("#collectionContent").append(newFood);
-                    if (i == numOfContent - 1) {
-                        newFoodImg.on("load", function () {
-                            $("progress").hide();
-                        })
-                    }
                 }
                 wrapTwoLines();
             }

@@ -235,7 +235,7 @@
     WinJS.UI.Pages.define("/pages/index/index.html", {
         ready: function (element, options) {
 
-            // reset indexes;
+            // reset indeces;
             startIndexList = [0, 0, 0];
             endIndexList = [0, 0, 0];
 

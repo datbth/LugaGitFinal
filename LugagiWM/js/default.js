@@ -73,7 +73,7 @@
                     if (!WinJS.Application.sessionState.currentUserID) {
                         app.sessionState.goingToNewFood = true;
                         WinJS.Navigation.navigate("/pages/userdata/loginform.html");
-                        alertBox("Please login to Lugagi before adding a new food");
+                        alertBox("Please Log In before adding a new food");
                     }
                     else {
                         WinJS.Navigation.navigate("/pages/food/addNewFood.html"); // navigate to addNewFood page
