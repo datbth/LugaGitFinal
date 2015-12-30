@@ -117,7 +117,7 @@
                 });
 
                 //Saerch textbox keypress (enter key)
-                $("body").on("keypress", "#searchTextbox", function (e) {
+                $("body").on("keyup", "#searchTextbox", function (e) {
                     e.stopImmediatePropagation();
                     if ((e.keyCode == 10 || e.keyCode == 13)) {
                         e.preventDefault();
