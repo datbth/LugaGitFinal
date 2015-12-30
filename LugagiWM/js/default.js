@@ -10,10 +10,14 @@
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
                 // TODO: This application has been newly launched. Initialize your application here.
                 getCurrentUser();
+                var url = app.sessionState.lastUrl;
+                WinJS.Navigation.addEventListener("navigated", navigate);
 
             } else {
                 // TODO: This application was suspended and then terminated.
                 // To create a smooth user experience, restore application state here so that it looks like the app never stopped running.
+                var url = app.sessionState.lastUrl || "/pages/index/index.html";
+                WinJS.Navigation.navigate(url, app.sessionState.lastState);
             }
             args.setPromise(WinJS.UI.processAll().done(function () {
                 // app variables
@@ -47,57 +51,51 @@
                 };
 
                 //function to navigate between pages
-                function navigateDefault() {
+                function navigateDefault(e) {
                     $(".win-splitview-content").scrollTop(0);
                     if (windowSize == 'small') {
                         splitView.closePane();
                     }
-                    //navigate(eventObject);
+                    e.stopImmediatePropagation();
                 };
 
                 // resize the pane based on window size
-                WinJS.UI.processAll().then(function () {
-                    navResize();
-                    $(window).resize(navResize);
-                    $(window).resize(adjustItemHeight);
-                });
-
-
-                // load index page when app initiates
-                $('document').ready(function () {
-                    WinJS.Navigation.navigate("/pages/index/index.html");
-                    WinJS.Navigation.addEventListener("navigated", navigate);
-                    WinJS.Navigation.navigate("/pages/index/index.html"); // navigate to Home page
-                })
+                navResize();
+                $(window).resize(navResize);
+                   
 
                 // bind events to navigation menu
-                $('#nav-goHome').click(function () {
+                $('#nav-goHome').click(function (e) {
                     WinJS.Navigation.navigate("/pages/index/index.html"); // navigate to Home page
-                    navigateDefault();
-                    //WinJS.Navigation.addEventListener("navigated", navigateDefault);
-                })
-                $('#nav-addNewFood').click(function () {
+                    navigateDefault(e);
+                });
+                $('#nav-addNewFood').click(function (e) {
                     if (!WinJS.Application.sessionState.currentUserID) {
-                        alertBox("Because you have not login yet, new dishes will be added using our default account")
+                        app.sessionState.goingToNewFood = true;
+                        WinJS.Navigation.navigate("/pages/userdata/loginform.html");
+                        alertBox("Please login to Lugagi before adding a new food");
                     }
-                    WinJS.Navigation.navigate("/pages/food/addNewFood.html"); // navigate to addNewFood page
-                    navigateDefault();
+                    else {
+                        WinJS.Navigation.navigate("/pages/food/addNewFood.html"); // navigate to addNewFood page
+                    }
+                    navigateDefault(e);
                 });
-                $('#nav-recommendation-ingredient').click(function () {
+                $('#nav-recommendation-ingredient').click(function (e) {
                     WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestion.html"); // navigate to ingredientBasedSuggestion page
-                    navigateDefault();
+                    navigateDefault(e);
                 });
-                $('#nav-recommendation-week-menu').click(function () {
+                $('#nav-recommendation-week-menu').click(function (e) {
                     WinJS.Navigation.navigate("/pages/recommendation/weekMenuSuggestionFilter.html"); // navigate to weekMenuSuggestion page
-                    navigateDefault();
+                    navigateDefault(e);
                 });
-                $('#nav-login').click(function () {
+                $('#nav-login').click(function (e) {
+                    app.sessionState.goingToNewFood = false;
                     if (WinJS.Application.sessionState.currentUserID) {
                         WinJS.Navigation.navigate("/pages/userdata/profile.html");
                     } else {
                         WinJS.Navigation.navigate("/pages/userdata/loginform.html");
                     }
-                    navigateDefault();
+                    navigateDefault(e);
                 });
 
                 //Search button in the navigation bar
@@ -119,7 +117,8 @@
                 });
 
                 //Saerch textbox keypress (enter key)
-                $("body").on("keypress", "#searchTextbox", function (e) {
+                $("body").on("keyup", "#searchTextbox", function (e) {
+                    e.stopImmediatePropagation();
                     if ((e.keyCode == 10 || e.keyCode == 13)) {
                         e.preventDefault();
                         var searchKeyWord = $("#searchTextbox").val();
@@ -127,10 +126,14 @@
                     }
                 });
 
-                $('#addNewFoodToolbarCommand').click(function () {
+                $('#addNewFoodToolbarCommand').click(function (e) {
                     WinJS.Navigation.navigate("/pages/food/addNewFood.html");
+                    e.stopImmediatePropagation();
                 });
 
+                if (!url) {
+                    WinJS.Navigation.navigate("/pages/index/index.html");
+                }
             }));
 
         }
@@ -147,7 +150,6 @@
         // Need to return true to cancel the default behavior of this event.
         return true;
     }
-
     //Starting the app, do not remove
     app.start();
 })();

@@ -120,18 +120,20 @@ function adjustItemHeight() {
 
 // function to reload page when navigating
 function navigate(evObject) {
-    WinJS.Application.sessionState.classToResize = undefined;
+    //WinJS.Application.sessionState.classToResize = undefined;
     var url = evObject.detail.location,
+        state = evObject.detail.state,
         host = $("#content-host")[0];
     // unload content
     host.winControl && host.winControl.unload && host.winControl.unload();
     WinJS.Utilities.empty(host);
     // load new content
     evObject.detail.setPromise(
-        WinJS.UI.Pages.render(url, host, evObject.detail.state).then(function () {
+        WinJS.UI.Pages.render(url, host, state).then(function () {
             WinJS.Application.sessionState.lastUrl = url;
+            WinJS.Application.sessionState.lastState = state;
             WinJS.UI.Animation.enterPage(host);
-            WinJS.UI.processAll()
+            WinJS.UI.processAll();
         }));
 }
 
@@ -460,7 +462,6 @@ var weekMenuScript = {
             async: true,
             success: function (data) {
                 WinJS.Navigation.navigate("/pages/recommendation/weekMenuSuggestionContent.html", [data, nutritionChoices]);
-                WinJS.Navigation.addEventListener("navigated", navigate);
             }
         });
     },

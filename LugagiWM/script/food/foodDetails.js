@@ -30,9 +30,9 @@
             for (i; i < stepsSource.length; i++) {
                 var stepText = stepsSource[i].TextContent;
                 var stepImgURL = stepsSource[i].ImageURL;
-                foodStepsList.append("<li>" + stepText + "</li>");
+                foodStepsList.append("<br/><li>" + stepText + "</li>");
                 if (stepImgURL) {
-                    foodStepsList.append('<img src="http://lugagi.com/script/timthumb.php?src=/postimages/' + stepImgURL + '&w=300&h=200" class="img-responsive center-block" />');
+                    foodStepsList.append('<img src="http://lugagi.com/script/timthumb.php?src=/postimages/' + stepImgURL + '&w=300&h=200" class="img-responsive center-block" style="margin-left:30px"/>');
                 }
             }
         } else { $("#foodSteps").append("<p>not available<p>") };

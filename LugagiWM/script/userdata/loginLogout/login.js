@@ -21,7 +21,13 @@
                 else if (status == "success") {
                     saveUser(currentUserID, currentUsername, profileImageURL);
                     alertBox("Welcome back to Lugagi, " + currentUsername + "!");
-                    WinJS.Navigation.navigate("/pages/userdata/profile.html");
+                    if (!WinJS.Application.sessionState.goingToNewFood) {
+                        WinJS.Navigation.navigate("/pages/userdata/profile.html");
+                    }
+                    else {
+                        WinJS.Application.sessionState.goingToNewFood = false;
+                        WinJS.Navigation.navigate("/pages/food/addNewFood.html");
+                    }
                 }
             },
             error: function (xhr, status, error) {

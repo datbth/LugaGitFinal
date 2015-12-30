@@ -27,7 +27,7 @@
     $('body').on("click", "#clearBoxes", function () {
         checkBoxesElem.prop("checked", false);
         weekMenuScript.nutritionChoices[0] = true;
-    })
+    });
 
 
     WinJS.UI.Pages.define("/pages/recommendation/weekMenuSuggestionFilter.html", {

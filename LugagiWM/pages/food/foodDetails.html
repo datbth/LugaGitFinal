@@ -4,7 +4,7 @@
     <link href="/css/food/foodDetails.css" rel="stylesheet" />
     <script src="/script/food/foodDetails.js"></script>
 </head>
-<body>
+<body class="win-type-body">
     <div id="foodPage" class="container-fluid">
         
         <!-- Main content -->
@@ -14,7 +14,7 @@
                 <!-- Header -->
                 <img id="foodHeader" class="img-responsive"/>
                 <h2 id="foodName"></h2>
-                <p class="foodDescription" style="opacity: 0.5"></p>
+                <p class="foodDescription" style="opacity: 0.6"></p>
                 <!-- Ultility buttons -->
                 <div class="row" id="changeDishButton">
                     <button id="newFood" class="win-button col-xs-3">Change Dish</button>
@@ -31,19 +31,21 @@
                 <ul id="foodInfo" class="list-group"></ul>
             </div>
             <!-- Food recipe-->
-            <div id="foodContent" class="contentContainer list-group-item col-xs-12 col-sm-7 pull-left">
-                <h6 id="authorInfo" authorID="" class="txt-clickable"></h6>
-                <!-- Food ingredients -->
-                <hr />
-                <div id="foodIngredients">
-                    <h5>Ingredients</h5>
-                    <ul></ul>
-                </div>
-                
-                <!-- Food cooking steps -->
-                <div>
-                    <h5>Cooking Steps</h5>
-                    <ol id="foodSteps" style="word-wrap: break-word"></ol>
+            <div class="col-xs-12 col-sm-7 pull-left contentContainer">
+                <div id="foodContent">
+                    <h6 id="authorInfo" authorID="" class="txt-clickable"></h6>
+                    <!-- Food ingredients -->
+                    <hr />
+                    <div id="foodIngredients">
+                        <h5>Ingredients</h5>
+                        <ul></ul>
+                    </div>
+
+                    <!-- Food cooking steps -->
+                    <div>
+                        <h5 style="margin-bottom:-5px">Cooking Steps</h5>
+                        <ol id="foodSteps" style="word-wrap: break-word"></ol>
+                    </div>
                 </div>
             </div>
         </div>      
