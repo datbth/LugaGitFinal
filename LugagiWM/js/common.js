@@ -120,8 +120,9 @@ function adjustItemHeight() {
 
 // function to reload page when navigating
 function navigate(evObject) {
-    WinJS.Application.sessionState.classToResize = undefined;
+    //WinJS.Application.sessionState.classToResize = undefined;
     var url = evObject.detail.location,
+        state = evObject.detail.state,
         host = $("#content-host")[0];
     // unload content
     host.winControl && host.winControl.unload && host.winControl.unload();
@@ -130,9 +131,10 @@ function navigate(evObject) {
     evObject.detail.setPromise(
         WinJS.UI.Pages.render(url, host, evObject.detail.state).then(function () {
             WinJS.Application.sessionState.lastUrl = url;
+            WinJS.Application.sessionState.lastState = state;
             WinJS.UI.Animation.enterPage(host);
-            WinJS.UI.processAll()
-        }));
+            WinJS.UI.processAll();
+        }));   
 }
 
 //Get parameter from the string separated by "&"
