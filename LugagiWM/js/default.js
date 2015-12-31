@@ -8,15 +8,15 @@
     app.onactivated = function (args) {
         if (args.detail.kind === activation.ActivationKind.launch) {
             var url = app.sessionState.lastUrl || "/pages/index/index.html";
+            WinJS.Navigation.addEventListener("navigated", navigate);
             if (args.detail.previousExecutionState !== activation.ApplicationExecutionState.terminated) {
                 // TODO: This application has been newly launched. Initialize your application here.
                 getCurrentUser();
-                var url = app.sessionState.lastUrl;
-                WinJS.Navigation.addEventListener("navigated", navigate);
 
             } else {
                 // TODO: This application was suspended and then terminated.
                 // To create a smooth user experience, restore application state here so that it looks like the app never stopped running.
+                getCurrentUser();
             }
             args.setPromise(WinJS.UI.processAll().done(function () {
                 // app variables
@@ -129,12 +129,8 @@
                     WinJS.Navigation.navigate("/pages/food/addNewFood.html");
                     e.stopImmediatePropagation();
                 });
-                if (!url || url == "pages/index/index.html") {
-                    WinJS.Navigation.navigate("/pages/index/index.html");
-                }
-                else {
-                    WinJS.Navigation.navigate(url, app.sessionState.lastState);
-                }
+
+                WinJS.Navigation.navigate(url, app.sessionState.lastState);
             }));
 
         }
