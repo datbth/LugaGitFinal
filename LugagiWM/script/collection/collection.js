@@ -11,7 +11,6 @@
             cache: false,
             async: true,
             success: function (receivedData) {
-                console.debug(receivedData);
                 var source = receivedData.Collection;
                 collectionName = source.CollectionName;
                 $("#collectionName").text(collectionName);
