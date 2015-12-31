@@ -17,7 +17,6 @@
             } else {
                 // TODO: This application was suspended and then terminated.
                 // To create a smooth user experience, restore application state here so that it looks like the app never stopped running.
-                WinJS.Navigation.navigate(url, app.sessionState.lastState);
             }
             args.setPromise(WinJS.UI.processAll().done(function () {
                 if (!url) {
@@ -134,6 +133,9 @@
                 };
                 if (!url || url == "pages/index/index.html") {
                     WinJS.Navigation.navigate("/pages/index/index.html");
+                }
+                else {
+                    WinJS.Navigation.navigate(url, app.sessionState.lastState);
                 }
             }));
 
