@@ -20,7 +20,7 @@
                 WinJS.Navigation.navigate(url, app.sessionState.lastState);
             }
             args.setPromise(WinJS.UI.processAll().done(function () {
-                if ((url == "/pages/index/index.html") || (!url)) {
+                if (!url) {
                     // app variables
                     /* added by Dat - 18-11-2015 */
                     var splitView = document.getElementById('mySplitView').winControl;
@@ -131,7 +131,8 @@
                         WinJS.Navigation.navigate("/pages/food/addNewFood.html");
                         //e.stopImmediatePropagation();
                     });
-
+                };
+                if (!url || url == "pages/index/index.html") {
                     WinJS.Navigation.navigate("/pages/index/index.html");
                 }
             }));

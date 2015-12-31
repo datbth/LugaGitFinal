@@ -1,4 +1,4 @@
-MainPackage=C:\Data\COSC2634\Lugagi\LugaGitFinal\LugagiWM\bin\Debug\LugagiWM_0.2.22.0_AnyCPU_Debug.appx
-ResourcePack=C:\Data\COSC2634\Lugagi\LugaGitFinal\LugagiWM\bin\Debug\LugagiWM_0.2.22.0_scale-150.appx
-ResourcePack=C:\Data\COSC2634\Lugagi\LugaGitFinal\LugagiWM\bin\Debug\LugagiWM_0.2.22.0_scale-200.appx
-ResourcePack=C:\Data\COSC2634\Lugagi\LugaGitFinal\LugagiWM\bin\Debug\LugagiWM_0.2.22.0_scale-400.appx
+MainPackage=C:\Data\COSC2634\Lugagi\LugaGitFinal\LugagiWM\bin\Debug\LugagiWM_0.2.23.0_AnyCPU_Debug.appx
+ResourcePack=C:\Data\COSC2634\Lugagi\LugaGitFinal\LugagiWM\bin\Debug\LugagiWM_0.2.23.0_scale-150.appx
+ResourcePack=C:\Data\COSC2634\Lugagi\LugaGitFinal\LugagiWM\bin\Debug\LugagiWM_0.2.23.0_scale-200.appx
+ResourcePack=C:\Data\COSC2634\Lugagi\LugaGitFinal\LugagiWM\bin\Debug\LugagiWM_0.2.23.0_scale-400.appx
