@@ -138,11 +138,11 @@
         }
         else if (currentIndex === 0) {
             $("#foodNavigationPrevious").hide();
-            $('#foodNavigationNext').addClass("col-xs-offset-3");
+            $("#dummyNavigation").show();
         }
         else if (currentIndex == 1 || currentIndex == foodIdListLength - 2) {
-            $('#foodNavigationNext').removeClass("col-xs-offset-3");
             $("#foodNavigationNext").show();
+            $("#dummyNavigation").hide();
             $("#foodNavigationPrevious").show();
         };
     };

@@ -58,6 +58,6 @@ div {
 #previousAndNextButton {
     margin-left: 0px;
 }
-#foodNavigationPrevious {
+#foodNavigationPrevious, #dummyNavigation {
     margin-right: 5px;
 }
