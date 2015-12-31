@@ -62,6 +62,15 @@
                 navResize();
                 $(window).resize(navResize);
 
+                // reopen the split view pane if the keyboard has just hidden
+                var inputPane = Windows.UI.ViewManagement.InputPane.getForCurrentView();
+                inputPane.onhiding = function (evt) {
+                    if (WinJS.Application.sessionState.openingSplitView) {
+                        WinJS.Promise.timeout(350).then(function () {
+                            $("#split-view-toggle").trigger("click");
+                        })
+                    }
+                }
 
                 // bind events to navigation menu
                 $('#nav-goHome').click(function (e) {

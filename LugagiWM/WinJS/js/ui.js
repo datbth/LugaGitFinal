@@ -54976,6 +54976,12 @@ define('WinJS/Controls/SplitViewPaneToggle/_SplitViewPaneToggle',["require", "ex
             }
             if (this._splitView) {
                 this._opened = !this._opened;
+                // ----- added by Dat ------
+                WinJS.Application.sessionState.openingSplitView = true;
+                WinJS.Promise.timeout(400).then(function () {
+                    WinJS.Application.sessionState.openingSplitView = false;
+                });
+                // ----- end added by Dat ------
                 this._updateDom();
             }
             this._fireEvent(EventNames.invoked);
