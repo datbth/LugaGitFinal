@@ -11,13 +11,14 @@
             cache: false,
             async: true,
             success: function (receivedData) {
+                console.debug(receivedData);
                 var source = receivedData.Collection;
                 collectionName = source.CollectionName;
                 $("#collectionName").text(collectionName);
                 $("#ViewCount").text(source.ViewCount);
                 $("#LikeCount").text(source.LikeCount);
                 $("#CollectionDescription").text(source.CollectionDescription);
-                $("#CollectionCreatedDate").text(source.CollectionCreatedDate);
+                $("#CollectionCreatedDate").text("Created on: " + source.CollectionCreatedDate.split(" ")[0]);
 
                 var contentSource = source.Content;
                 var numOfContent = contentSource.length;
