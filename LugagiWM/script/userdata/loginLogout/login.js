@@ -43,7 +43,7 @@
         loginToLugagi();
     });
 
-    $("body").on("keypress", "#password", function (e) {
+    $("body").on("keyup", "#password", function (e) {
         if ((e.keyCode == 10 || e.keyCode == 13)) {
             e.preventDefault();
             loginToLugagi();

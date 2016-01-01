@@ -62,15 +62,22 @@
                 navResize();
                 $(window).resize(navResize);
 
-                // reopen the split view pane if the keyboard has just hidden
-                var inputPane = Windows.UI.ViewManagement.InputPane.getForCurrentView();
+                //// reopen the split view pane if the keyboard has just hidden
+                //var inputPane = Windows.UI.ViewManagement.InputPane.getForCurrentView();
+                //inputPane.onhiding = function (evt) {
+                //    if (WinJS.Application.sessionState.openingSplitView) {
+                //        WinJS.Promise.timeout(350).then(function () {
+                //            $("#split-view-toggle").trigger("click");
+                //        })
+                //    }
+                //}
+                inputPane.onshowing = function (evt) {
+                    WinJS.Application.sessionState.visibleInputPane = true;
+                };
+
                 inputPane.onhiding = function (evt) {
-                    if (WinJS.Application.sessionState.openingSplitView) {
-                        WinJS.Promise.timeout(350).then(function () {
-                            $("#split-view-toggle").trigger("click");
-                        })
-                    }
-                }
+                    WinJS.Application.sessionState.visibleInputPane = false;
+                };
 
                 // bind events to navigation menu
                 $('#nav-goHome').click(function (e) {

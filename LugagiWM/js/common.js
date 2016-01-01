@@ -4,6 +4,9 @@
 //    // $(this).hide();
 //    $(this).css({ visibility: "hidden" });
 //});
+
+var inputPane = Windows.UI.ViewManagement.InputPane.getForCurrentView();
+
 function transparentize(elem) {
     elem.css({ visibility: "hidden" });
 }

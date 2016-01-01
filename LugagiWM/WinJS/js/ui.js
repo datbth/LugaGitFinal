@@ -54971,18 +54971,24 @@ define('WinJS/Controls/SplitViewPaneToggle/_SplitViewPaneToggle',["require", "ex
         };
         // Called by tests.
         SplitViewPaneToggle.prototype._invoked = function () {
+            var thisToggle = this;
             if (this._disposed) {
                 return;
             }
             if (this._splitView) {
                 this._opened = !this._opened;
                 // ----- added by Dat ------
-                WinJS.Application.sessionState.openingSplitView = true;
-                WinJS.Promise.timeout(400).then(function () {
-                    WinJS.Application.sessionState.openingSplitView = false;
-                });
+                if (WinJS.Application.sessionState.visibleInputPane) {
+                    WinJS.Promise.timeout(375).then(function () {
+                        //WinJS.Application.sessionState.visibleInputPane = false;
+                        thisToggle._updateDom();
+                    });
+                }
+                else {
+                    thisToggle._updateDom();
+                }
                 // ----- end added by Dat ------
-                this._updateDom();
+                
             }
             this._fireEvent(EventNames.invoked);
         };
