@@ -19,6 +19,13 @@
                 getCurrentUser();
             }
             args.setPromise(WinJS.UI.processAll().done(function () {
+
+                app.onbackclick = function (evt) {
+                    WinJS.Navigation.back(1).done;
+                    // Need to return true to cancel the default behavior of this event.
+                    return true;
+                }
+
                 // app variables
                 /* added by Dat - 18-11-2015 */
                 var splitView = document.getElementById('mySplitView').winControl;
@@ -158,11 +165,6 @@
         // If you need to complete an asynchronous operation before your application is suspended, call args.setPromise().
     };
 
-    app.onbackclick = function (evt) {
-        WinJS.Navigation.back(1).done;
-        // Need to return true to cancel the default behavior of this event.
-        return true;
-    }
     //Starting the app, do not remove
     app.start();
 })();
