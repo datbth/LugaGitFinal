@@ -4,6 +4,7 @@
     var foodIdList;
     var initialFoodDetailHTML;
     var foodIdListLength;
+    var collectionID;
 
     // load the ingredients of the food
     function loadIngredient(ingredientsSource) {
@@ -176,13 +177,14 @@
     });
 
     $('body').on("click", "#currentCollection", function () {
-        WinJS.Navigation.back(1).done;
+        WinJS.Navigation.navigate("/pages/collection/collection.html", collectionID);
     });
 
     WinJS.UI.Pages.define("/pages/food/foodDetails.html", {
         ready: function (element, options) {
             // get the ID of the food
             if (typeof options === "object") {
+                collectionID = options.collectionID;
                 var collectionData = options;
                 $("#currentCollection").text("Current Collection: " + collectionData.collectionName);
                 foodIdList = options.foodIDList;

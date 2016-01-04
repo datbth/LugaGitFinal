@@ -69,6 +69,7 @@
                 'foodIndex': parseInt(currentItem.attr("currentIndex")),
                 'foodIDList': foodIdList,
                 'collectionName': collectionName,
+                'collectionID': collectionID,
             };
             WinJS.Navigation.navigate("/pages/food/foodDetails.html", collectionData);
         });
