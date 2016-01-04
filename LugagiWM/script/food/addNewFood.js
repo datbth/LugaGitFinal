@@ -64,7 +64,7 @@
                         }
                     }
                     else {
-                        alertBox("Đã xảy ra lỗi: " + errorMessage + ". Vui lòng thử lại");
+                        alertBox("An error has occurred: " + errorMessage + ". Please try again");
                     }
                     $("#waitingSpinner").css("display", "none");
                     $("#addNewFoodButton").attr("disabled", false);
@@ -79,7 +79,7 @@
             });
         }
         else {
-            alertBox("Bạn không được để trống tên món ăn!")
+            alertBox("Please enter the dish name at the top of the page!")
         }
     };
 
