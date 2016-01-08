@@ -128,7 +128,8 @@
     <Content Include="pages\index\categories\featuredCollection.html" />
     <Content Include="pages\index\categories\latestFood.html" />
     <Content Include="pages\index\index.html" />
-    <Content Include="pages\recommendation\ingredientBasedSuggestion.html" />
+    <Content Include="pages\recommendation\ingredientBasedSuggestionBox.html" />
+    <Content Include="pages\recommendation\ingredientBasedSuggestionContent.html" />
     <Content Include="pages\recommendation\weekMenuSuggestionContent.html" />
     <Content Include="pages\recommendation\weekMenuSuggestionFilter.html" />
     <Content Include="pages\search\searchResult.html" />
@@ -141,7 +142,8 @@
     <Content Include="script\index\categories\featuredCollection.js" />
     <Content Include="script\index\categories\latestFood.js" />
     <Content Include="script\index\index.js" />
-    <Content Include="script\recommendation\ingredientBasedSuggestion.js" />
+    <Content Include="script\recommendation\ingredientBasedSuggestionBox.js" />
+    <Content Include="script\recommendation\ingredientBasedSuggestionContent.js" />
     <Content Include="script\recommendation\weekMenuSuggestionFilter.js" />
     <Content Include="script\recommendation\weekMenuSuggestionContent.js" />
     <Content Include="script\search\searchFood.js" />

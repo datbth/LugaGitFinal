@@ -2,40 +2,6 @@
     var currentInput = "";
     var initialIngredientHTML;
 
-    function loadIngredientSuggestion() {
-        $.ajax({
-            type: "GET",
-            url: "http://lugagi.com/script/ingredientRecommendation/generateFoodSuggestion.php",
-            data: { ingredientname: [currentInput] },
-            dataType: 'json',
-            cache: false,
-            async: true,
-            success: function (receivedData) {
-                var source = receivedData.Foods;
-                var noOfFood = source.length;
-                if (noOfFood < 1) {
-                    $("progress").hide();
-                    $("#no-dish-mess").show();
-                } else {
-                    for (var i = 0; i < noOfFood; i++) {
-                        var currentSource = source[i]
-                        var newFood = $("#sampleIngredientContentItem").clone();
-                        newFood.find(".ingredientContentName").text(currentSource.MonAnName);
-                        var fullImageURL = "http://lugagi.com/script/timthumb.php?src=/foodimages/" + currentSource.ImageURL + "&w=300&h=200";
-                        newFood.find(".ingredientContentImg").attr("src", fullImageURL);
-                        newFood.attr("data-food-ID", currentSource.MonAnID);
-                        //newFood.find(".contentView").text(currentSource.ContentViewCount + " ");
-                        //newFood.find(".contentLike").text(currentSource.ContentLikeCount);
-                        newFood.css("display", "block");
-                        $("#suggestionContent").append(newFood);
-                        $("progress").hide();
-                    }
-                    wrapTwoLines();
-                }
-            }
-        });
-    };
-
     function generateSuggestion() {
         currentInput = "";
         $("#suggestionContent").html(initialIngredientHTML);
@@ -49,8 +15,6 @@
         if (testCurrentInput != "") {
             $("#no-input-mess").hide();
             $("#no-dish-mess").hide();
-            $("progress").show();
-            loadIngredientSuggestion();
         } else {
             $("#no-input-mess").show();
         }
@@ -66,12 +30,14 @@
 
     $('body').on("click", "#submitUserInput", function () {
         generateSuggestion();
+        WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestionContent.html", currentInput);
     })
-
+    
     $('body').on("keyup", ".ingredientInput input", function (e) {
         if (e.keyCode == 13) {
             $(this).blur();
             generateSuggestion();
+            WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestionContent.html", currentInput);
         } else {
             if (e.keyCode == 27) {
                 $(this).val("");
@@ -95,13 +61,7 @@
         $(".ingredientInput:eq(" + currentIndex + ")").remove();
     })
 
-    $('body').on("click", ".ingredientContentItem", function () {
-        var currentID = $(this).attr("data-food-ID");
-        WinJS.Navigation.navigate("/pages/food/foodDetails.html", currentID);
-    })
-
-
-    WinJS.UI.Pages.define("/pages/recommendation/ingredientBasedSuggestion.html", {
+    WinJS.UI.Pages.define("/pages/recommendation/ingredientBasedSuggestionBox.html", {
         ready: function (element, options) {
             initialIngredientHTML = $("#suggestionContent").html();
             $('.ingredientInput:eq(0)').find("input").focus();

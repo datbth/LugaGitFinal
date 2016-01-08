@@ -174,7 +174,7 @@
 
         // header section events
         $('body').on("click", "#goToIngredient", function () {
-            WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestion.html"); // navigate to ingredientBasedSuggestion page
+            WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestionBox.html"); // navigate to ingredientBasedSuggestion page
         });
 
         $('body').on("click", "#goToWeek", function () {
