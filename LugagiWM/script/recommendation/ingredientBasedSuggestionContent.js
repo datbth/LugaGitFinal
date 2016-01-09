@@ -45,6 +45,7 @@
         ready: function (element, options) {
             currentInput = options;
             initialIngredientHTML = $("#suggestionContent").html();
+            $("body").find("#userSuggestionInput").text("Dishes suggestion for: " + options)
             loadIngredientSuggestion();
         }
     });
