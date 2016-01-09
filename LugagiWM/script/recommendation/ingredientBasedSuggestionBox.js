@@ -15,6 +15,7 @@
         if (testCurrentInput != "") {
             $("#no-input-mess").hide();
             $("#no-dish-mess").hide();
+        WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestionContent.html", currentInput);
         } else {
             $("#no-input-mess").show();
         }
@@ -30,14 +31,13 @@
 
     $('body').on("click", "#submitUserInput", function () {
         generateSuggestion();
-        WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestionContent.html", currentInput);
+        
     })
     
     $('body').on("keyup", ".ingredientInput input", function (e) {
         if (e.keyCode == 13) {
             $(this).blur();
             generateSuggestion();
-            WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestionContent.html", currentInput);
         } else {
             if (e.keyCode == 27) {
                 $(this).val("");
