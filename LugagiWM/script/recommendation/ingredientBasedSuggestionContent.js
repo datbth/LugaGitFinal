@@ -30,7 +30,7 @@
     WinJS.UI.Pages.define("/pages/recommendation/ingredientBasedSuggestionContent.html", {
         ready: function (element, options) {
             var currentInput = options.currentInput.trim().replace(/,/g, "").replace(/ +(?= )/g, '').replace(/ /g, ", ");
-            $("#userSuggestionInput").html("<span>Suggestions for the ingredient(s): </span>" + "<span style='color:rgb(0, 150, 136); font-size:30px'>" + currentInput + "</span>");
+            $("#userSuggestionInput").html("<span>Ingredient keyword(s): </span>" + "<span style='color:rgb(0, 150, 136); font-size:30px'>" + currentInput + "</span>");
             loadSuggestionContents(options.data);
         }
     });
