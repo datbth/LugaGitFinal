@@ -83,6 +83,7 @@
             dayMenuHTML = $("#monday").html();
             reloadContent();
             weekMenuScript.nutritionChoices = options[1];
+            console.debug(options[1]);
             $("#currentChoices").text(weekMenuScript.translateChoices(options[1]).join(", "));
             loadWeekMenuContent(options[0]);
         }

@@ -468,8 +468,8 @@ var weekMenuScript = {
         }
         else {
             var translatedChoices = [];
-            choices.forEach(function (choice) {
-                translatedChoices.push(weekMenuScript.choiceDict[choice + 1]);
+            choices.slice(1).forEach(function (choice) {
+                translatedChoices.push(weekMenuScript.choiceDict[choice - 1]);
             });
             return translatedChoices;
         }
