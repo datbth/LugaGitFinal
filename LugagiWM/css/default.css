@@ -182,7 +182,7 @@ h6 {
   line-height: 1.333;
 }
 
-h4 , h3, h6{
+.txt-clickable{
     color: rgb(255,64,129);
 }
 

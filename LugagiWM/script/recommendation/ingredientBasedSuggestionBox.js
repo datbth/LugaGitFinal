@@ -1,10 +1,31 @@
 ﻿(function () {
     var currentInput = "";
-    var initialIngredientHTML;
+    //var initialIngredientHTML;
+
+    function loadIngredientSuggestion() {
+        $.ajax({
+            type: "GET",
+            url: "http://lugagi.com/script/ingredientRecommendation/generateFoodSuggestion.php",
+            data: { ingredientname: [currentInput] },
+            dataType: 'json',
+            cache: false,
+            async: true,
+            success: function (receivedData) {
+                var source = receivedData.Foods;
+                var noOfFood = source.length;
+                if (noOfFood < 1) {
+                    $("progress").hide();
+                    $("#no-dish-mess").show();
+                } else {
+                    WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestionContent.html", { currentInput: currentInput, data: source });
+                }
+            }
+        });
+    };
 
     function generateSuggestion() {
         currentInput = "";
-        $("#suggestionContent").html(initialIngredientHTML);
+        //$("#suggestionContent").html(initialIngredientHTML);
 
         var numberOfInput = $(".ingredientInput").length;
         for (var i = 0; i < numberOfInput; i++) {
@@ -13,9 +34,10 @@
         };
         var testCurrentInput = currentInput.replace(" ", "")
         if (testCurrentInput != "") {
+            $("progress").show();
             $("#no-input-mess").hide();
             $("#no-dish-mess").hide();
-        WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestionContent.html", currentInput);
+            loadIngredientSuggestion()
         } else {
             $("#no-input-mess").show();
         }
@@ -31,7 +53,6 @@
 
     $('body').on("click", "#submitUserInput", function () {
         generateSuggestion();
-        
     })
     
     $('body').on("keyup", ".ingredientInput input", function (e) {
@@ -63,8 +84,10 @@
 
     WinJS.UI.Pages.define("/pages/recommendation/ingredientBasedSuggestionBox.html", {
         ready: function (element, options) {
-            initialIngredientHTML = $("#suggestionContent").html();
-            $('.ingredientInput:eq(0)').find("input").focus();
+            //initialIngredientHTML = $("#suggestionContent").html();
+            WinJS.Promise.timeout(400).then(function () {
+                $('.ingredientInput:eq(0)').find("input").focus();
+            });
         }
     });
 })();
