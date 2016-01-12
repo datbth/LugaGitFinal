@@ -454,6 +454,27 @@ function checkForPromotionContent() {
 var weekMenuScript = {
     nutritionChoices: [true],
 
+    choiceDict: [
+        "Diet",
+        "Kid",
+        "Vegetarian",
+        "Snack",
+        "Health Boost"
+    ],
+
+    translateChoices: function (choices) {
+        if (choices[0]) {
+            return ["Default"];
+        }
+        else {
+            var translatedChoices = [];
+            choices.forEach(function (choice) {
+                translatedChoices.push(weekMenuScript.choiceDict[choice + 1]);
+            });
+            return translatedChoices;
+        }
+    },
+
     // load default menu (no filter)
     loadDefaultMenu: function () {
         var nutritionChoices = this.nutritionChoices;

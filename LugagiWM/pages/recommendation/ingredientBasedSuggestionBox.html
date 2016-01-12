@@ -2,7 +2,7 @@
 <html>
 <head>
     <link href="/css/recommendation/ingredientBasedSuggestion.css" rel="stylesheet" />
-    <script src="/script/recommendation/ingredientBasedSuggestion.js"></script>
+    <script src="/script/recommendation/ingredientBasedSuggestionBox.js"></script>
 </head>
 <body>
     <div class="container-fluid" >
@@ -42,24 +42,10 @@
                 
             </div>
         </div>
-        
-        <!-- Suggestion Content -->
-        <p><hr /></p>
-        <p id="no-dish-mess" class="text-center" style="display:none">No dish found</p>
-        <p id="no-input-mess" class="text-center" style="display:none">You need to input at least one ingredient</p>
-        <div id="suggestionContent" class="row" style="margin-top: 10px; margin-bottom: 10px">
-            <progress class="col-xs-12 col-sm-4 col-sm-offset-4" style="display:none"></progress>
-            <div id="sampleIngredientContentItem" class="ingredientContentItem col-xs-6 col-sm-4 col-md-3 col-lg-2 div-clickable"
-                  data-food-ID="" style="display:none">            
-                  
-                <img class="ingredientContentImg img-responsive" />
-                <h6 class="ingredientContentName txt-clickable wrap-two-lines"></h6>
-                <!--<small>                    
-                    <span class="glyphicon glyphicon-eye-open contentView"></span>
-                    <span class="glyphicon glyphicon-heart contentLike"></span>
-                </small>-->
-            </div>
-        </div>
+        <p><hr /><br /></p>
+        <progress class="col-xs-12 col-sm-4 col-sm-offset-4" style="display:none"></progress>
+        <h3 id="no-input-mess" class="text-center" style="display:none">You need to input at least one ingredient</h3>
+        <h3 id="no-dish-mess" class="text-center" style="display:none">No dish found</h3>
     </div>
 </body>
 </html>

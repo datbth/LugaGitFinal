@@ -103,7 +103,7 @@
                     navigateDefault(e);
                 });
                 $('#nav-recommendation-ingredient').click(function (e) {
-                    WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestion.html"); // navigate to ingredientBasedSuggestion page
+                    WinJS.Navigation.navigate("/pages/recommendation/ingredientBasedSuggestionBox.html"); // navigate to ingredientBasedSuggestion page
                     navigateDefault(e);
                 });
                 $('#nav-recommendation-week-menu').click(function (e) {
