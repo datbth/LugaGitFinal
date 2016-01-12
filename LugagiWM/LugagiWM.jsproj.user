@@ -9,7 +9,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>AppHostLocalDebugger</DebuggerFlavor>
-    <WindowsPhoneEmulatorID>01B17A49-475E-48D6-BFB2-46C9CE5E8B4C;Mobile Emulator 10.0.10240.0 WVGA 4 inch 1GB</WindowsPhoneEmulatorID>
+    <WindowsPhoneEmulatorID>25433CEB-C8BF-4422-B581-3EEFFC9B8ED6;Mobile Emulator 10.0.10240.0 WXGA 4.5 inch 1GB</WindowsPhoneEmulatorID>
     <UapDefaultAssetScale>100</UapDefaultAssetScale>
   </PropertyGroup>
 </Project>
